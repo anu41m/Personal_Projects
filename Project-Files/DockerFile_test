@@ -1,0 +1,17 @@
+FROM jupyter/pyspark-notebook:latest
+
+# Install necessary packages
+USER root
+RUN apt-get update && apt-get install -y \
+    openjdk-17-jdk-headless \
+    wget \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+USER $NB_USER
+
+# Install Delta Lake if needed
+RUN pip install delta-spark
+
+# Start Jupyter and Spark
+CMD ["start-notebook.sh", "--NotebookApp.token=''"]
