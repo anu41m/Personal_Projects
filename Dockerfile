@@ -1,42 +1,74 @@
-# Use an official Jupyter Notebook image
-FROM jupyter/scipy-notebook:latest
+# Use a base image with Jupyter and Spark pre-installed
+FROM jupyter/all-spark-notebook:latest
 
-# Set the working directory
-WORKDIR /home/jovyan/work
+# Set environment variables for Spark, Hadoop, and Delta Lake versions
+ENV SPARK_HOME=/usr/local/spark
+ENV HADOOP_HOME=/usr/local/hadoop
+ENV HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+ENV PATH=$PATH:$SPARK_HOME/bin:$HADOOP_HOME/bin
+ENV PYSPARK_SUBMIT_ARGS="--jars pyspark-shell"
+ENV SPARK_CONF_DIR=$SPARK_HOME/conf
+ENV SPARK_VERSION=3.5.3
+ENV DELTA_VERSION=3.0.0
+ENV HADOOP_VERSION=3.3.4
 
-# Switch to root user to install packages
+# Switch to root to install packages
 USER root
 
-# Install Java, PySpark, and Google Cloud SDK
-RUN apt-get update && \
-    apt-get install -y openjdk-11-jdk && \
-    apt-get install -y python3-pip && \
-    pip3 install pyspark pandasql google-cloud-storage && \
-    apt-get install -y apt-transport-https ca-certificates gnupg && \
-    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
-    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - && \
-    apt-get update && \
-    apt-get install -y google-cloud-sdk && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+# Install necessary packages and Spark
+RUN apt-get update && apt-get install -y \
+    curl \
+    gnupg \
+    openjdk-11-jdk && \
+    export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java)))) && \
+    echo "JAVA_HOME=$JAVA_HOME" >> /etc/environment && \
+    # Debug Spark installation
+    curl -L "https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop3.tgz" -o /tmp/spark.tgz && \
+    tar -xzf /tmp/spark.tgz -C /opt/ && \
+    mv /opt/spark-${SPARK_VERSION}-bin-hadoop3 /opt/spark && \
+    rm /tmp/spark.tgz
 
-# Set JAVA_HOME environment variable
-ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64
-ENV PATH="$JAVA_HOME/bin:$PATH"
+# Download and install Hadoop
+RUN curl -L "https://archive.apache.org/dist/hadoop/common/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz" -o /tmp/hadoop.tar.gz && \
+    tar -xzf /tmp/hadoop.tar.gz -C /usr/local/ && \
+    mv /usr/local/hadoop-${HADOOP_VERSION} /usr/local/hadoop && \
+    rm /tmp/hadoop.tar.gz
 
-# Verify Java installation
-RUN java -version
+# Set up permissions for Spark directory and create work directory
+RUN mkdir -p /usr/local/spark/work && chown -R jovyan:users /usr/local/spark
 
-VOLUME [ "/mnt","/data" ]
+# Verify Spark installation
+RUN ls -la /opt/spark/bin
 
-# Switch back to jovyan user
-USER jovyan
+# Install Delta Lake dependencies
+RUN pip install delta-spark==$DELTA_VERSION
 
-# Copy the local notebook to the container
-COPY ./test.ipynb /home/jovyan/work/test.ipynb
+# Adjust ownership for Spark directory
+RUN chown -R 1000:100 /opt/spark
 
-# Expose port 8888 for Jupyter
-EXPOSE 8888
+# Install openpyxl for Excel support in PySpark
+RUN pip install openpyxl
 
-# Start Jupyter Notebook automatically
-CMD ["start-notebook.sh", "--NotebookApp.token=''"]
+# Ensure spark-excel JAR is available and correctly placed
+RUN ls -la /opt/spark/jars/
+
+# Set the working directory for the project
+WORKDIR /app
+
+# Copy project files and set permissions
+COPY Project-Files /app/Project-Files
+RUN chown -R jovyan:users /app && chmod -R 777 /app
+
+# Create directories for data
+RUN mkdir -p /mnt/Calendar/Calendar_Parquet && chown -R jovyan:users /mnt/Calendar/Calendar_Parquet
+
+# Copy JAR file and Spark defaults
+COPY Docker_setup/fat.jar /app/libs/fat.jar
+COPY Docker_setup/spark-master/spark-defaults.conf /usr/local/spark/conf/
+COPY Docker_setup/spark-master/jupyter_notebook_config.py /home/jovyan/.jupyter/
+
+# Expose necessary ports
+EXPOSE 8888 8080 7077
+
+# Start Spark master and Jupyter Notebook
+CMD /bin/bash -c "/usr/local/spark/bin/spark-class org.apache.spark.deploy.master.Master & start-notebook.sh --ip=0.0.0.0 --port=8888 --no-browser --NotebookApp.token=''"

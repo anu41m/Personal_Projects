@@ -1,0 +1,59 @@
+networks:
+  spark-network:
+    driver: bridge
+
+services:
+  spark-master:
+    build:
+      context: ..
+      dockerfile: Docker_setup/spark-master/Dockerfile
+    container_name: spark-master
+    networks:
+      - spark-network
+    ports:
+      - "7077:7077"  # Spark Master RPC Port
+      - "8080:8080"  # Spark Master Web UI
+    environment:
+      - SPARK_MASTER_HOST=spark-master
+    volumes:
+      - /Users/anoopm/my_jupyter_project/Docker_setup/fat.jar:/app/setup/fat.jar
+      - /Users/anoopm/my_jupyter_project/Project-Files:/app/Project-Files
+      - /Users/anoopm/Documents/Local_Folder:/mnt
+      - "/Users/anoopm/Library/CloudStorage/OneDrive-Personal/Cloud Documents:/data"
+      - /Users/anoopm/Documents/Spark_Work:/usr/local/spark/work
+
+  spark-worker:
+    build: 
+      context: ..
+      dockerfile: Docker_setup/spark-worker/Dockerfile
+    networks:
+      - spark-network
+    depends_on:
+      - spark-master
+    environment:
+      - SPARK_MASTER=spark://spark-master:7077
+      - SPARK_WORKER_CORES=2
+      - SPARK_WORKER_MEMORY=1G
+    volumes:
+      - /Users/anoopm/my_jupyter_project/Docker_setup/fat.jar:/app/setup/fat.jar
+      - /Users/anoopm/my_jupyter_project/Project-Files:/app/Project-Files
+      - /Users/anoopm/Documents/Local_Folder:/mnt
+      - "/Users/anoopm/Library/CloudStorage/OneDrive-Personal/Cloud Documents:/data"
+      - /Users/anoopm/Documents/Spark_Work:/usr/local/spark/work
+    ports:
+      - "8081:8081"  # Spark Worker Web UI
+
+  jupyter:
+    image: jupyter/pyspark-notebook:latest
+    container_name: jupyter
+    networks:
+      - spark-network
+    ports:
+      - "8888:8888"  # Jupyter Notebook
+    volumes:
+      - /Users/anoopm/my_jupyter_project:/home/jovyan/work
+    environment:
+      - SPARK_MASTER=spark://spark-master:7077
+      - PYSPARK_PYTHON=python3
+      - PYSPARK_DRIVER_PYTHON=jupyter
+      - PYSPARK_DRIVER_PYTHON_OPTS="notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root"

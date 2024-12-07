@@ -1,0 +1,79 @@
+networks:
+  spark-network:
+    driver: bridge
+x-airflow-common: &airflow-common
+  build:
+    context: ..
+    dockerfile: Docker_setup/Dockerfile
+  env_file:
+    - airflow.env
+  volumes:
+    - ./jobs:/opt/airflow/jobs
+    - ./dags:/opt/airflow/dags
+    - ./logs:/opt/airflow/logs
+  depends_on:
+    - postgres
+  networks:
+    - spark-network
+
+services:
+  spark-master:
+    build:
+      context: ..
+      dockerfile: Docker_setup/spark-master/Dockerfile
+    container_name: spark-master
+    networks:
+      - spark-network
+    ports:
+      - "8070:8070"
+      - "7077:7077"
+      - "8888:8888"
+    volumes:
+      - /Users/anoopm/my_jupyter_project/Docker_setup/fat.jar:/app/setup/fat.jar
+      - /Users/anoopm/my_jupyter_project/Project-Files:/app/Project-Files  # This maps the host's Project-Files to the container
+      - /Users/anoopm/Documents/Local_Folder:/mnt
+      - "/Users/anoopm/Library/CloudStorage/OneDrive-Personal/Cloud Documents:/data"
+      - /Users/anoopm/Documents/Spark_Work:/usr/local/spark/work
+
+  spark-worker:
+    build: 
+      context: ..
+      dockerfile: Docker_setup/spark-worker/Dockerfile
+    networks:
+      - spark-network
+    environment:
+      - SPARK_MASTER=spark://spark-master:7077
+      - SPARK_WORKER_CORES=2
+      - SPARK_WORKER_MEMORY=1G
+    depends_on:
+      - spark-master
+    volumes:
+      - /Users/anoopm/my_jupyter_project/Docker_setup/fat.jar:/app/setup/fat.jar
+      - /Users/anoopm/my_jupyter_project/Project-Files:/app/Project-Files
+      - /Users/anoopm/Documents/Local_Folder:/mnt
+      - "/Users/anoopm/Library/CloudStorage/OneDrive-Personal/Cloud Documents:/data"
+      - /Users/anoopm/Documents/Spark_Work:/usr/local/spark/work
+    ports:
+      - "8089:8089"
+      - "7337:7337"
+  postgres:
+    image: postgres:14.0
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    networks:
+      - spark-network
+
+  webserver:
+    <<: *airflow-common
+    command: webserver
+    ports:
+      - "8080:8080"
+    depends_on:
+      - scheduler
+
+  scheduler:
+    <<: *airflow-common
+    command: bash -c "airflow db migrate && airflow users create --username admin --firstname anoop --lastname m --role Admin --email anoopmadhu2000@gmail.com --password admin && airflow scheduler"
+

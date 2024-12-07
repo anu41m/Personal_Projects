@@ -1,0 +1,49 @@
+services:
+  airflow-webserver:
+    image: apache/airflow:latest
+    container_name: airflow-webserver
+    ports:
+      - "8081:8080"
+    environment:
+      - AIRFLOW__CORE__FERNET_KEY=domAaJEdoT_ZXkA0yTjjuWrmL2TO9Xbw62QxvP2umNU=
+      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/airflow.db  # Updated to the new [database] section
+      - AIRFLOW__WEBSERVER__SECRET_KEY=qhhXkay_LOMH5Cnq_NaB4cKpTqMk0_uf4Cz680h36Y4  # Set a secret key for webserver
+    volumes:
+      - ./airflow.cfg:/opt/airflow/airflow.cfg 
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    command: webserver  # Start the webserver process
+
+  airflow-scheduler:
+    image: apache/airflow:latest
+    container_name: airflow-scheduler
+    depends_on:
+      - airflow-webserver
+    environment:
+      - AIRFLOW__CORE__FERNET_KEY=domAaJEdoT_ZXkA0yTjjuWrmL2TO9Xbw62QxvP2umNU=
+      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/airflow.db  # Updated to the new [database] section
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    command: scheduler  # Start the scheduler process
+
+  airflow-init:
+    image: apache/airflow:latest
+    container_name: airflow-init
+    depends_on:
+      - airflow-webserver
+      - airflow-scheduler
+    environment:
+      - AIRFLOW__CORE__FERNET_KEY=domAaJEdoT_ZXkA0yTjjuWrmL2TO9Xbw62QxvP2umNU=
+      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/airflow.db  # Updated to the new [database] section
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    entrypoint: >
+      /bin/bash -c "airflow db migrate && airflow connections create-default-connections"
