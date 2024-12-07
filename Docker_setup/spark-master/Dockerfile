@@ -1,5 +1,5 @@
 # Use a base image with Jupyter and Spark pre-installed
-FROM jupyter/all-spark-notebook:latest
+FROM jupyter/base-notebook:latest
 
 # Set environment variables for Spark, Hadoop, and Delta Lake versions
 

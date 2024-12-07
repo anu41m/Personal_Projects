@@ -1,0 +1,25 @@
+services:
+  airflow:
+    image: apache/airflow:2.2.3
+    environment:
+      - LOAD_EX=y
+      - EXECUTOR=Local
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./notebooks:/opt/airflow/notebooks  # Mount the notebooks directory
+      - ./Spark-Config:/opt/airflow/config
+    ports:
+      - "8080:8080"
+    command: bash -c "airflow db init && airflow webserver"
+
+
+  spark:
+    image: bitnami/spark:3.4.0
+    volumes:
+      - ./notebooks:/notebooks  # Mount the notebooks directory
+      - ./Spark-Config:/opt/airflow/config
+    command: bash -c "spark-shell"
+    ports:
+      - "4040:4040"
