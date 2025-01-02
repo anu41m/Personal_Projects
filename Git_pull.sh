@@ -34,7 +34,7 @@ read $user_input
 
 case "$user_input" in
 "DEV_test")
-git remote add origin https://github.com/anu41m/my_jupyter_project/tree/DEV_test
+git remote add origin https://github.com/anu41m/my_jupyter_project
 git branch -M DEV_test
 git push -u origin DEV_test
 ;;
