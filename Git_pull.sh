@@ -26,7 +26,7 @@ read user_input
 
 echo "Committing the changes ...."
 
-git commit -m $user_input
+git commit -m \"$user_input\"
 
 echo "Enter the Branch to pull the changes:"
 echo "Available Brances:- \"DEV_test\""
