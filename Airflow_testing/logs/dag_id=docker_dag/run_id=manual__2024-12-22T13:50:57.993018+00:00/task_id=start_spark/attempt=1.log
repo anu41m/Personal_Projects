@@ -1,0 +1,142 @@
+[2024-12-22T13:51:00.072+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-22T13:51:00.088+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: docker_dag.start_spark manual__2024-12-22T13:50:57.993018+00:00 [queued]>
+[2024-12-22T13:51:00.093+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: docker_dag.start_spark manual__2024-12-22T13:50:57.993018+00:00 [queued]>
+[2024-12-22T13:51:00.094+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-22T13:51:00.101+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): start_spark> on 2024-12-22 13:50:57.993018+00:00
+[2024-12-22T13:51:00.118+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'docker_dag', 'start_spark', 'manual__2024-12-22T13:50:57.993018+00:00', '--job-id', '155', '--raw', '--subdir', 'DAGS_FOLDER/A_dag_test.py', '--cfg-path', '/tmp/tmpyzd4i1u5']
+[2024-12-22T13:51:00.120+0000] {standard_task_runner.py:105} INFO - Job 155: Subtask start_spark
+[2024-12-22T13:51:00.117+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=326) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-22T13:51:00.123+0000] {standard_task_runner.py:72} INFO - Started process 327 to run task
+[2024-12-22T13:51:00.163+0000] {task_command.py:467} INFO - Running <TaskInstance: docker_dag.start_spark manual__2024-12-22T13:50:57.993018+00:00 [running]> on host 49ab4fbc6be0
+[2024-12-22T13:51:00.213+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='docker_dag' AIRFLOW_CTX_TASK_ID='start_spark' AIRFLOW_CTX_EXECUTION_DATE='2024-12-22T13:50:57.993018+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-22T13:50:57.993018+00:00'
+[2024-12-22T13:51:00.215+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-22T13:51:00.215+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-22T13:51:00.215+0000] {logging_mixin.py:190} INFO - Current task name:start_spark state:running start_date:2024-12-22 13:51:00.089265+00:00
+[2024-12-22T13:51:00.215+0000] {logging_mixin.py:190} INFO - Dag name:docker_dag and current dag run status:running
+[2024-12-22T13:51:00.215+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-22T13:51:00.504+0000] {logging_mixin.py:190} INFO - Error starting Spark Master: 500 Server Error for http+docker://localhost/v1.47/containers/e5237c871d306bd8600c834689ca8075dcf3440c9a6b538ec016bc2188c0341d/start: Internal Server Error ("driver failed programming external connectivity on endpoint spark-master (ead66ab8d73b3a79bbed375cec6b4ca6d317b7470933103963b60f3c2a0a5623): Bind for 0.0.0.0:8080 failed: port is already allocated")
+[2024-12-22T13:51:00.506+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/A_dag_test.py", line 49, in start_spark_containers
+    client.containers.run(**spark_worker_config)
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/models/containers.py", line 876, in run
+    container = self.create(image=image, command=command,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/models/containers.py", line 934, in create
+    create_kwargs = _create_container_args(kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/models/containers.py", line 1164, in _create_container_args
+    create_kwargs['host_config'] = HostConfig(**host_config_kwargs)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/types/containers.py", line 413, in __init__
+    self['Links'] = normalize_links(links)
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/utils/utils.py", line 455, in normalize_links
+    return [f'{k}:{v}' if v else k for k, v in sorted(links)]
+                                       ^^^^
+ValueError: too many values to unpack (expected 2)
+[2024-12-22T13:51:00.540+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-12-22T13:51:00.542+0000] {logging_mixin.py:190} INFO - Task start:2024-12-22 13:51:00.089265+00:00 end:2024-12-22 13:51:00.534479+00:00 duration:0.445214
+[2024-12-22T13:51:00.543+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): start_spark> dag:<DAG: docker_dag> dagrun:<DagRun docker_dag @ 2024-12-22 13:50:57.993018+00:00: manual__2024-12-22T13:50:57.993018+00:00, state:running, queued_at: 2024-12-22 13:50:58.019033+00:00. externally triggered: True>
+[2024-12-22T13:51:00.544+0000] {logging_mixin.py:190} INFO - Failure caused by too many values to unpack (expected 2)
+[2024-12-22T13:51:00.546+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=docker_dag, task_id=start_spark, run_id=manual__2024-12-22T13:50:57.993018+00:00, execution_date=20241222T135057, start_date=20241222T135100, end_date=20241222T135100
+[2024-12-22T13:51:00.592+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-22T13:51:00.610+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 155 for task start_spark (too many values to unpack (expected 2); 327)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/A_dag_test.py", line 49, in start_spark_containers
+    client.containers.run(**spark_worker_config)
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/models/containers.py", line 876, in run
+    container = self.create(image=image, command=command,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/models/containers.py", line 934, in create
+    create_kwargs = _create_container_args(kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/models/containers.py", line 1164, in _create_container_args
+    create_kwargs['host_config'] = HostConfig(**host_config_kwargs)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/types/containers.py", line 413, in __init__
+    self['Links'] = normalize_links(links)
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/utils/utils.py", line 455, in normalize_links
+    return [f'{k}:{v}' if v else k for k, v in sorted(links)]
+                                       ^^^^
+ValueError: too many values to unpack (expected 2)
+[2024-12-22T13:51:00.650+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-12-22T13:51:00.686+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-22T13:51:00.693+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

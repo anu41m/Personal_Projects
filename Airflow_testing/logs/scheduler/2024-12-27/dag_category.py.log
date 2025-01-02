@@ -1,0 +1,42 @@
+[2024-12-27T15:34:30.774+0000] {processor.py:186} INFO - Started process (PID=71) to work on /opt/airflow/dags/dag_category.py
+[2024-12-27T15:34:30.777+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_category.py for tasks to queue
+[2024-12-27T15:34:30.788+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:34:30.787+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_category.py
+[2024-12-27T15:34:30.817+0000] {processor.py:925} INFO - DAG(s) 'dag_Category_NTBK' retrieved from /opt/airflow/dags/dag_category.py
+[2024-12-27T15:34:30.882+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:34:30.881+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:34:30.935+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:34:30.934+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Category_NTBK to 2024-12-27 15:30:00+00:00, run_after=2024-12-28 15:30:00+00:00
+[2024-12-27T15:34:30.977+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_category.py took 0.222 seconds
+[2024-12-27T15:35:01.608+0000] {processor.py:186} INFO - Started process (PID=91) to work on /opt/airflow/dags/dag_category.py
+[2024-12-27T15:35:01.610+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_category.py for tasks to queue
+[2024-12-27T15:35:01.614+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:01.613+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_category.py
+[2024-12-27T15:35:01.626+0000] {processor.py:925} INFO - DAG(s) 'dag_Category_NTBK' retrieved from /opt/airflow/dags/dag_category.py
+[2024-12-27T15:35:01.642+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:01.642+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:35:01.852+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:01.851+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Category_NTBK to 2024-12-27 15:30:00+00:00, run_after=2024-12-28 15:30:00+00:00
+[2024-12-27T15:35:01.878+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_category.py took 0.277 seconds
+[2024-12-27T15:35:36.552+0000] {processor.py:186} INFO - Started process (PID=108) to work on /opt/airflow/dags/dag_category.py
+[2024-12-27T15:35:36.559+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_category.py for tasks to queue
+[2024-12-27T15:35:36.571+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:36.570+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_category.py
+[2024-12-27T15:35:36.612+0000] {processor.py:925} INFO - DAG(s) 'dag_Category_NTBK' retrieved from /opt/airflow/dags/dag_category.py
+[2024-12-27T15:35:36.664+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:36.664+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:35:39.851+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:39.842+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Category_NTBK to 2024-12-27 15:30:00+00:00, run_after=2024-12-28 15:30:00+00:00
+[2024-12-27T15:35:39.951+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_category.py took 3.419 seconds
+[2024-12-27T15:36:30.315+0000] {processor.py:186} INFO - Started process (PID=122) to work on /opt/airflow/dags/dag_category.py
+[2024-12-27T15:36:30.332+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_category.py for tasks to queue
+[2024-12-27T15:36:30.371+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:36:30.368+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_category.py
+[2024-12-27T15:36:30.593+0000] {processor.py:925} INFO - DAG(s) 'dag_Category_NTBK' retrieved from /opt/airflow/dags/dag_category.py
+[2024-12-27T15:36:30.910+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:36:30.909+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:36:31.028+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:36:31.028+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Category_NTBK to 2024-12-27 15:30:00+00:00, run_after=2024-12-28 15:30:00+00:00
+[2024-12-27T15:36:31.101+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_category.py took 0.865 seconds
+[2024-12-27T15:37:01.515+0000] {processor.py:186} INFO - Started process (PID=136) to work on /opt/airflow/dags/dag_category.py
+[2024-12-27T15:37:01.527+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_category.py for tasks to queue
+[2024-12-27T15:37:01.541+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:01.540+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_category.py
+[2024-12-27T15:37:01.635+0000] {processor.py:925} INFO - DAG(s) 'dag_Category_NTBK' retrieved from /opt/airflow/dags/dag_category.py
+[2024-12-27T15:37:01.749+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:01.747+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:37:02.273+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:02.233+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Category_NTBK to 2024-12-27 15:30:00+00:00, run_after=2024-12-28 15:30:00+00:00
+[2024-12-27T15:37:02.493+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_category.py took 1.006 seconds
+[2024-12-27T15:37:33.403+0000] {processor.py:186} INFO - Started process (PID=153) to work on /opt/airflow/dags/dag_category.py
+[2024-12-27T15:37:33.449+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_category.py for tasks to queue
+[2024-12-27T15:37:33.485+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:33.479+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_category.py
+[2024-12-27T15:37:33.708+0000] {processor.py:925} INFO - DAG(s) 'dag_Category_NTBK' retrieved from /opt/airflow/dags/dag_category.py
+[2024-12-27T15:37:33.987+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:33.983+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:37:34.284+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:34.282+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Category_NTBK to 2024-12-27 15:30:00+00:00, run_after=2024-12-28 15:30:00+00:00
+[2024-12-27T15:37:34.439+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_category.py took 1.085 seconds

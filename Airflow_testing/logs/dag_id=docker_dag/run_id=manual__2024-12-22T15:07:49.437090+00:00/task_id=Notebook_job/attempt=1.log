@@ -1,0 +1,40 @@
+[2024-12-22T15:20:21.149+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-22T15:20:21.198+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: docker_dag.Notebook_job manual__2024-12-22T15:07:49.437090+00:00 [queued]>
+[2024-12-22T15:20:21.226+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: docker_dag.Notebook_job manual__2024-12-22T15:07:49.437090+00:00 [queued]>
+[2024-12-22T15:20:21.228+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-22T15:20:21.268+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): Notebook_job> on 2024-12-22 15:07:49.437090+00:00
+[2024-12-22T15:20:21.322+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=304) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-22T15:20:21.330+0000] {standard_task_runner.py:72} INFO - Started process 305 to run task
+[2024-12-22T15:20:21.334+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'docker_dag', 'Notebook_job', 'manual__2024-12-22T15:07:49.437090+00:00', '--job-id', '172', '--raw', '--subdir', 'DAGS_FOLDER/A_dag_test.py', '--cfg-path', '/tmp/tmpyqh0exxb']
+[2024-12-22T15:20:21.337+0000] {standard_task_runner.py:105} INFO - Job 172: Subtask Notebook_job
+[2024-12-22T15:20:21.445+0000] {task_command.py:467} INFO - Running <TaskInstance: docker_dag.Notebook_job manual__2024-12-22T15:07:49.437090+00:00 [running]> on host 36fc03ce6ff3
+[2024-12-22T15:20:21.558+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='docker_dag' AIRFLOW_CTX_TASK_ID='Notebook_job' AIRFLOW_CTX_EXECUTION_DATE='2024-12-22T15:07:49.437090+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-22T15:07:49.437090+00:00'
+[2024-12-22T15:20:21.561+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-22T15:20:21.562+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-22T15:20:21.562+0000] {logging_mixin.py:190} INFO - Current task name:Notebook_job state:running start_date:2024-12-22 15:20:21.200183+00:00
+[2024-12-22T15:20:21.562+0000] {logging_mixin.py:190} INFO - Dag name:docker_dag and current dag run status:running
+[2024-12-22T15:20:21.563+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-22T15:20:21.833+0000] {docker.py:379} INFO - Starting docker container from image spark-cluster:version-1.0.0
+[2024-12-22T15:20:24.697+0000] {docker.py:73} INFO - Input Notebook:  /home/jovyan/Notebooks/NB_Calendar.ipynb
+[2024-12-22T15:20:24.710+0000] {docker.py:73} INFO - Output Notebook: /home/jovyan/Notebooks/output-NB_Calendar.ipynb
+[2024-12-22T15:20:24.862+0000] {docker.py:73} INFO - Executing:   0%|          | 0/14 [00:00<?, ?cell/s]
+[2024-12-22T15:20:26.683+0000] {docker.py:73} INFO - Executing notebook with kernel: python3
+[2024-12-22T15:20:27.590+0000] {docker.py:73} INFO - Executing:   7%|▋         | 1/14 [00:02<00:35,  2.73s/cell]
+[2024-12-22T15:20:29.991+0000] {docker.py:73} INFO - :: loading settings :: url = jar:file:/usr/local/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2024-12-22T15:20:30.084+0000] {docker.py:73} INFO - Ivy Default Cache set to: /home/jovyan/.ivy2/cache
+[2024-12-22T15:20:30.085+0000] {docker.py:73} INFO - The jars for the packages stored in: /home/jovyan/.ivy2/jars
+[2024-12-22T15:20:30.088+0000] {docker.py:73} INFO - io.delta#delta-spark_2.12 added as a dependency
+[2024-12-22T15:20:30.089+0000] {docker.py:73} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-4bf1f6e4-72e4-495d-9144-5e2b2cc91083;1.0
+[2024-12-22T15:20:30.090+0000] {docker.py:73} INFO - 	confs: [default]
+[2024-12-22T15:20:41.405+0000] {docker.py:73} INFO - 	found io.delta#delta-spark_2.12;3.1.0 in central
+[2024-12-22T15:20:41.430+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-spark_2.12/3.1.0/delta-spark_2.12-3.1.0.jar ...
+[2024-12-22T15:21:37.596+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-12-22T15:21:37.607+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-22T15:21:37.612+0000] {process_utils.py:132} INFO - Sending 15 to group 305. PIDs of all processes in the group: [305]
+[2024-12-22T15:21:37.613+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 305
+[2024-12-22T15:21:37.620+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-22T15:21:37.631+0000] {docker.py:539} INFO - Stopping docker container
+[2024-12-22T15:21:38.250+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-22T15:21:38.374+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=305, status='terminated', exitcode=0, started='15:20:20') (305) terminated with exit code 0

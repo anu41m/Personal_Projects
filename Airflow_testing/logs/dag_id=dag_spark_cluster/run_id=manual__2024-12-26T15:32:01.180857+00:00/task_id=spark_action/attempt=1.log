@@ -1,0 +1,22 @@
+[2024-12-26T15:32:02.073+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-26T15:32:02.084+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_spark_cluster.spark_action manual__2024-12-26T15:32:01.180857+00:00 [queued]>
+[2024-12-26T15:32:02.091+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_spark_cluster.spark_action manual__2024-12-26T15:32:01.180857+00:00 [queued]>
+[2024-12-26T15:32:02.092+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-26T15:32:02.099+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): spark_action> on 2024-12-26 15:32:01.180857+00:00
+[2024-12-26T15:32:02.104+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=141) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-26T15:32:02.105+0000] {standard_task_runner.py:72} INFO - Started process 143 to run task
+[2024-12-26T15:32:02.105+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_spark_cluster', 'spark_action', 'manual__2024-12-26T15:32:01.180857+00:00', '--job-id', '511', '--raw', '--subdir', 'DAGS_FOLDER/dag_spark_cluster.py', '--cfg-path', '/tmp/tmpn_nbnjnh']
+[2024-12-26T15:32:02.106+0000] {standard_task_runner.py:105} INFO - Job 511: Subtask spark_action
+[2024-12-26T15:32:02.182+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_spark_cluster.spark_action manual__2024-12-26T15:32:01.180857+00:00 [running]> on host 73ea30f3c77a
+[2024-12-26T15:32:02.289+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Anoop M' AIRFLOW_CTX_DAG_ID='dag_spark_cluster' AIRFLOW_CTX_TASK_ID='spark_action' AIRFLOW_CTX_EXECUTION_DATE='2024-12-26T15:32:01.180857+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-26T15:32:01.180857+00:00'
+[2024-12-26T15:32:02.290+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-26T15:32:03.056+0000] {logging_mixin.py:190} INFO - Spark Master started.
+[2024-12-26T15:32:03.738+0000] {logging_mixin.py:190} INFO - Error starting Spark Worker: 500 Server Error for http+docker://localhost/v1.47/containers/2bd9b01734b50b993cb7aa7c18d89fd0dd41dd092ad235604df0027c81936fca/start: Internal Server Error ("driver failed programming external connectivity on endpoint spark-worker (26c6d7aca3ba8d5bcdaf5a47b39150e683544f3dc110c9074895a273d4230e6a): Bind for 0.0.0.0:8081 failed: port is already allocated")
+[2024-12-26T15:32:03.743+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-26T15:32:03.836+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-26T15:32:03.844+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_spark_cluster, task_id=spark_action, run_id=manual__2024-12-26T15:32:01.180857+00:00, execution_date=20241226T153201, start_date=20241226T153202, end_date=20241226T153203
+[2024-12-26T15:32:03.967+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-26T15:32:04.053+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-26T15:32:04.057+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,421 @@
+[2024-12-20T18:00:51.316+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-20T18:00:51.344+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: docker_dag.t2 manual__2024-12-20T18:00:35.390036+00:00 [queued]>
+[2024-12-20T18:00:51.350+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: docker_dag.t2 manual__2024-12-20T18:00:35.390036+00:00 [queued]>
+[2024-12-20T18:00:51.351+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-20T18:00:51.363+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): t2> on 2024-12-20 18:00:35.390036+00:00
+[2024-12-20T18:00:51.391+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1466) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-20T18:00:51.393+0000] {standard_task_runner.py:72} INFO - Started process 1467 to run task
+[2024-12-20T18:00:51.393+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'docker_dag', 't2', 'manual__2024-12-20T18:00:35.390036+00:00', '--job-id', '64', '--raw', '--subdir', 'DAGS_FOLDER/A_dag_test.py', '--cfg-path', '/tmp/tmp4h1_4gfw']
+[2024-12-20T18:00:51.396+0000] {standard_task_runner.py:105} INFO - Job 64: Subtask t2
+[2024-12-20T18:00:51.464+0000] {task_command.py:467} INFO - Running <TaskInstance: docker_dag.t2 manual__2024-12-20T18:00:35.390036+00:00 [running]> on host 6cb319c12099
+[2024-12-20T18:00:51.595+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='docker_dag' AIRFLOW_CTX_TASK_ID='t2' AIRFLOW_CTX_EXECUTION_DATE='2024-12-20T18:00:35.390036+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-20T18:00:35.390036+00:00'
+[2024-12-20T18:00:51.597+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-20T18:00:51.597+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-20T18:00:51.598+0000] {logging_mixin.py:190} INFO - Current task name:t2 state:running start_date:2024-12-20 18:00:51.344783+00:00
+[2024-12-20T18:00:51.598+0000] {logging_mixin.py:190} INFO - Dag name:docker_dag and current dag run status:running
+[2024-12-20T18:00:51.598+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-20T18:00:51.805+0000] {docker.py:379} INFO - Starting docker container from image spark-cluster:version-1.0.0
+[2024-12-20T18:00:51.847+0000] {docker.py:387} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-12-20T18:00:54.129+0000] {docker.py:73} INFO - Input Notebook:  /home/jovyan/Notebooks/NB_Calendar.ipynb
+[2024-12-20T18:00:54.132+0000] {docker.py:73} INFO - Output Notebook: /home/jovyan/Notebooks/output/NB_Calendar.ipynb
+[2024-12-20T18:00:54.198+0000] {docker.py:73} INFO - Executing:   0%|          | 0/14 [00:00<?, ?cell/s]
+[2024-12-20T18:00:56.657+0000] {docker.py:73} INFO - Executing notebook with kernel: python3
+[2024-12-20T18:00:59.839+0000] {docker.py:73} INFO - Executing:   7%|▋         | 1/14 [00:05<01:13,  5.63s/cell]
+[2024-12-20T18:01:13.271+0000] {job.py:229} INFO - Heartbeat recovered after 11.63 seconds
+[2024-12-20T18:01:16.584+0000] {docker.py:73} INFO - :: loading settings :: url = jar:file:/usr/local/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2024-12-20T18:01:16.678+0000] {docker.py:73} INFO - Ivy Default Cache set to: /home/jovyan/.ivy2/cache
+[2024-12-20T18:01:16.679+0000] {docker.py:73} INFO - The jars for the packages stored in: /home/jovyan/.ivy2/jars
+[2024-12-20T18:01:16.684+0000] {docker.py:73} INFO - io.delta#delta-spark_2.12 added as a dependency
+[2024-12-20T18:01:16.686+0000] {docker.py:73} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-714084ad-ecc9-4e16-a047-55cd158e602c;1.0
+[2024-12-20T18:01:16.686+0000] {docker.py:73} INFO - 	confs: [default]
+[2024-12-20T18:01:19.591+0000] {docker.py:73} INFO - 	found io.delta#delta-spark_2.12;3.2.0 in central
+[2024-12-20T18:01:20.194+0000] {docker.py:73} INFO - 	found io.delta#delta-storage;3.2.0 in central
+[2024-12-20T18:01:26.293+0000] {docker.py:73} INFO - 	found org.antlr#antlr4-runtime;4.9.3 in central
+[2024-12-20T18:01:26.627+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-spark_2.12/3.2.0/delta-spark_2.12-3.2.0.jar ...
+[2024-12-20T18:01:48.309+0000] {job.py:229} INFO - Heartbeat recovered after 18.45 seconds
+[2024-12-20T18:02:37.300+0000] {job.py:229} INFO - Heartbeat recovered after 19.45 seconds
+[2024-12-20T18:04:05.309+0000] {job.py:229} INFO - Heartbeat recovered after 14.64 seconds
+[2024-12-20T18:04:24.572+0000] {job.py:229} INFO - Heartbeat recovered after 19.30 seconds
+[2024-12-20T18:05:38.451+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] io.delta#delta-spark_2.12;3.2.0!delta-spark_2.12.jar (252056ms)
+[2024-12-20T18:05:38.636+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-storage/3.2.0/delta-storage-3.2.0.jar ...
+[2024-12-20T18:05:40.446+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] io.delta#delta-storage;3.2.0!delta-storage.jar (1988ms)
+[2024-12-20T18:05:40.618+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.9.3/antlr4-runtime-4.9.3.jar ...
+[2024-12-20T18:05:54.910+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] org.antlr#antlr4-runtime;4.9.3!antlr4-runtime.jar (14451ms)
+[2024-12-20T18:05:54.915+0000] {docker.py:73} INFO - :: resolution report :: resolve 9698ms :: artifacts dl 268531ms
+[2024-12-20T18:05:54.916+0000] {docker.py:73} INFO - 	:: modules in use:
+[2024-12-20T18:05:54.917+0000] {docker.py:73} INFO - 	io.delta#delta-spark_2.12;3.2.0 from central in [default]
+[2024-12-20T18:05:54.917+0000] {docker.py:73} INFO - 	io.delta#delta-storage;3.2.0 from central in [default]
+[2024-12-20T18:05:54.918+0000] {docker.py:73} INFO - 	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+[2024-12-20T18:05:54.919+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2024-12-20T18:05:54.920+0000] {docker.py:73} INFO - 	|                  |            modules            ||   artifacts   |
+[2024-12-20T18:05:54.921+0000] {docker.py:73} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2024-12-20T18:05:54.922+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2024-12-20T18:05:54.922+0000] {docker.py:73} INFO - 	|      default     |   3   |   3   |   3   |   0   ||   3   |   3   |
+[2024-12-20T18:05:54.923+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2024-12-20T18:05:54.955+0000] {docker.py:73} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-714084ad-ecc9-4e16-a047-55cd158e602c
+[2024-12-20T18:05:54.956+0000] {docker.py:73} INFO - 	confs: [default]
+[2024-12-20T18:05:55.002+0000] {docker.py:73} INFO - 	3 artifacts copied, 0 already retrieved (6321kB/48ms)
+[2024-12-20T18:05:55.229+0000] {docker.py:73} INFO - 24/12/20 18:05:55 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-12-20T18:05:55.513+0000] {docker.py:73} INFO - Setting default log level to "WARN".
+[2024-12-20T18:05:55.514+0000] {docker.py:73} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2024-12-20T18:05:56.309+0000] {docker.py:73} INFO - 24/12/20 18:05:56 WARN StandaloneSchedulerBackend: Dynamic allocation enabled without spark.executor.cores explicitly set, you may get more executors allocated than expected. It's recommended to set spark.executor.cores explicitly. Please check SPARK-30299 for more details.
+[2024-12-20T18:05:56.468+0000] {docker.py:73} INFO - 24/12/20 18:05:56 WARN StandaloneAppClient$ClientEndpoint: Failed to connect to master spark-master:7077
+[2024-12-20T18:05:56.469+0000] {docker.py:73} INFO - org.apache.spark.SparkException: Exception thrown in awaitResult: 
+[2024-12-20T18:05:56.469+0000] {docker.py:73} INFO - 	at org.apache.spark.util.SparkThreadUtils$.awaitResult(SparkThreadUtils.scala:56)
+[2024-12-20T18:05:56.470+0000] {docker.py:73} INFO - 	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:310)
+[2024-12-20T18:05:56.470+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+[2024-12-20T18:05:56.470+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.RpcEnv.setupEndpointRefByURI(RpcEnv.scala:102)
+[2024-12-20T18:05:56.470+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.RpcEnv.setupEndpointRef(RpcEnv.scala:110)
+[2024-12-20T18:05:56.470+0000] {docker.py:73} INFO - 	at org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint$$anon$1.run(StandaloneAppClient.scala:108)
+[2024-12-20T18:05:56.470+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2024-12-20T18:05:56.470+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2024-12-20T18:05:56.470+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2024-12-20T18:05:56.470+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2024-12-20T18:05:56.471+0000] {docker.py:73} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-20T18:05:56.471+0000] {docker.py:73} INFO - Caused by: java.io.IOException: Failed to connect to spark-master/<unresolved>:7077
+[2024-12-20T18:05:56.471+0000] {docker.py:73} INFO - 	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:294)
+[2024-12-20T18:05:56.471+0000] {docker.py:73} INFO - 	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:214)
+[2024-12-20T18:05:56.471+0000] {docker.py:73} INFO - 	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:226)
+[2024-12-20T18:05:56.471+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.NettyRpcEnv.createClient(NettyRpcEnv.scala:204)
+[2024-12-20T18:05:56.471+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:202)
+[2024-12-20T18:05:56.471+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:198)
+[2024-12-20T18:05:56.471+0000] {docker.py:73} INFO - 	... 4 more
+[2024-12-20T18:05:56.472+0000] {docker.py:73} INFO - Caused by: java.net.UnknownHostException: spark-master
+[2024-12-20T18:05:56.472+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+[2024-12-20T18:05:56.472+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533)
+[2024-12-20T18:05:56.472+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1385)
+[2024-12-20T18:05:56.472+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+[2024-12-20T18:05:56.472+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress.getByName(InetAddress.java:1256)
+[2024-12-20T18:05:56.472+0000] {docker.py:73} INFO - 	at io.netty.util.internal.SocketUtils$8.run(SocketUtils.java:156)
+[2024-12-20T18:05:56.472+0000] {docker.py:73} INFO - 	at io.netty.util.internal.SocketUtils$8.run(SocketUtils.java:153)
+[2024-12-20T18:05:56.472+0000] {docker.py:73} INFO - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+[2024-12-20T18:05:56.472+0000] {docker.py:73} INFO - 	at io.netty.util.internal.SocketUtils.addressByName(SocketUtils.java:153)
+[2024-12-20T18:05:56.472+0000] {docker.py:73} INFO - 	at io.netty.resolver.DefaultNameResolver.doResolve(DefaultNameResolver.java:41)
+[2024-12-20T18:05:56.472+0000] {docker.py:73} INFO - 	at io.netty.resolver.SimpleNameResolver.resolve(SimpleNameResolver.java:61)
+[2024-12-20T18:05:56.473+0000] {docker.py:73} INFO - 	at io.netty.resolver.SimpleNameResolver.resolve(SimpleNameResolver.java:53)
+[2024-12-20T18:05:56.473+0000] {docker.py:73} INFO - 	at io.netty.resolver.InetSocketAddressResolver.doResolve(InetSocketAddressResolver.java:55)
+[2024-12-20T18:05:56.473+0000] {docker.py:73} INFO - 	at io.netty.resolver.InetSocketAddressResolver.doResolve(InetSocketAddressResolver.java:31)
+[2024-12-20T18:05:56.473+0000] {docker.py:73} INFO - 	at io.netty.resolver.AbstractAddressResolver.resolve(AbstractAddressResolver.java:106)
+[2024-12-20T18:05:56.474+0000] {docker.py:73} INFO - 	at io.netty.bootstrap.Bootstrap.doResolveAndConnect0(Bootstrap.java:220)
+[2024-12-20T18:05:56.474+0000] {docker.py:73} INFO - 	at io.netty.bootstrap.Bootstrap.access$000(Bootstrap.java:46)
+[2024-12-20T18:05:56.474+0000] {docker.py:73} INFO - 	at io.netty.bootstrap.Bootstrap$1.operationComplete(Bootstrap.java:189)
+[2024-12-20T18:05:56.474+0000] {docker.py:73} INFO - 	at io.netty.bootstrap.Bootstrap$1.operationComplete(Bootstrap.java:175)
+[2024-12-20T18:05:56.474+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
+[2024-12-20T18:05:56.474+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:557)
+[2024-12-20T18:05:56.474+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
+[2024-12-20T18:05:56.474+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
+[2024-12-20T18:05:56.474+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:625)
+[2024-12-20T18:05:56.474+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:105)
+[2024-12-20T18:05:56.474+0000] {docker.py:73} INFO - 	at io.netty.channel.DefaultChannelPromise.trySuccess(DefaultChannelPromise.java:84)
+[2024-12-20T18:05:56.475+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetSuccess(AbstractChannel.java:990)
+[2024-12-20T18:05:56.475+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:516)
+[2024-12-20T18:05:56.475+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:429)
+[2024-12-20T18:05:56.475+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:486)
+[2024-12-20T18:05:56.475+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+[2024-12-20T18:05:56.475+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+[2024-12-20T18:05:56.475+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+[2024-12-20T18:05:56.475+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+[2024-12-20T18:05:56.475+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2024-12-20T18:05:56.475+0000] {docker.py:73} INFO - 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2024-12-20T18:05:56.475+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2024-12-20T18:05:56.475+0000] {docker.py:73} INFO - 	... 1 more
+[2024-12-20T18:06:16.375+0000] {docker.py:73} INFO - 24/12/20 18:06:16 WARN StandaloneAppClient$ClientEndpoint: Failed to connect to master spark-master:7077
+[2024-12-20T18:06:16.379+0000] {docker.py:73} INFO - org.apache.spark.SparkException: Exception thrown in awaitResult: 
+[2024-12-20T18:06:16.379+0000] {docker.py:73} INFO - 	at org.apache.spark.util.SparkThreadUtils$.awaitResult(SparkThreadUtils.scala:56)
+[2024-12-20T18:06:16.379+0000] {docker.py:73} INFO - 	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:310)
+[2024-12-20T18:06:16.379+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+[2024-12-20T18:06:16.380+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.RpcEnv.setupEndpointRefByURI(RpcEnv.scala:102)
+[2024-12-20T18:06:16.380+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.RpcEnv.setupEndpointRef(RpcEnv.scala:110)
+[2024-12-20T18:06:16.380+0000] {docker.py:73} INFO - 	at org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint$$anon$1.run(StandaloneAppClient.scala:108)
+[2024-12-20T18:06:16.380+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2024-12-20T18:06:16.380+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2024-12-20T18:06:16.380+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2024-12-20T18:06:16.380+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2024-12-20T18:06:16.380+0000] {docker.py:73} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-20T18:06:16.381+0000] {docker.py:73} INFO - Caused by: java.io.IOException: Failed to connect to spark-master/<unresolved>:7077
+[2024-12-20T18:06:16.381+0000] {docker.py:73} INFO - 	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:294)
+[2024-12-20T18:06:16.381+0000] {docker.py:73} INFO - 	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:214)
+[2024-12-20T18:06:16.381+0000] {docker.py:73} INFO - 	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:226)
+[2024-12-20T18:06:16.381+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.NettyRpcEnv.createClient(NettyRpcEnv.scala:204)
+[2024-12-20T18:06:16.381+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:202)
+[2024-12-20T18:06:16.381+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:198)
+[2024-12-20T18:06:16.382+0000] {docker.py:73} INFO - 	... 4 more
+[2024-12-20T18:06:16.382+0000] {docker.py:73} INFO - Caused by: java.net.UnknownHostException: spark-master
+[2024-12-20T18:06:16.382+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+[2024-12-20T18:06:16.382+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533)
+[2024-12-20T18:06:16.382+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1385)
+[2024-12-20T18:06:16.382+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+[2024-12-20T18:06:16.382+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress.getByName(InetAddress.java:1256)
+[2024-12-20T18:06:16.382+0000] {docker.py:73} INFO - 	at io.netty.util.internal.SocketUtils$8.run(SocketUtils.java:156)
+[2024-12-20T18:06:16.382+0000] {docker.py:73} INFO - 	at io.netty.util.internal.SocketUtils$8.run(SocketUtils.java:153)
+[2024-12-20T18:06:16.382+0000] {docker.py:73} INFO - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+[2024-12-20T18:06:16.382+0000] {docker.py:73} INFO - 	at io.netty.util.internal.SocketUtils.addressByName(SocketUtils.java:153)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.resolver.DefaultNameResolver.doResolve(DefaultNameResolver.java:41)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.resolver.SimpleNameResolver.resolve(SimpleNameResolver.java:61)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.resolver.SimpleNameResolver.resolve(SimpleNameResolver.java:53)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.resolver.InetSocketAddressResolver.doResolve(InetSocketAddressResolver.java:55)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.resolver.InetSocketAddressResolver.doResolve(InetSocketAddressResolver.java:31)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.resolver.AbstractAddressResolver.resolve(AbstractAddressResolver.java:106)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.bootstrap.Bootstrap.doResolveAndConnect0(Bootstrap.java:220)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.bootstrap.Bootstrap.access$000(Bootstrap.java:46)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.bootstrap.Bootstrap$1.operationComplete(Bootstrap.java:189)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.bootstrap.Bootstrap$1.operationComplete(Bootstrap.java:175)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:557)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
+[2024-12-20T18:06:16.383+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:625)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:105)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.channel.DefaultChannelPromise.trySuccess(DefaultChannelPromise.java:84)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetSuccess(AbstractChannel.java:990)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:516)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:429)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:486)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2024-12-20T18:06:16.384+0000] {docker.py:73} INFO - 	... 1 more
+[2024-12-20T18:06:36.393+0000] {docker.py:73} INFO - 24/12/20 18:06:36 WARN StandaloneAppClient$ClientEndpoint: Failed to connect to master spark-master:7077
+[2024-12-20T18:06:36.397+0000] {docker.py:73} INFO - org.apache.spark.SparkException: Exception thrown in awaitResult: 
+[2024-12-20T18:06:36.397+0000] {docker.py:73} INFO - 	at org.apache.spark.util.SparkThreadUtils$.awaitResult(SparkThreadUtils.scala:56)
+[2024-12-20T18:06:36.397+0000] {docker.py:73} INFO - 	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:310)
+[2024-12-20T18:06:36.398+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+[2024-12-20T18:06:36.398+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.RpcEnv.setupEndpointRefByURI(RpcEnv.scala:102)
+[2024-12-20T18:06:36.398+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.RpcEnv.setupEndpointRef(RpcEnv.scala:110)
+[2024-12-20T18:06:36.398+0000] {docker.py:73} INFO - 	at org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint$$anon$1.run(StandaloneAppClient.scala:108)
+[2024-12-20T18:06:36.398+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2024-12-20T18:06:36.398+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2024-12-20T18:06:36.398+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2024-12-20T18:06:36.398+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2024-12-20T18:06:36.398+0000] {docker.py:73} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-20T18:06:36.398+0000] {docker.py:73} INFO - Caused by: java.io.IOException: Failed to connect to spark-master/<unresolved>:7077
+[2024-12-20T18:06:36.398+0000] {docker.py:73} INFO - 	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:294)
+[2024-12-20T18:06:36.399+0000] {docker.py:73} INFO - 	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:214)
+[2024-12-20T18:06:36.399+0000] {docker.py:73} INFO - 	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:226)
+[2024-12-20T18:06:36.399+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.NettyRpcEnv.createClient(NettyRpcEnv.scala:204)
+[2024-12-20T18:06:36.399+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:202)
+[2024-12-20T18:06:36.399+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:198)
+[2024-12-20T18:06:36.399+0000] {docker.py:73} INFO - 	... 4 more
+[2024-12-20T18:06:36.399+0000] {docker.py:73} INFO - Caused by: java.net.UnknownHostException: spark-master
+[2024-12-20T18:06:36.399+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+[2024-12-20T18:06:36.399+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533)
+[2024-12-20T18:06:36.400+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1385)
+[2024-12-20T18:06:36.400+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+[2024-12-20T18:06:36.400+0000] {docker.py:73} INFO - 	at java.base/java.net.InetAddress.getByName(InetAddress.java:1256)
+[2024-12-20T18:06:36.400+0000] {docker.py:73} INFO - 	at io.netty.util.internal.SocketUtils$8.run(SocketUtils.java:156)
+[2024-12-20T18:06:36.400+0000] {docker.py:73} INFO - 	at io.netty.util.internal.SocketUtils$8.run(SocketUtils.java:153)
+[2024-12-20T18:06:36.400+0000] {docker.py:73} INFO - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+[2024-12-20T18:06:36.400+0000] {docker.py:73} INFO - 	at io.netty.util.internal.SocketUtils.addressByName(SocketUtils.java:153)
+[2024-12-20T18:06:36.400+0000] {docker.py:73} INFO - 	at io.netty.resolver.DefaultNameResolver.doResolve(DefaultNameResolver.java:41)
+[2024-12-20T18:06:36.400+0000] {docker.py:73} INFO - 	at io.netty.resolver.SimpleNameResolver.resolve(SimpleNameResolver.java:61)
+[2024-12-20T18:06:36.401+0000] {docker.py:73} INFO - 	at io.netty.resolver.SimpleNameResolver.resolve(SimpleNameResolver.java:53)
+[2024-12-20T18:06:36.401+0000] {docker.py:73} INFO - 	at io.netty.resolver.InetSocketAddressResolver.doResolve(InetSocketAddressResolver.java:55)
+[2024-12-20T18:06:36.401+0000] {docker.py:73} INFO - 	at io.netty.resolver.InetSocketAddressResolver.doResolve(InetSocketAddressResolver.java:31)
+[2024-12-20T18:06:36.401+0000] {docker.py:73} INFO - 	at io.netty.resolver.AbstractAddressResolver.resolve(AbstractAddressResolver.java:106)
+[2024-12-20T18:06:36.401+0000] {docker.py:73} INFO - 	at io.netty.bootstrap.Bootstrap.doResolveAndConnect0(Bootstrap.java:220)
+[2024-12-20T18:06:36.401+0000] {docker.py:73} INFO - 	at io.netty.bootstrap.Bootstrap.access$000(Bootstrap.java:46)
+[2024-12-20T18:06:36.401+0000] {docker.py:73} INFO - 	at io.netty.bootstrap.Bootstrap$1.operationComplete(Bootstrap.java:189)
+[2024-12-20T18:06:36.401+0000] {docker.py:73} INFO - 	at io.netty.bootstrap.Bootstrap$1.operationComplete(Bootstrap.java:175)
+[2024-12-20T18:06:36.401+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
+[2024-12-20T18:06:36.401+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:557)
+[2024-12-20T18:06:36.402+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
+[2024-12-20T18:06:36.402+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
+[2024-12-20T18:06:36.402+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:625)
+[2024-12-20T18:06:36.402+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:105)
+[2024-12-20T18:06:36.402+0000] {docker.py:73} INFO - 	at io.netty.channel.DefaultChannelPromise.trySuccess(DefaultChannelPromise.java:84)
+[2024-12-20T18:06:36.402+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetSuccess(AbstractChannel.java:990)
+[2024-12-20T18:06:36.402+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:516)
+[2024-12-20T18:06:36.402+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:429)
+[2024-12-20T18:06:36.402+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:486)
+[2024-12-20T18:06:36.402+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+[2024-12-20T18:06:36.402+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+[2024-12-20T18:06:36.402+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+[2024-12-20T18:06:36.402+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+[2024-12-20T18:06:36.403+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2024-12-20T18:06:36.403+0000] {docker.py:73} INFO - 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2024-12-20T18:06:36.403+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2024-12-20T18:06:36.403+0000] {docker.py:73} INFO - 	... 1 more
+[2024-12-20T18:06:56.677+0000] {docker.py:73} INFO - 24/12/20 18:06:56 ERROR StandaloneSchedulerBackend: Application has been killed. Reason: All masters are unresponsive! Giving up.
+[2024-12-20T18:06:56.859+0000] {docker.py:73} INFO - 24/12/20 18:06:56 WARN StandaloneSchedulerBackend: Application ID is not initialized yet.
+[2024-12-20T18:07:10.639+0000] {job.py:229} INFO - Heartbeat recovered after 11.82 seconds
+[2024-12-20T18:07:39.289+0000] {job.py:229} INFO - Heartbeat recovered after 28.71 seconds
+[2024-12-20T18:07:41.094+0000] {docker.py:73} INFO - 24/12/20 18:07:41 WARN Utils: spark.executor.instances less than spark.dynamicAllocation.minExecutors is invalid, ignoring its setting, please update your configs.
+[2024-12-20T18:07:42.290+0000] {docker.py:73} INFO - 24/12/20 18:07:42 WARN StandaloneAppClient: Attempted to request executors before driver fully initialized.
+[2024-12-20T18:07:48.355+0000] {docker.py:73} INFO - 24/12/20 18:07:48 WARN StandaloneAppClient$ClientEndpoint: Drop UnregisterApplication(null) because has not yet connected to master
+[2024-12-20T18:08:08.711+0000] {docker.py:73} INFO - Executing:  21%|██▏       | 3/14 [07:14<29:23, 160.30s/cell]
+[2024-12-20T18:08:11.689+0000] {docker.py:73} INFO - 24/12/20 18:08:11 WARN JavaUtils: Attempt to delete using native Unix OS command failed for path = /tmp/spark-85cdb5df-200e-42b1-832d-02228cfa936c. Falling back to Java IO way
+[2024-12-20T18:08:11.763+0000] {docker.py:73} INFO - java.io.IOException: Failed to delete: /tmp/spark-85cdb5df-200e-42b1-832d-02228cfa936c
+[2024-12-20T18:08:11.770+0000] {docker.py:73} INFO - 	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:173)
+[2024-12-20T18:08:11.778+0000] {docker.py:73} INFO - 	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:109)
+[2024-12-20T18:08:11.780+0000] {docker.py:73} INFO - 	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+[2024-12-20T18:08:11.791+0000] {docker.py:73} INFO - 	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+[2024-12-20T18:08:11.795+0000] {docker.py:73} INFO - 	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+[2024-12-20T18:08:11.806+0000] {docker.py:73} INFO - 	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+[2024-12-20T18:08:11.811+0000] {docker.py:73} INFO - 	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+[2024-12-20T18:08:11.812+0000] {docker.py:73} INFO - 	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+[2024-12-20T18:08:11.813+0000] {docker.py:73} INFO - 	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+[2024-12-20T18:08:11.816+0000] {docker.py:73} INFO - 	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+[2024-12-20T18:08:11.821+0000] {docker.py:73} INFO - 	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+[2024-12-20T18:08:11.823+0000] {docker.py:73} INFO - 	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+[2024-12-20T18:08:11.826+0000] {docker.py:73} INFO - 	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+[2024-12-20T18:08:11.828+0000] {docker.py:73} INFO - 	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+[2024-12-20T18:08:11.833+0000] {docker.py:73} INFO - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2024-12-20T18:08:11.834+0000] {docker.py:73} INFO - 	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+[2024-12-20T18:08:11.839+0000] {docker.py:73} INFO - 	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+[2024-12-20T18:08:11.846+0000] {docker.py:73} INFO - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2024-12-20T18:08:11.857+0000] {docker.py:73} INFO - 	at scala.util.Try$.apply(Try.scala:213)
+[2024-12-20T18:08:11.858+0000] {docker.py:73} INFO - 	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+[2024-12-20T18:08:11.865+0000] {docker.py:73} INFO - 	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+[2024-12-20T18:08:11.867+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2024-12-20T18:08:11.868+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2024-12-20T18:08:11.870+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2024-12-20T18:08:11.874+0000] {docker.py:73} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2024-12-20T18:08:11.883+0000] {docker.py:73} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-20T18:08:11.886+0000] {docker.py:73} INFO - Executing:  21%|██▏       | 3/14 [07:17<26:44, 145.84s/cell]
+[2024-12-20T18:08:11.888+0000] {docker.py:73} INFO - 
+[2024-12-20T18:08:12.026+0000] {docker.py:73} INFO - Traceback (most recent call last):
+[2024-12-20T18:08:12.029+0000] {docker.py:73} INFO -   File "/opt/conda/bin/papermill", line 8, in <module>
+[2024-12-20T18:08:12.035+0000] {docker.py:73} INFO -     sys.exit(papermill())
+[2024-12-20T18:08:12.043+0000] {docker.py:73} INFO -              ^^^^^^^^^^^
+[2024-12-20T18:08:12.044+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+[2024-12-20T18:08:12.086+0000] {docker.py:73} INFO -     return self.main(*args, **kwargs)
+[2024-12-20T18:08:12.103+0000] {docker.py:73} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-20T18:08:12.105+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/core.py", line 1078, in main
+[2024-12-20T18:08:12.113+0000] {docker.py:73} INFO -     rv = self.invoke(ctx)
+[2024-12-20T18:08:12.135+0000] {docker.py:73} INFO -          ^^^^^^^^^^^^^^^^
+[2024-12-20T18:08:12.138+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+[2024-12-20T18:08:12.141+0000] {docker.py:73} INFO -     return ctx.invoke(self.callback, **ctx.params)
+[2024-12-20T18:08:12.146+0000] {docker.py:73} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-20T18:08:12.157+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+[2024-12-20T18:08:12.170+0000] {docker.py:73} INFO -     return __callback(*args, **kwargs)
+[2024-12-20T18:08:12.196+0000] {docker.py:73} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-20T18:08:12.201+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/decorators.py", line 33, in new_func
+[2024-12-20T18:08:12.218+0000] {docker.py:73} INFO -     return f(get_current_context(), *args, **kwargs)
+[2024-12-20T18:08:12.222+0000] {docker.py:73} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-20T18:08:12.224+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/papermill/cli.py", line 235, in papermill
+[2024-12-20T18:08:12.236+0000] {docker.py:73} INFO -     execute_notebook(
+[2024-12-20T18:08:12.241+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/papermill/execute.py", line 131, in execute_notebook
+[2024-12-20T18:08:12.253+0000] {docker.py:73} INFO -     raise_for_execution_errors(nb, output_path)
+[2024-12-20T18:08:12.281+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+[2024-12-20T18:08:12.598+0000] {docker.py:73} INFO -     raise error
+[2024-12-20T18:08:12.639+0000] {docker.py:73} INFO - papermill.exceptions.PapermillExecutionError: 
+[2024-12-20T18:08:12.646+0000] {docker.py:73} INFO - ---------------------------------------------------------------------------
+[2024-12-20T18:08:12.659+0000] {docker.py:73} INFO - Exception encountered at "In [3]":
+[2024-12-20T18:08:12.665+0000] {docker.py:73} INFO - ---------------------------------------------------------------------------
+[2024-12-20T18:08:12.676+0000] {docker.py:73} INFO - Py4JJavaError                             Traceback (most recent call last)
+[2024-12-20T18:08:12.678+0000] {docker.py:73} INFO - Cell In[3], line 2
+[2024-12-20T18:08:12.729+0000] {docker.py:73} INFO -       1 # Configure Spark with Delta Lake (if needed)
+[2024-12-20T18:08:12.745+0000] {docker.py:73} INFO - ----> 2 spark = configure_spark_with_delta_pip(builder).getOrCreate()
+[2024-12-20T18:08:12.772+0000] {docker.py:73} INFO -       5 # Now you can use the Spark session
+[2024-12-20T18:08:12.783+0000] {docker.py:73} INFO -       6 spark
+[2024-12-20T18:08:12.788+0000] {docker.py:73} INFO - 
+[2024-12-20T18:08:12.789+0000] {docker.py:73} INFO - File /opt/conda/lib/python3.11/site-packages/pyspark/sql/session.py:500, in SparkSession.Builder.getOrCreate(self)
+[2024-12-20T18:08:12.791+0000] {docker.py:73} INFO -     497     sc = SparkContext.getOrCreate(sparkConf)
+[2024-12-20T18:08:12.811+0000] {docker.py:73} INFO -     498     # Do not update `SparkConf` for existing `SparkContext`, as it's shared
+[2024-12-20T18:08:12.812+0000] {docker.py:73} INFO -     499     # by all sessions.
+[2024-12-20T18:08:12.816+0000] {docker.py:73} INFO - --> 500     session = SparkSession(sc, options=self._options)
+[2024-12-20T18:08:12.818+0000] {docker.py:73} INFO -     501 else:
+[2024-12-20T18:08:12.824+0000] {docker.py:73} INFO -     502     getattr(
+[2024-12-20T18:08:12.828+0000] {docker.py:73} INFO -     503         getattr(session._jvm, "SparkSession$"), "MODULE$"
+[2024-12-20T18:08:12.835+0000] {docker.py:73} INFO -     504     ).applyModifiableSettings(session._jsparkSession, self._options)
+[2024-12-20T18:08:12.839+0000] {docker.py:73} INFO - 
+[2024-12-20T18:08:12.840+0000] {docker.py:73} INFO - File /opt/conda/lib/python3.11/site-packages/pyspark/sql/session.py:589, in SparkSession.__init__(self, sparkContext, jsparkSession, options)
+[2024-12-20T18:08:12.841+0000] {docker.py:73} INFO -     585         getattr(getattr(self._jvm, "SparkSession$"), "MODULE$").applyModifiableSettings(
+[2024-12-20T18:08:12.842+0000] {docker.py:73} INFO -     586             jsparkSession, options
+[2024-12-20T18:08:12.846+0000] {docker.py:73} INFO -     587         )
+[2024-12-20T18:08:12.850+0000] {docker.py:73} INFO -     588     else:
+[2024-12-20T18:08:12.858+0000] {docker.py:73} INFO - --> 589         jsparkSession = self._jvm.SparkSession(self._jsc.sc(), options)
+[2024-12-20T18:08:12.865+0000] {docker.py:73} INFO -     590 else:
+[2024-12-20T18:08:12.869+0000] {docker.py:73} INFO -     591     getattr(getattr(self._jvm, "SparkSession$"), "MODULE$").applyModifiableSettings(
+[2024-12-20T18:08:12.873+0000] {docker.py:73} INFO -     592         jsparkSession, options
+[2024-12-20T18:08:12.884+0000] {docker.py:73} INFO -     593     )
+[2024-12-20T18:08:12.886+0000] {docker.py:73} INFO - 
+[2024-12-20T18:08:12.894+0000] {docker.py:73} INFO - File /opt/conda/lib/python3.11/site-packages/py4j/java_gateway.py:1587, in JavaClass.__call__(self, *args)
+[2024-12-20T18:08:12.900+0000] {docker.py:73} INFO -    1581 command = proto.CONSTRUCTOR_COMMAND_NAME +\
+[2024-12-20T18:08:12.902+0000] {docker.py:73} INFO -    1582     self._command_header +\
+[2024-12-20T18:08:12.909+0000] {docker.py:73} INFO -    1583     args_command +\
+[2024-12-20T18:08:12.914+0000] {docker.py:73} INFO -    1584     proto.END_COMMAND_PART
+[2024-12-20T18:08:12.918+0000] {docker.py:73} INFO -    1586 answer = self._gateway_client.send_command(command)
+[2024-12-20T18:08:12.921+0000] {docker.py:73} INFO - -> 1587 return_value = get_return_value(
+[2024-12-20T18:08:12.927+0000] {docker.py:73} INFO -    1588     answer, self._gateway_client, None, self._fqn)
+[2024-12-20T18:08:12.932+0000] {docker.py:73} INFO -    1590 for temp_arg in temp_args:
+[2024-12-20T18:08:12.942+0000] {docker.py:73} INFO -    1591     if hasattr(temp_arg, "_detach"):
+[2024-12-20T18:08:12.951+0000] {docker.py:73} INFO - 
+[2024-12-20T18:08:12.972+0000] {docker.py:73} INFO - File /opt/conda/lib/python3.11/site-packages/py4j/protocol.py:326, in get_return_value(answer, gateway_client, target_id, name)
+[2024-12-20T18:08:12.973+0000] {docker.py:73} INFO -     324 value = OUTPUT_CONVERTER[type](answer[2:], gateway_client)
+[2024-12-20T18:08:12.989+0000] {docker.py:73} INFO -     325 if answer[1] == REFERENCE_TYPE:
+[2024-12-20T18:08:13.013+0000] {docker.py:73} INFO - --> 326     raise Py4JJavaError(
+[2024-12-20T18:08:13.016+0000] {docker.py:73} INFO -     327         "An error occurred while calling {0}{1}{2}.\n".
+[2024-12-20T18:08:13.030+0000] {docker.py:73} INFO -     328         format(target_id, ".", name), value)
+[2024-12-20T18:08:13.031+0000] {docker.py:73} INFO -     329 else:
+[2024-12-20T18:08:13.033+0000] {docker.py:73} INFO -     330     raise Py4JError(
+[2024-12-20T18:08:13.037+0000] {docker.py:73} INFO -     331         "An error occurred while calling {0}{1}{2}. Trace:\n{3}\n".
+[2024-12-20T18:08:13.040+0000] {docker.py:73} INFO -     332         format(target_id, ".", name, value))
+[2024-12-20T18:08:13.043+0000] {docker.py:73} INFO - 
+[2024-12-20T18:08:13.049+0000] {docker.py:73} INFO - Py4JJavaError: An error occurred while calling None.org.apache.spark.sql.SparkSession.
+[2024-12-20T18:08:13.063+0000] {docker.py:73} INFO - : java.lang.IllegalStateException: Cannot call methods on a stopped SparkContext.
+[2024-12-20T18:08:13.076+0000] {docker.py:73} INFO - This stopped SparkContext was created at:
+[2024-12-20T18:08:13.079+0000] {docker.py:73} INFO - 
+[2024-12-20T18:08:13.095+0000] {docker.py:73} INFO - org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+[2024-12-20T18:08:13.102+0000] {docker.py:73} INFO - java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2024-12-20T18:08:13.104+0000] {docker.py:73} INFO - java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+[2024-12-20T18:08:13.106+0000] {docker.py:73} INFO - java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2024-12-20T18:08:13.106+0000] {docker.py:73} INFO - java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+[2024-12-20T18:08:13.107+0000] {docker.py:73} INFO - java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+[2024-12-20T18:08:13.108+0000] {docker.py:73} INFO - py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+[2024-12-20T18:08:13.110+0000] {docker.py:73} INFO - py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2024-12-20T18:08:13.111+0000] {docker.py:73} INFO - py4j.Gateway.invoke(Gateway.java:238)
+[2024-12-20T18:08:13.112+0000] {docker.py:73} INFO - py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+[2024-12-20T18:08:13.115+0000] {docker.py:73} INFO - py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+[2024-12-20T18:08:13.117+0000] {docker.py:73} INFO - py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2024-12-20T18:08:13.121+0000] {docker.py:73} INFO - py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2024-12-20T18:08:13.124+0000] {docker.py:73} INFO - java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-20T18:08:13.126+0000] {docker.py:73} INFO - 
+[2024-12-20T18:08:13.127+0000] {docker.py:73} INFO - The currently active SparkContext was created at:
+[2024-12-20T18:08:13.128+0000] {docker.py:73} INFO - 
+[2024-12-20T18:08:13.129+0000] {docker.py:73} INFO - org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+[2024-12-20T18:08:13.131+0000] {docker.py:73} INFO - java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2024-12-20T18:08:13.133+0000] {docker.py:73} INFO - java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+[2024-12-20T18:08:13.134+0000] {docker.py:73} INFO - java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2024-12-20T18:08:13.135+0000] {docker.py:73} INFO - java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+[2024-12-20T18:08:13.136+0000] {docker.py:73} INFO - java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+[2024-12-20T18:08:13.136+0000] {docker.py:73} INFO - py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+[2024-12-20T18:08:13.137+0000] {docker.py:73} INFO - py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2024-12-20T18:08:13.137+0000] {docker.py:73} INFO - py4j.Gateway.invoke(Gateway.java:238)
+[2024-12-20T18:08:13.140+0000] {docker.py:73} INFO - py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+[2024-12-20T18:08:13.142+0000] {docker.py:73} INFO - py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+[2024-12-20T18:08:13.144+0000] {docker.py:73} INFO - py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2024-12-20T18:08:13.148+0000] {docker.py:73} INFO - py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2024-12-20T18:08:13.153+0000] {docker.py:73} INFO - java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-20T18:08:13.154+0000] {docker.py:73} INFO -          
+[2024-12-20T18:08:13.155+0000] {docker.py:73} INFO - 	at org.apache.spark.SparkContext.assertNotStopped(SparkContext.scala:122)
+[2024-12-20T18:08:13.156+0000] {docker.py:73} INFO - 	at org.apache.spark.sql.SparkSession.<init>(SparkSession.scala:113)
+[2024-12-20T18:08:13.165+0000] {docker.py:73} INFO - 	at org.apache.spark.sql.SparkSession.<init>(SparkSession.scala:106)
+[2024-12-20T18:08:13.170+0000] {docker.py:73} INFO - 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2024-12-20T18:08:13.173+0000] {docker.py:73} INFO - 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+[2024-12-20T18:08:13.174+0000] {docker.py:73} INFO - 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2024-12-20T18:08:13.175+0000] {docker.py:73} INFO - 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+[2024-12-20T18:08:13.177+0000] {docker.py:73} INFO - 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+[2024-12-20T18:08:13.179+0000] {docker.py:73} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+[2024-12-20T18:08:13.180+0000] {docker.py:73} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2024-12-20T18:08:13.182+0000] {docker.py:73} INFO - 	at py4j.Gateway.invoke(Gateway.java:238)
+[2024-12-20T18:08:13.184+0000] {docker.py:73} INFO - 	at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+[2024-12-20T18:08:13.185+0000] {docker.py:73} INFO - 	at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+[2024-12-20T18:08:13.188+0000] {docker.py:73} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2024-12-20T18:08:13.193+0000] {docker.py:73} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2024-12-20T18:08:13.200+0000] {docker.py:73} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-20T18:08:13.638+0000] {job.py:229} INFO - Heartbeat recovered after 17.11 seconds
+[2024-12-20T18:08:19.402+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-12-20T18:08:19.409+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-20T18:08:19.419+0000] {process_utils.py:132} INFO - Sending 15 to group 1467. PIDs of all processes in the group: [1467]
+[2024-12-20T18:08:19.429+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 1467
+[2024-12-20T18:08:19.439+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-20T18:08:19.460+0000] {docker.py:539} INFO - Stopping docker container
+[2024-12-20T18:08:19.872+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-20T18:08:19.971+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1467, status='terminated', exitcode=0, started='18:00:51') (1467) terminated with exit code 0

@@ -1,0 +1,330 @@
+[2024-12-27T15:34:35.421+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-27T15:34:35.453+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_Wallet_NTBK.NB_Notebook_job scheduled__2024-12-26T15:32:00+00:00 [queued]>
+[2024-12-27T15:34:35.469+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_Wallet_NTBK.NB_Notebook_job scheduled__2024-12-26T15:32:00+00:00 [queued]>
+[2024-12-27T15:34:35.469+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-27T15:34:35.491+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): NB_Notebook_job> on 2024-12-26 15:32:00+00:00
+[2024-12-27T15:34:35.504+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=73) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-27T15:34:35.507+0000] {standard_task_runner.py:72} INFO - Started process 77 to run task
+[2024-12-27T15:34:35.508+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_Wallet_NTBK', 'NB_Notebook_job', 'scheduled__2024-12-26T15:32:00+00:00', '--job-id', '524', '--raw', '--subdir', 'DAGS_FOLDER/dag_wallet.py', '--cfg-path', '/tmp/tmpxx0fgx0f']
+[2024-12-27T15:34:35.509+0000] {standard_task_runner.py:105} INFO - Job 524: Subtask NB_Notebook_job
+[2024-12-27T15:34:35.584+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_Wallet_NTBK.NB_Notebook_job scheduled__2024-12-26T15:32:00+00:00 [running]> on host 0d520416d7dc
+[2024-12-27T15:34:35.704+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Anoop M' AIRFLOW_CTX_DAG_ID='dag_Wallet_NTBK' AIRFLOW_CTX_TASK_ID='NB_Notebook_job' AIRFLOW_CTX_EXECUTION_DATE='2024-12-26T15:32:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-26T15:32:00+00:00'
+[2024-12-27T15:34:35.707+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-27T15:34:36.030+0000] {docker.py:379} INFO - Starting docker container from image spark-cluster:version-1.0.0
+[2024-12-27T15:34:40.314+0000] {docker.py:73} INFO - Input Notebook:  /home/jovyan/Notebooks/NB_DIM_wallet.ipynb
+[2024-12-27T15:34:40.331+0000] {docker.py:73} INFO - Output Notebook: /home/jovyan/Notebooks/output/NB_DIM_wallet.ipynb
+[2024-12-27T15:34:42.253+0000] {docker.py:73} INFO - Executing notebook with kernel: python3
+[2024-12-27T15:34:42.265+0000] {docker.py:73} INFO - Executing Cell 1---------------------------------------
+[2024-12-27T15:34:44.306+0000] {docker.py:73} INFO - Ending Cell 1------------------------------------------
+[2024-12-27T15:34:44.327+0000] {docker.py:73} INFO - Executing Cell 2---------------------------------------
+[2024-12-27T15:34:47.757+0000] {docker.py:73} INFO - :: loading settings :: url = jar:file:/usr/local/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2024-12-27T15:34:47.871+0000] {docker.py:73} INFO - Ivy Default Cache set to: /home/jovyan/.ivy2/cache
+[2024-12-27T15:34:47.873+0000] {docker.py:73} INFO - The jars for the packages stored in: /home/jovyan/.ivy2/jars
+[2024-12-27T15:34:47.877+0000] {docker.py:73} INFO - io.delta#delta-spark_2.12 added as a dependency
+[2024-12-27T15:34:47.888+0000] {docker.py:73} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-3a91b70b-c150-4e6f-9db3-6259991b8ca4;1.0
+[2024-12-27T15:34:47.891+0000] {docker.py:73} INFO - 	confs: [default]
+[2024-12-27T15:34:50.334+0000] {docker.py:73} INFO - 	found io.delta#delta-spark_2.12;3.1.0 in central
+[2024-12-27T15:34:50.862+0000] {docker.py:73} INFO - 	found io.delta#delta-storage;3.1.0 in central
+[2024-12-27T15:34:54.548+0000] {docker.py:73} INFO - 	found org.antlr#antlr4-runtime;4.9.3 in central
+[2024-12-27T15:34:54.793+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-spark_2.12/3.1.0/delta-spark_2.12-3.1.0.jar ...
+[2024-12-27T15:35:28.185+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] io.delta#delta-spark_2.12;3.1.0!delta-spark_2.12.jar (33590ms)
+[2024-12-27T15:35:28.414+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-storage/3.1.0/delta-storage-3.1.0.jar ...
+[2024-12-27T15:35:28.727+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] io.delta#delta-storage;3.1.0!delta-storage.jar (541ms)
+[2024-12-27T15:35:28.936+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.9.3/antlr4-runtime-4.9.3.jar ...
+[2024-12-27T15:35:31.061+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] org.antlr#antlr4-runtime;4.9.3!antlr4-runtime.jar (2320ms)
+[2024-12-27T15:35:31.081+0000] {docker.py:73} INFO - :: resolution report :: resolve 6703ms :: artifacts dl 36475ms
+[2024-12-27T15:35:31.082+0000] {docker.py:73} INFO - 	:: modules in use:
+[2024-12-27T15:35:31.082+0000] {docker.py:73} INFO - 	io.delta#delta-spark_2.12;3.1.0 from central in [default]
+[2024-12-27T15:35:31.083+0000] {docker.py:73} INFO - 	io.delta#delta-storage;3.1.0 from central in [default]
+[2024-12-27T15:35:31.084+0000] {docker.py:73} INFO - 	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+[2024-12-27T15:35:31.085+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2024-12-27T15:35:31.087+0000] {docker.py:73} INFO - 	|                  |            modules            ||   artifacts   |
+[2024-12-27T15:35:31.089+0000] {docker.py:73} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2024-12-27T15:35:31.090+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2024-12-27T15:35:31.090+0000] {docker.py:73} INFO - 	|      default     |   3   |   3   |   3   |   0   ||   3   |   3   |
+[2024-12-27T15:35:31.092+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2024-12-27T15:35:31.155+0000] {docker.py:73} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-3a91b70b-c150-4e6f-9db3-6259991b8ca4
+[2024-12-27T15:35:31.157+0000] {docker.py:73} INFO - 	confs: [default]
+[2024-12-27T15:35:31.357+0000] {docker.py:73} INFO - 	3 artifacts copied, 0 already retrieved (5727kB/198ms)
+[2024-12-27T15:35:33.553+0000] {docker.py:73} INFO - 24/12/27 15:35:33 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-12-27T15:35:34.895+0000] {docker.py:73} INFO - Setting default log level to "WARN".
+[2024-12-27T15:35:34.930+0000] {docker.py:73} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2024-12-27T15:35:44.837+0000] {docker.py:73} INFO - <pyspark.sql.session.SparkSession at 0xffff6f9168d0>
+[2024-12-27T15:35:44.845+0000] {docker.py:73} INFO - Ending Cell 2------------------------------------------
+[2024-12-27T15:35:44.847+0000] {docker.py:73} INFO - Executing Cell 3---------------------------------------
+[2024-12-27T15:35:44.889+0000] {docker.py:73} INFO - Ending Cell 3------------------------------------------
+[2024-12-27T15:35:44.895+0000] {docker.py:73} INFO - Executing Cell 4---------------------------------------
+[2024-12-27T15:35:48.327+0000] {docker.py:73} INFO - Ending Cell 4------------------------------------------
+[2024-12-27T15:35:48.342+0000] {docker.py:73} INFO - Executing Cell 5---------------------------------------
+[2024-12-27T15:35:49.432+0000] {docker.py:73} INFO - select distinct `Wallet used` from vw_src
+[2024-12-27T15:35:52.196+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 8) / 8]
+[2024-12-27T15:35:55.152+0000] {docker.py:73} INFO - 
+[2024-12-27T15:35:56.538+0000] {docker.py:73} INFO - +--------------------+
+[2024-12-27T15:35:56.542+0000] {docker.py:73} INFO - |         Wallet used|
+[2024-12-27T15:35:56.542+0000] {docker.py:73} INFO - +--------------------+
+[2024-12-27T15:35:56.545+0000] {docker.py:73} INFO - |               G-pay|
+[2024-12-27T15:35:56.548+0000] {docker.py:73} INFO - |       Amazon Wallet|
+[2024-12-27T15:35:56.550+0000] {docker.py:73} INFO - |           ICICI Pay|
+[2024-12-27T15:35:56.551+0000] {docker.py:73} INFO - |Credit Card - Amazon|
+[2024-12-27T15:35:56.551+0000] {docker.py:73} INFO - +--------------------+
+[2024-12-27T15:35:56.552+0000] {docker.py:73} INFO - Ending Cell 5------------------------------------------
+[2024-12-27T15:35:56.569+0000] {docker.py:73} INFO - Executing Cell 6---------------------------------------
+[2024-12-27T15:35:56.646+0000] {docker.py:73} INFO - Ending Cell 6------------------------------------------
+[2024-12-27T15:35:56.651+0000] {docker.py:73} INFO - Executing Cell 7---------------------------------------
+[2024-12-27T15:35:56.714+0000] {docker.py:73} INFO - Ending Cell 7------------------------------------------
+[2024-12-27T15:35:56.717+0000] {docker.py:73} INFO - Executing Cell 8---------------------------------------
+[2024-12-27T15:35:56.762+0000] {docker.py:73} INFO - MERGE INTO delta.`/mnt/Wallet/Wallet_Parquet` AS target USING vw_source AS source ON target.Walletsk = source.Walletsk WHEN MATCHED THEN UPDATE SET target.WalletUsed = source.WalletUsed, target.Walletsk = source.Walletsk
+[2024-12-27T15:35:56.765+0000] {docker.py:73} INFO - Ending Cell 8------------------------------------------
+[2024-12-27T15:35:56.768+0000] {docker.py:73} INFO - Executing Cell 9---------------------------------------
+[2024-12-27T15:36:00.182+0000] {docker.py:73} INFO - [Stage 4:===================================================>       (7 + 1) / 8]
+[2024-12-27T15:36:00.883+0000] {docker.py:73} INFO - 
+[2024-12-27T15:36:04.101+0000] {docker.py:73} INFO - 24/12/27 15:36:04 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[2024-12-27T15:36:07.667+0000] {docker.py:73} INFO - [Stage 9:>                                                         (0 + 0) / 50]
+[2024-12-27T15:36:07.778+0000] {docker.py:73} INFO - [Stage 9:>                                                         (0 + 8) / 50]
+[2024-12-27T15:36:13.356+0000] {docker.py:73} INFO - [Stage 9:=========>                                                (8 + 8) / 50]
+[2024-12-27T15:36:13.768+0000] {docker.py:73} INFO - [Stage 9:==========>                                               (9 + 8) / 50]
+[2024-12-27T15:36:13.982+0000] {docker.py:73} INFO - [Stage 9:============>                                           (11 + 10) / 50]
+[2024-12-27T15:36:14.169+0000] {docker.py:73} INFO - [Stage 9:==================>                                      (16 + 8) / 50]
+[2024-12-27T15:36:14.527+0000] {docker.py:73} INFO - [Stage 9:===================>                                     (17 + 8) / 50]
+[2024-12-27T15:36:14.934+0000] {docker.py:73} INFO - [Stage 9:======================>                                  (20 + 8) / 50]
+[2024-12-27T15:36:15.115+0000] {docker.py:73} INFO - [Stage 9:==========================>                              (23 + 8) / 50]
+[2024-12-27T15:36:15.895+0000] {docker.py:73} INFO - [Stage 9:=============================>                           (26 + 8) / 50]
+[2024-12-27T15:36:16.875+0000] {docker.py:73} INFO - [Stage 9:=============================>                           (26 + 9) / 50]
+[2024-12-27T15:36:17.048+0000] {docker.py:73} INFO - [Stage 9:==============================>                          (27 + 9) / 50]
+[2024-12-27T15:36:17.457+0000] {docker.py:73} INFO - [Stage 9:===================================>                     (31 + 8) / 50]
+[2024-12-27T15:36:17.684+0000] {docker.py:73} INFO - [Stage 9:====================================>                    (32 + 8) / 50]
+[2024-12-27T15:36:17.846+0000] {docker.py:73} INFO - [Stage 9:======================================>                  (34 + 8) / 50]
+[2024-12-27T15:36:18.176+0000] {docker.py:73} INFO - [Stage 9:=========================================>               (36 + 8) / 50]
+[2024-12-27T15:36:19.042+0000] {docker.py:73} INFO - [Stage 9:=========================================>               (36 + 9) / 50]
+[2024-12-27T15:36:19.217+0000] {docker.py:73} INFO - [Stage 9:============================================>            (39 + 8) / 50]
+[2024-12-27T15:36:19.434+0000] {docker.py:73} INFO - [Stage 9:=================================================>       (43 + 7) / 50]
+[2024-12-27T15:36:21.432+0000] {docker.py:73} INFO - [Stage 9:==================================================>      (44 + 6) / 50]
+[2024-12-27T15:36:22.122+0000] {docker.py:73} INFO - [Stage 9:===================================================>     (45 + 5) / 50]
+[2024-12-27T15:36:22.200+0000] {docker.py:73} INFO - [Stage 9:======================================================>  (48 + 2) / 50]
+[2024-12-27T15:36:26.008+0000] {docker.py:73} INFO - [Stage 12:>                                                         (0 + 0) / 1]
+[2024-12-27T15:36:26.118+0000] {docker.py:73} INFO - [Stage 12:>                                                         (0 + 1) / 1]
+[2024-12-27T15:36:30.809+0000] {docker.py:73} INFO - 
+[2024-12-27T15:36:37.466+0000] {docker.py:73} INFO - [Stage 14:>                                                        (0 + 8) / 50]
+[2024-12-27T15:36:38.606+0000] {docker.py:73} INFO - [Stage 14:=======>                                                 (7 + 9) / 50]
+[2024-12-27T15:36:38.811+0000] {docker.py:73} INFO - [Stage 14:=========>                                               (8 + 8) / 50]
+[2024-12-27T15:36:39.014+0000] {docker.py:73} INFO - [Stage 14:=================>                                      (16 + 9) / 50]
+[2024-12-27T15:36:39.279+0000] {docker.py:73} INFO - [Stage 14:==========================>                             (24 + 8) / 50]
+[2024-12-27T15:36:39.485+0000] {docker.py:73} INFO - [Stage 14:====================================>                   (33 + 8) / 50]
+[2024-12-27T15:36:39.636+0000] {docker.py:73} INFO - [Stage 14:=============================================>          (41 + 9) / 50]
+[2024-12-27T15:36:39.818+0000] {docker.py:73} INFO - [Stage 14:======================================================> (49 + 1) / 50]
+[2024-12-27T15:36:55.750+0000] {job.py:229} INFO - Heartbeat recovered after 11.94 seconds
+[2024-12-27T15:36:57.445+0000] {docker.py:73} INFO - ----------------------------------------
+[2024-12-27T15:36:57.472+0000] {docker.py:73} INFO - Exception occurred during processing of request from ('127.0.0.1', 51060)
+[2024-12-27T15:36:57.478+0000] {docker.py:73} INFO - ERROR:root:Exception while sending command.
+[2024-12-27T15:36:57.506+0000] {docker.py:73} INFO - Traceback (most recent call last):
+[2024-12-27T15:36:57.511+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/py4j/clientserver.py", line 516, in send_command
+[2024-12-27T15:36:57.513+0000] {docker.py:73} INFO -     raise Py4JNetworkError("Answer from Java side is empty")
+[2024-12-27T15:36:57.514+0000] {docker.py:73} INFO - py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+[2024-12-27T15:36:57.516+0000] {docker.py:73} INFO - 
+[2024-12-27T15:36:57.517+0000] {docker.py:73} INFO - During handling of the above exception, another exception occurred:
+[2024-12-27T15:36:57.521+0000] {docker.py:73} INFO - 
+[2024-12-27T15:36:57.525+0000] {docker.py:73} INFO - Traceback (most recent call last):
+[2024-12-27T15:36:57.527+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+[2024-12-27T15:36:57.529+0000] {docker.py:73} INFO -     response = connection.send_command(command)
+[2024-12-27T15:36:57.530+0000] {docker.py:73} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-27T15:36:57.534+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/py4j/clientserver.py", line 539, in send_command
+[2024-12-27T15:36:57.536+0000] {docker.py:73} INFO -     raise Py4JNetworkError(
+[2024-12-27T15:36:57.539+0000] {docker.py:73} INFO - py4j.protocol.Py4JNetworkError: Error while sending or receiving
+[2024-12-27T15:36:57.543+0000] {docker.py:73} INFO - Traceback (most recent call last):
+[2024-12-27T15:36:57.549+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/socketserver.py", line 317, in _handle_request_noblock
+[2024-12-27T15:36:57.553+0000] {docker.py:73} INFO -     self.process_request(request, client_address)
+[2024-12-27T15:36:57.558+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/socketserver.py", line 348, in process_request
+[2024-12-27T15:36:57.561+0000] {docker.py:73} INFO -     self.finish_request(request, client_address)
+[2024-12-27T15:36:57.564+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/socketserver.py", line 361, in finish_request
+[2024-12-27T15:36:57.566+0000] {docker.py:73} INFO -     self.RequestHandlerClass(request, client_address, self)
+[2024-12-27T15:36:57.572+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/socketserver.py", line 755, in __init__
+[2024-12-27T15:36:57.573+0000] {docker.py:73} INFO -     self.handle()
+[2024-12-27T15:36:57.573+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/pyspark/accumulators.py", line 295, in handle
+[2024-12-27T15:36:57.573+0000] {docker.py:73} INFO -     poll(accum_updates)
+[2024-12-27T15:36:57.579+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/pyspark/accumulators.py", line 267, in poll
+[2024-12-27T15:36:57.583+0000] {docker.py:73} INFO -     if self.rfile in r and func():
+[2024-12-27T15:36:57.589+0000] {docker.py:73} INFO -                            ^^^^^^
+[2024-12-27T15:36:57.592+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/pyspark/accumulators.py", line 271, in accum_updates
+[2024-12-27T15:36:57.596+0000] {docker.py:73} INFO -     num_updates = read_int(self.rfile)
+[2024-12-27T15:36:57.599+0000] {docker.py:73} INFO -                   ^^^^^^^^^^^^^^^^^^^^
+[2024-12-27T15:36:57.602+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/pyspark/serializers.py", line 596, in read_int
+[2024-12-27T15:36:57.608+0000] {docker.py:73} INFO -     raise EOFError
+[2024-12-27T15:36:57.609+0000] {docker.py:73} INFO - EOFError
+[2024-12-27T15:36:57.614+0000] {docker.py:73} INFO - ----------------------------------------
+[2024-12-27T15:36:57.615+0000] {docker.py:73} INFO - ERROR:root:Exception while sending command.
+[2024-12-27T15:36:57.616+0000] {docker.py:73} INFO - Traceback (most recent call last):
+[2024-12-27T15:36:57.617+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/py4j/clientserver.py", line 516, in send_command
+[2024-12-27T15:36:57.618+0000] {docker.py:73} INFO -     raise Py4JNetworkError("Answer from Java side is empty")
+[2024-12-27T15:36:57.619+0000] {docker.py:73} INFO - py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+[2024-12-27T15:36:57.619+0000] {docker.py:73} INFO - 
+[2024-12-27T15:36:57.619+0000] {docker.py:73} INFO - During handling of the above exception, another exception occurred:
+[2024-12-27T15:36:57.620+0000] {docker.py:73} INFO - 
+[2024-12-27T15:36:57.620+0000] {docker.py:73} INFO - Traceback (most recent call last):
+[2024-12-27T15:36:57.621+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+[2024-12-27T15:36:57.621+0000] {docker.py:73} INFO -     response = connection.send_command(command)
+[2024-12-27T15:36:57.622+0000] {docker.py:73} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-27T15:36:57.623+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/py4j/clientserver.py", line 539, in send_command
+[2024-12-27T15:36:57.624+0000] {docker.py:73} INFO -     raise Py4JNetworkError(
+[2024-12-27T15:36:57.624+0000] {docker.py:73} INFO - py4j.protocol.Py4JNetworkError: Error while sending or receiving
+[2024-12-27T15:37:03.106+0000] {docker.py:73} INFO - Ending Cell 9------------------------------------------
+[2024-12-27T15:37:06.348+0000] {docker.py:73} INFO - Traceback (most recent call last):
+[2024-12-27T15:37:06.446+0000] {docker.py:73} INFO -   File "/opt/conda/bin/papermill", line 8, in <module>
+[2024-12-27T15:37:06.459+0000] {docker.py:73} INFO -     sys.exit(papermill())
+[2024-12-27T15:37:06.463+0000] {docker.py:73} INFO -              ^^^^^^^^^^^
+[2024-12-27T15:37:06.468+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+[2024-12-27T15:37:06.481+0000] {docker.py:73} INFO -     return self.main(*args, **kwargs)
+[2024-12-27T15:37:06.481+0000] {docker.py:73} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-27T15:37:06.482+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/core.py", line 1078, in main
+[2024-12-27T15:37:06.482+0000] {docker.py:73} INFO -     rv = self.invoke(ctx)
+[2024-12-27T15:37:06.483+0000] {docker.py:73} INFO -          ^^^^^^^^^^^^^^^^
+[2024-12-27T15:37:06.491+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+[2024-12-27T15:37:06.495+0000] {docker.py:73} INFO -     return ctx.invoke(self.callback, **ctx.params)
+[2024-12-27T15:37:06.498+0000] {docker.py:73} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-27T15:37:06.499+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+[2024-12-27T15:37:06.500+0000] {docker.py:73} INFO -     return __callback(*args, **kwargs)
+[2024-12-27T15:37:06.503+0000] {docker.py:73} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-27T15:37:06.504+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/decorators.py", line 33, in new_func
+[2024-12-27T15:37:06.510+0000] {docker.py:73} INFO -     return f(get_current_context(), *args, **kwargs)
+[2024-12-27T15:37:06.516+0000] {docker.py:73} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-27T15:37:06.516+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/papermill/cli.py", line 235, in papermill
+[2024-12-27T15:37:06.517+0000] {docker.py:73} INFO -     execute_notebook(
+[2024-12-27T15:37:06.517+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/papermill/execute.py", line 131, in execute_notebook
+[2024-12-27T15:37:06.524+0000] {docker.py:73} INFO -     raise_for_execution_errors(nb, output_path)
+[2024-12-27T15:37:06.526+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+[2024-12-27T15:37:06.529+0000] {docker.py:73} INFO -     raise error
+[2024-12-27T15:37:06.540+0000] {docker.py:73} INFO - papermill.exceptions.PapermillExecutionError: 
+[2024-12-27T15:37:06.546+0000] {docker.py:73} INFO - ---------------------------------------------------------------------------
+[2024-12-27T15:37:06.549+0000] {docker.py:73} INFO - Exception encountered at "In [9]":
+[2024-12-27T15:37:06.551+0000] {docker.py:73} INFO - ---------------------------------------------------------------------------
+[2024-12-27T15:37:06.553+0000] {docker.py:73} INFO - Py4JError                                 Traceback (most recent call last)
+[2024-12-27T15:37:06.554+0000] {docker.py:73} INFO - Cell In[9], line 3
+[2024-12-27T15:37:06.555+0000] {docker.py:73} INFO -       1 if DeltaTable.isDeltaTable(spark, trgt_path_processed):
+[2024-12-27T15:37:06.556+0000] {docker.py:73} INFO -       2     query = f"MERGE INTO delta.`{trgt_path_processed}` AS target USING vw_source AS source ON target.Walletsk = source.Walletsk WHEN MATCHED THEN UPDATE SET {set_clause}"
+[2024-12-27T15:37:06.557+0000] {docker.py:73} INFO - ----> 3     spark.sql(query)
+[2024-12-27T15:37:06.559+0000] {docker.py:73} INFO -       4 else :
+[2024-12-27T15:37:06.560+0000] {docker.py:73} INFO -       5     query=f"CREATE TABLE delta.`{trgt_path_processed}` USING DELTA AS SELECT * FROM vw_source"
+[2024-12-27T15:37:06.563+0000] {docker.py:73} INFO - 
+[2024-12-27T15:37:06.564+0000] {docker.py:73} INFO - File /opt/conda/lib/python3.11/site-packages/pyspark/sql/session.py:1631, in SparkSession.sql(self, sqlQuery, args, **kwargs)
+[2024-12-27T15:37:06.568+0000] {docker.py:73} INFO -    1627         assert self._jvm is not None
+[2024-12-27T15:37:06.572+0000] {docker.py:73} INFO -    1628         litArgs = self._jvm.PythonUtils.toArray(
+[2024-12-27T15:37:06.572+0000] {docker.py:73} INFO -    1629             [_to_java_column(lit(v)) for v in (args or [])]
+[2024-12-27T15:37:06.572+0000] {docker.py:73} INFO -    1630         )
+[2024-12-27T15:37:06.572+0000] {docker.py:73} INFO - -> 1631     return DataFrame(self._jsparkSession.sql(sqlQuery, litArgs), self)
+[2024-12-27T15:37:06.572+0000] {docker.py:73} INFO -    1632 finally:
+[2024-12-27T15:37:06.573+0000] {docker.py:73} INFO -    1633     if len(kwargs) > 0:
+[2024-12-27T15:37:06.573+0000] {docker.py:73} INFO - 
+[2024-12-27T15:37:06.573+0000] {docker.py:73} INFO - File /opt/conda/lib/python3.11/site-packages/py4j/java_gateway.py:1322, in JavaMember.__call__(self, *args)
+[2024-12-27T15:37:06.574+0000] {docker.py:73} INFO -    1316 command = proto.CALL_COMMAND_NAME +\
+[2024-12-27T15:37:06.574+0000] {docker.py:73} INFO -    1317     self.command_header +\
+[2024-12-27T15:37:06.576+0000] {docker.py:73} INFO -    1318     args_command +\
+[2024-12-27T15:37:06.579+0000] {docker.py:73} INFO -    1319     proto.END_COMMAND_PART
+[2024-12-27T15:37:06.585+0000] {docker.py:73} INFO -    1321 answer = self.gateway_client.send_command(command)
+[2024-12-27T15:37:06.586+0000] {docker.py:73} INFO - -> 1322 return_value = get_return_value(
+[2024-12-27T15:37:06.587+0000] {docker.py:73} INFO -    1323     answer, self.gateway_client, self.target_id, self.name)
+[2024-12-27T15:37:06.587+0000] {docker.py:73} INFO -    1325 for temp_arg in temp_args:
+[2024-12-27T15:37:06.590+0000] {docker.py:73} INFO -    1326     if hasattr(temp_arg, "_detach"):
+[2024-12-27T15:37:06.591+0000] {docker.py:73} INFO - 
+[2024-12-27T15:37:06.593+0000] {docker.py:73} INFO - File /opt/conda/lib/python3.11/site-packages/pyspark/errors/exceptions/captured.py:179, in capture_sql_exception.<locals>.deco(*a, **kw)
+[2024-12-27T15:37:06.594+0000] {docker.py:73} INFO -     177 def deco(*a: Any, **kw: Any) -> Any:
+[2024-12-27T15:37:06.595+0000] {docker.py:73} INFO -     178     try:
+[2024-12-27T15:37:06.596+0000] {docker.py:73} INFO - --> 179         return f(*a, **kw)
+[2024-12-27T15:37:06.603+0000] {docker.py:73} INFO -     180     except Py4JJavaError as e:
+[2024-12-27T15:37:06.604+0000] {docker.py:73} INFO -     181         converted = convert_exception(e.java_exception)
+[2024-12-27T15:37:06.607+0000] {docker.py:73} INFO - 
+[2024-12-27T15:37:06.610+0000] {docker.py:73} INFO - File /opt/conda/lib/python3.11/site-packages/py4j/protocol.py:334, in get_return_value(answer, gateway_client, target_id, name)
+[2024-12-27T15:37:06.614+0000] {docker.py:73} INFO -     330             raise Py4JError(
+[2024-12-27T15:37:06.616+0000] {docker.py:73} INFO -     331                 "An error occurred while calling {0}{1}{2}. Trace:\n{3}\n".
+[2024-12-27T15:37:06.620+0000] {docker.py:73} INFO -     332                 format(target_id, ".", name, value))
+[2024-12-27T15:37:06.622+0000] {docker.py:73} INFO -     333     else:
+[2024-12-27T15:37:06.623+0000] {docker.py:73} INFO - --> 334         raise Py4JError(
+[2024-12-27T15:37:06.623+0000] {docker.py:73} INFO -     335             "An error occurred while calling {0}{1}{2}".
+[2024-12-27T15:37:06.701+0000] {docker.py:73} INFO -     336             format(target_id, ".", name))
+[2024-12-27T15:37:06.708+0000] {docker.py:73} INFO -     337 else:
+[2024-12-27T15:37:06.716+0000] {docker.py:73} INFO -     338     type = answer[1]
+[2024-12-27T15:37:06.724+0000] {docker.py:73} INFO - 
+[2024-12-27T15:37:06.725+0000] {docker.py:73} INFO - Py4JError: An error occurred while calling o33.sql
+[2024-12-27T15:37:13.249+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 519, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 396, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 453, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 1}
+[2024-12-27T15:37:13.698+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=dag_Wallet_NTBK, task_id=NB_Notebook_job, run_id=scheduled__2024-12-26T15:32:00+00:00, execution_date=20241226T153200, start_date=20241227T153435, end_date=20241227T153713
+[2024-12-27T15:37:14.172+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-27T15:37:14.203+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 524 for task NB_Notebook_job (Docker container failed: {'StatusCode': 1}; 77)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 519, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 396, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 453, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 1}
+[2024-12-27T15:37:14.467+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-12-27T15:37:15.088+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-27T15:37:15.116+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

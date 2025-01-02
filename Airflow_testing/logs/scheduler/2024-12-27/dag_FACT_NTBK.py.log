@@ -1,0 +1,42 @@
+[2024-12-27T15:34:30.814+0000] {processor.py:186} INFO - Started process (PID=72) to work on /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:34:30.818+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_FACT_NTBK.py for tasks to queue
+[2024-12-27T15:34:30.825+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:34:30.825+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:34:30.861+0000] {processor.py:925} INFO - DAG(s) 'dag_Fact_NTBK' retrieved from /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:34:30.921+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:34:30.920+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:34:30.966+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:34:30.966+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Fact_NTBK to 2024-12-26 15:35:00+00:00, run_after=2024-12-27 15:35:00+00:00
+[2024-12-27T15:34:31.022+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_FACT_NTBK.py took 0.220 seconds
+[2024-12-27T15:35:01.927+0000] {processor.py:186} INFO - Started process (PID=92) to work on /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:35:01.928+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_FACT_NTBK.py for tasks to queue
+[2024-12-27T15:35:01.932+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:01.931+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:35:01.949+0000] {processor.py:925} INFO - DAG(s) 'dag_Fact_NTBK' retrieved from /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:35:01.969+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:01.969+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:35:02.230+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:02.229+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Fact_NTBK to 2024-12-27 15:35:00+00:00, run_after=2024-12-28 15:35:00+00:00
+[2024-12-27T15:35:02.260+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_FACT_NTBK.py took 0.348 seconds
+[2024-12-27T15:35:40.162+0000] {processor.py:186} INFO - Started process (PID=110) to work on /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:35:40.173+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_FACT_NTBK.py for tasks to queue
+[2024-12-27T15:35:40.187+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:40.186+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:35:40.239+0000] {processor.py:925} INFO - DAG(s) 'dag_Fact_NTBK' retrieved from /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:35:41.362+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:41.361+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:35:41.437+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:41.435+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Fact_NTBK to 2024-12-27 15:35:00+00:00, run_after=2024-12-28 15:35:00+00:00
+[2024-12-27T15:35:41.494+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_FACT_NTBK.py took 1.349 seconds
+[2024-12-27T15:36:31.256+0000] {processor.py:186} INFO - Started process (PID=130) to work on /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:36:31.270+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_FACT_NTBK.py for tasks to queue
+[2024-12-27T15:36:31.287+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:36:31.286+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:36:31.451+0000] {processor.py:925} INFO - DAG(s) 'dag_Fact_NTBK' retrieved from /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:36:32.342+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:36:32.254+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:36:32.755+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:36:32.746+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Fact_NTBK to 2024-12-27 15:35:00+00:00, run_after=2024-12-28 15:35:00+00:00
+[2024-12-27T15:36:32.939+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_FACT_NTBK.py took 1.717 seconds
+[2024-12-27T15:37:03.916+0000] {processor.py:186} INFO - Started process (PID=142) to work on /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:37:03.925+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_FACT_NTBK.py for tasks to queue
+[2024-12-27T15:37:03.955+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:03.953+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:37:04.080+0000] {processor.py:925} INFO - DAG(s) 'dag_Fact_NTBK' retrieved from /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:37:04.282+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:04.281+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:37:04.440+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:04.435+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Fact_NTBK to 2024-12-27 15:35:00+00:00, run_after=2024-12-28 15:35:00+00:00
+[2024-12-27T15:37:04.559+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_FACT_NTBK.py took 0.732 seconds
+[2024-12-27T15:37:35.572+0000] {processor.py:186} INFO - Started process (PID=159) to work on /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:37:35.573+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_FACT_NTBK.py for tasks to queue
+[2024-12-27T15:37:35.589+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:35.589+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:37:35.631+0000] {processor.py:925} INFO - DAG(s) 'dag_Fact_NTBK' retrieved from /opt/airflow/dags/dag_FACT_NTBK.py
+[2024-12-27T15:37:35.691+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:35.691+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:37:35.749+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:35.749+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Fact_NTBK to 2024-12-27 15:35:00+00:00, run_after=2024-12-28 15:35:00+00:00
+[2024-12-27T15:37:35.792+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_FACT_NTBK.py took 0.234 seconds

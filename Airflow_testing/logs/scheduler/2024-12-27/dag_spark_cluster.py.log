@@ -1,0 +1,42 @@
+[2024-12-27T15:34:27.821+0000] {processor.py:186} INFO - Started process (PID=53) to work on /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:34:27.823+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_spark_cluster.py for tasks to queue
+[2024-12-27T15:34:27.830+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:34:27.829+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:34:28.345+0000] {processor.py:925} INFO - DAG(s) 'dag_spark_cluster' retrieved from /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:34:28.905+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:34:28.903+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:34:28.973+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:34:28.972+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_spark_cluster to None, run_after=None
+[2024-12-27T15:34:29.046+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_spark_cluster.py took 1.231 seconds
+[2024-12-27T15:34:59.924+0000] {processor.py:186} INFO - Started process (PID=81) to work on /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:34:59.926+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_spark_cluster.py for tasks to queue
+[2024-12-27T15:34:59.933+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:34:59.932+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:34:59.961+0000] {processor.py:925} INFO - DAG(s) 'dag_spark_cluster' retrieved from /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:34:59.993+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:34:59.993+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:35:00.019+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:00.019+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_spark_cluster to None, run_after=None
+[2024-12-27T15:35:00.040+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_spark_cluster.py took 0.130 seconds
+[2024-12-27T15:35:30.588+0000] {processor.py:186} INFO - Started process (PID=105) to work on /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:35:30.591+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_spark_cluster.py for tasks to queue
+[2024-12-27T15:35:30.641+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:30.606+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:35:30.681+0000] {processor.py:925} INFO - DAG(s) 'dag_spark_cluster' retrieved from /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:35:30.907+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:30.907+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:35:36.335+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:35:36.331+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_spark_cluster to None, run_after=None
+[2024-12-27T15:35:36.384+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_spark_cluster.py took 5.817 seconds
+[2024-12-27T15:36:07.769+0000] {processor.py:186} INFO - Started process (PID=120) to work on /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:36:07.782+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_spark_cluster.py for tasks to queue
+[2024-12-27T15:36:07.842+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:36:07.837+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:36:20.932+0000] {processor.py:925} INFO - DAG(s) 'dag_spark_cluster' retrieved from /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:36:21.530+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:36:21.521+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:36:21.716+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:36:21.693+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_spark_cluster to None, run_after=None
+[2024-12-27T15:36:22.290+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_spark_cluster.py took 14.904 seconds
+[2024-12-27T15:36:56.024+0000] {processor.py:186} INFO - Started process (PID=134) to work on /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:36:56.108+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_spark_cluster.py for tasks to queue
+[2024-12-27T15:36:56.341+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:36:56.324+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:36:56.948+0000] {processor.py:925} INFO - DAG(s) 'dag_spark_cluster' retrieved from /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:36:57.424+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:36:57.418+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:36:57.568+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:36:57.565+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_spark_cluster to None, run_after=None
+[2024-12-27T15:36:57.693+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_spark_cluster.py took 2.804 seconds
+[2024-12-27T15:37:29.545+0000] {processor.py:186} INFO - Started process (PID=151) to work on /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:37:29.562+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_spark_cluster.py for tasks to queue
+[2024-12-27T15:37:29.594+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:29.591+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:37:29.726+0000] {processor.py:925} INFO - DAG(s) 'dag_spark_cluster' retrieved from /opt/airflow/dags/dag_spark_cluster.py
+[2024-12-27T15:37:30.061+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:30.053+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-27T15:37:30.269+0000] {logging_mixin.py:190} INFO - [2024-12-27T15:37:30.268+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_spark_cluster to None, run_after=None
+[2024-12-27T15:37:30.427+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_spark_cluster.py took 0.994 seconds

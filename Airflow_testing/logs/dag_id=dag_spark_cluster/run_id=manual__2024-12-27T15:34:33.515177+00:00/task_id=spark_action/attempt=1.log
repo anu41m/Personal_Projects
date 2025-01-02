@@ -1,0 +1,22 @@
+[2024-12-27T15:34:35.421+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-27T15:34:35.446+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_spark_cluster.spark_action manual__2024-12-27T15:34:33.515177+00:00 [queued]>
+[2024-12-27T15:34:35.461+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_spark_cluster.spark_action manual__2024-12-27T15:34:33.515177+00:00 [queued]>
+[2024-12-27T15:34:35.464+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-27T15:34:35.482+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): spark_action> on 2024-12-27 15:34:33.515177+00:00
+[2024-12-27T15:34:35.505+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=74) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-27T15:34:35.508+0000] {standard_task_runner.py:72} INFO - Started process 78 to run task
+[2024-12-27T15:34:35.508+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_spark_cluster', 'spark_action', 'manual__2024-12-27T15:34:33.515177+00:00', '--job-id', '525', '--raw', '--subdir', 'DAGS_FOLDER/dag_spark_cluster.py', '--cfg-path', '/tmp/tmptd4b3fp_']
+[2024-12-27T15:34:35.509+0000] {standard_task_runner.py:105} INFO - Job 525: Subtask spark_action
+[2024-12-27T15:34:35.592+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_spark_cluster.spark_action manual__2024-12-27T15:34:33.515177+00:00 [running]> on host 0d520416d7dc
+[2024-12-27T15:34:35.720+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Anoop M' AIRFLOW_CTX_DAG_ID='dag_spark_cluster' AIRFLOW_CTX_TASK_ID='spark_action' AIRFLOW_CTX_EXECUTION_DATE='2024-12-27T15:34:33.515177+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-27T15:34:33.515177+00:00'
+[2024-12-27T15:34:35.723+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-27T15:34:35.954+0000] {logging_mixin.py:190} INFO - Error starting Spark Master: 409 Client Error for http+docker://localhost/v1.47/containers/create?name=spark-master: Conflict ("Conflict. The container name "/spark-master" is already in use by container "fdccb5bb2a2d95e983463a7dbe87b974b93893711ab6ede394e4491801aad2fa". You have to remove (or rename) that container to be able to reuse that name.")
+[2024-12-27T15:34:37.872+0000] {logging_mixin.py:190} INFO - Spark Worker started.
+[2024-12-27T15:34:37.891+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-27T15:34:38.016+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-27T15:34:38.027+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_spark_cluster, task_id=spark_action, run_id=manual__2024-12-27T15:34:33.515177+00:00, execution_date=20241227T153433, start_date=20241227T153435, end_date=20241227T153438
+[2024-12-27T15:34:38.158+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-27T15:34:38.248+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-27T15:34:38.250+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

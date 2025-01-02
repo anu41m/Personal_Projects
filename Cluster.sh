@@ -1,5 +1,5 @@
 # Prompt user for input
-echo "Enter \"start\" to build the docker image||\"scale\" to scale workers||\"stop\" to stop cluster || \"restart\" to restart the cluster:"
+echo "Enter \"start\" to start the docker image ||\"build\" to build the docker image ||\"scale\" to scale workers||\"stop\" to stop cluster || \"restart\" to restart the cluster:"
 read user_input
 # Move to the Docker Setup Directory
 cd /Users/anoopm/my_jupyter_project/docker_setup || true
@@ -12,9 +12,6 @@ echo "==============Waiting for 5 seconds to Open Docker====================" &&
 
 # Delete all existing Docker Containers and Networks
 docker compose down || true
-
-# Build the Docker Image
-docker compose build
 
 # Run the Docker Image
 docker compose up -d 
@@ -45,6 +42,9 @@ elif [ "$user_input" == "stop" ]; then
     # Delete all existing Docker Containers and Networks
     docker compose down || true
     echo "=============== Cluster Stopped ===================="
+elif [ "$user_input" == "build" ]; then
+    docker compose down || true
+    docker compose build --progress=plain
 else
     echo "Invalid input"
 fi

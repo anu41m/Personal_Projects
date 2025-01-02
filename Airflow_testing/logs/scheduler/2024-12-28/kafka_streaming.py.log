@@ -1,0 +1,323 @@
+[2024-12-28T10:57:16.124+0000] {processor.py:186} INFO - Started process (PID=73) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:57:16.132+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T10:57:16.143+0000] {logging_mixin.py:190} INFO - [2024-12-28T10:57:16.142+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:57:16.159+0000] {logging_mixin.py:190} INFO - [2024-12-28T10:57:16.154+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T10:57:16.159+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:57:16.237+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.145 seconds
+[2024-12-28T10:57:46.482+0000] {processor.py:186} INFO - Started process (PID=86) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:57:46.484+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T10:57:46.486+0000] {logging_mixin.py:190} INFO - [2024-12-28T10:57:46.485+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:57:46.509+0000] {logging_mixin.py:190} INFO - [2024-12-28T10:57:46.505+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T10:57:46.510+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:57:46.524+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.051 seconds
+[2024-12-28T10:58:17.545+0000] {processor.py:186} INFO - Started process (PID=104) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:58:17.549+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T10:58:17.573+0000] {logging_mixin.py:190} INFO - [2024-12-28T10:58:17.571+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:58:17.609+0000] {logging_mixin.py:190} INFO - [2024-12-28T10:58:17.591+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T10:58:17.624+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:58:17.749+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.223 seconds
+[2024-12-28T10:58:47.846+0000] {processor.py:186} INFO - Started process (PID=117) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:58:47.851+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T10:58:47.855+0000] {logging_mixin.py:190} INFO - [2024-12-28T10:58:47.854+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:58:47.861+0000] {logging_mixin.py:190} INFO - [2024-12-28T10:58:47.859+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T10:58:47.861+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:58:47.887+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.049 seconds
+[2024-12-28T10:59:18.667+0000] {processor.py:186} INFO - Started process (PID=131) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:59:18.671+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T10:59:18.682+0000] {logging_mixin.py:190} INFO - [2024-12-28T10:59:18.680+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:59:18.689+0000] {logging_mixin.py:190} INFO - [2024-12-28T10:59:18.688+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T10:59:18.690+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:59:18.710+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.066 seconds
+[2024-12-28T10:59:49.187+0000] {processor.py:186} INFO - Started process (PID=145) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:59:49.190+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T10:59:49.203+0000] {logging_mixin.py:190} INFO - [2024-12-28T10:59:49.202+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:59:49.275+0000] {logging_mixin.py:190} INFO - [2024-12-28T10:59:49.240+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T10:59:49.281+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T10:59:49.363+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.193 seconds
+[2024-12-28T11:00:19.801+0000] {processor.py:186} INFO - Started process (PID=159) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:00:19.803+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T11:00:19.812+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:00:19.811+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:00:19.831+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:00:19.827+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T11:00:19.833+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:00:19.968+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.187 seconds
+[2024-12-28T11:00:50.171+0000] {processor.py:186} INFO - Started process (PID=173) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:00:50.173+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T11:00:50.179+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:00:50.178+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:00:50.186+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:00:50.184+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T11:00:50.187+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:00:50.230+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.078 seconds
+[2024-12-28T11:01:20.637+0000] {processor.py:186} INFO - Started process (PID=188) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:01:20.640+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T11:01:20.652+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:01:20.652+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:01:20.675+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:01:20.665+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T11:01:20.676+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:01:20.752+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.131 seconds
+[2024-12-28T11:01:51.688+0000] {processor.py:186} INFO - Started process (PID=202) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:01:51.690+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T11:01:51.695+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:01:51.693+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:01:51.708+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:01:51.706+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T11:01:51.708+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:01:51.744+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.067 seconds
+[2024-12-28T11:02:21.853+0000] {processor.py:186} INFO - Started process (PID=216) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:02:21.855+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T11:02:21.862+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:02:21.862+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:02:21.868+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:02:21.866+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T11:02:21.868+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:02:21.902+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.064 seconds
+[2024-12-28T11:02:52.138+0000] {processor.py:186} INFO - Started process (PID=230) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:02:52.140+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T11:02:52.144+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:02:52.144+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:02:52.150+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:02:52.148+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T11:02:52.150+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:02:52.207+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.087 seconds
+[2024-12-28T11:03:22.265+0000] {processor.py:186} INFO - Started process (PID=244) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:03:22.266+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T11:03:22.272+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:03:22.270+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:03:22.277+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:03:22.276+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T11:03:22.278+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:03:22.298+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.040 seconds
+[2024-12-28T11:03:53.238+0000] {processor.py:186} INFO - Started process (PID=262) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:03:53.267+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T11:03:53.329+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:03:53.327+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:03:53.389+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:03:53.372+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T11:03:53.400+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:03:53.552+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.367 seconds
+[2024-12-28T11:04:23.617+0000] {processor.py:186} INFO - Started process (PID=276) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:04:23.618+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T11:04:23.620+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:04:23.620+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:04:23.625+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:04:23.623+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T11:04:23.625+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:04:23.651+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.041 seconds
+[2024-12-28T11:04:54.578+0000] {processor.py:186} INFO - Started process (PID=290) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:04:54.596+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T11:04:54.625+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:04:54.622+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:04:54.655+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:04:54.646+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T11:04:54.657+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:04:54.771+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.239 seconds
+[2024-12-28T11:05:25.074+0000] {processor.py:186} INFO - Started process (PID=302) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:05:25.081+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T11:05:25.114+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:05:25.112+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:05:25.145+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:05:25.135+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T11:05:25.147+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:05:25.217+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.177 seconds
+[2024-12-28T11:05:55.655+0000] {processor.py:186} INFO - Started process (PID=316) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:05:55.657+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T11:05:55.667+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:05:55.665+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:05:55.681+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:05:55.676+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T11:05:55.682+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:05:55.717+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.081 seconds
+[2024-12-28T11:06:26.551+0000] {processor.py:186} INFO - Started process (PID=330) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:06:26.553+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-12-28T11:06:26.557+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:06:26.557+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:06:26.567+0000] {logging_mixin.py:190} INFO - [2024-12-28T11:06:26.565+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 48, in <module>
+    get_data()
+  File "/opt/airflow/dags/kafka_streaming.py", line 11, in get_data
+    with open('airflow_testing/config.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_testing/config.json'
+[2024-12-28T11:06:26.567+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-12-28T11:06:26.593+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.054 seconds

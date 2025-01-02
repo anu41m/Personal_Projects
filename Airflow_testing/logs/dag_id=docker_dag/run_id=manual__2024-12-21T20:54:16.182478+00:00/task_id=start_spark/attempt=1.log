@@ -1,0 +1,85 @@
+[2024-12-21T20:54:18.192+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-21T20:54:18.200+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: docker_dag.start_spark manual__2024-12-21T20:54:16.182478+00:00 [queued]>
+[2024-12-21T20:54:18.204+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: docker_dag.start_spark manual__2024-12-21T20:54:16.182478+00:00 [queued]>
+[2024-12-21T20:54:18.206+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-21T20:54:18.212+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): start_spark> on 2024-12-21 20:54:16.182478+00:00
+[2024-12-21T20:54:18.220+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=585) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-21T20:54:18.221+0000] {standard_task_runner.py:72} INFO - Started process 593 to run task
+[2024-12-21T20:54:18.222+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'docker_dag', 'start_spark', 'manual__2024-12-21T20:54:16.182478+00:00', '--job-id', '144', '--raw', '--subdir', 'DAGS_FOLDER/A_dag_test.py', '--cfg-path', '/tmp/tmpr6kv2ckr']
+[2024-12-21T20:54:18.223+0000] {standard_task_runner.py:105} INFO - Job 144: Subtask start_spark
+[2024-12-21T20:54:18.256+0000] {task_command.py:467} INFO - Running <TaskInstance: docker_dag.start_spark manual__2024-12-21T20:54:16.182478+00:00 [running]> on host 598d44cbaa7c
+[2024-12-21T20:54:18.302+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='docker_dag' AIRFLOW_CTX_TASK_ID='start_spark' AIRFLOW_CTX_EXECUTION_DATE='2024-12-21T20:54:16.182478+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-21T20:54:16.182478+00:00'
+[2024-12-21T20:54:18.303+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-21T20:54:18.303+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-21T20:54:18.303+0000] {logging_mixin.py:190} INFO - Current task name:start_spark state:running start_date:2024-12-21 20:54:18.201087+00:00
+[2024-12-21T20:54:18.303+0000] {logging_mixin.py:190} INFO - Dag name:docker_dag and current dag run status:running
+[2024-12-21T20:54:18.303+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-21T20:54:18.426+0000] {docker.py:379} INFO - Starting docker container from image spark-cluster:version-1.0.0
+[2024-12-21T20:54:18.881+0000] {docker.py:73} INFO - /bin/bash: line 1: /usr/local/bin/spark/spark-class: No such file or directory
+[2024-12-21T20:54:18.883+0000] {docker.py:73} INFO - WARNING: Use start-notebook.py instead
+[2024-12-21T20:54:18.906+0000] {docker.py:73} INFO - Entered start.sh with args: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --NotebookApp.token=
+[2024-12-21T20:54:18.909+0000] {docker.py:73} INFO - Running hooks in: /usr/local/bin/start-notebook.d as uid: 1000 gid: 100
+[2024-12-21T20:54:18.909+0000] {docker.py:73} INFO - Done running hooks in: /usr/local/bin/start-notebook.d
+[2024-12-21T20:54:18.917+0000] {docker.py:73} INFO - Running hooks in: /usr/local/bin/before-notebook.d as uid: 1000 gid: 100
+[2024-12-21T20:54:18.919+0000] {docker.py:73} INFO - Sourcing shell script: /usr/local/bin/before-notebook.d/spark-config.sh
+[2024-12-21T20:54:18.920+0000] {docker.py:73} INFO - Done running hooks in: /usr/local/bin/before-notebook.d
+[2024-12-21T20:54:18.921+0000] {docker.py:73} INFO - Executing the command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --NotebookApp.token=
+[2024-12-21T20:54:20.430+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.421 ServerApp] Package jupyterlab took 0.0000s to import
+[2024-12-21T20:54:20.442+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.440 ServerApp] Package jupyter_lsp took 0.0181s to import
+[2024-12-21T20:54:20.443+0000] {docker.py:73} INFO - [W 2024-12-21 20:54:20.440 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[2024-12-21T20:54:20.445+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.441 ServerApp] Package jupyter_server_mathjax took 0.0009s to import
+[2024-12-21T20:54:20.448+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.446 ServerApp] Package jupyter_server_terminals took 0.0050s to import
+[2024-12-21T20:54:20.483+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.481 ServerApp] Package jupyterlab_git took 0.0347s to import
+[2024-12-21T20:54:20.487+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.484 ServerApp] Package nbclassic took 0.0024s to import
+[2024-12-21T20:54:20.490+0000] {docker.py:73} INFO - [W 2024-12-21 20:54:20.486 ServerApp] A `_jupyter_server_extension_points` function was not found in nbclassic. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[2024-12-21T20:54:20.491+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.486 ServerApp] Package nbdime took 0.0000s to import
+[2024-12-21T20:54:20.492+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.487 ServerApp] Package notebook took 0.0000s to import
+[2024-12-21T20:54:20.493+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.488 ServerApp] Package notebook_shim took 0.0000s to import
+[2024-12-21T20:54:20.496+0000] {docker.py:73} INFO - [W 2024-12-21 20:54:20.488 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[2024-12-21T20:54:20.497+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.489 ServerApp] jupyter_lsp | extension was successfully linked.
+[2024-12-21T20:54:20.498+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.493 ServerApp] jupyter_server_mathjax | extension was successfully linked.
+[2024-12-21T20:54:20.499+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.496 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[2024-12-21T20:54:20.500+0000] {docker.py:73} INFO - [W 2024-12-21 20:54:20.498 LabApp] 'token' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[2024-12-21T20:54:20.508+0000] {docker.py:73} INFO - [W 2024-12-21 20:54:20.505 ServerApp] ServerApp.token config is deprecated in 2.0. Use IdentityProvider.token.
+[2024-12-21T20:54:20.508+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.506 ServerApp] jupyterlab | extension was successfully linked.
+[2024-12-21T20:54:20.509+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.506 ServerApp] jupyterlab_git | extension was successfully linked.
+[2024-12-21T20:54:20.513+0000] {docker.py:73} INFO - [W 2024-12-21 20:54:20.510 NotebookApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[2024-12-21T20:54:20.519+0000] {docker.py:73} INFO - [W 2024-12-21 20:54:20.510 NotebookApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[2024-12-21T20:54:20.520+0000] {docker.py:73} INFO - [W 2024-12-21 20:54:20.510 NotebookApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[2024-12-21T20:54:20.521+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.512 ServerApp] nbclassic | extension was successfully linked.
+[2024-12-21T20:54:20.522+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.512 ServerApp] nbdime | extension was successfully linked.
+[2024-12-21T20:54:20.523+0000] {docker.py:73} INFO - [W 2024-12-21 20:54:20.513 JupyterNotebookApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[2024-12-21T20:54:20.525+0000] {docker.py:73} INFO - [W 2024-12-21 20:54:20.513 JupyterNotebookApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[2024-12-21T20:54:20.527+0000] {docker.py:73} INFO - [W 2024-12-21 20:54:20.513 JupyterNotebookApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[2024-12-21T20:54:20.528+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.518 ServerApp] notebook | extension was successfully linked.
+[2024-12-21T20:54:20.538+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.532 ServerApp] Writing Jupyter server cookie secret to /home/jovyan/.local/share/jupyter/runtime/jupyter_cookie_secret
+[2024-12-21T20:54:20.727+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.725 ServerApp] notebook_shim | extension was successfully linked.
+[2024-12-21T20:54:20.782+0000] {docker.py:73} INFO - [W 2024-12-21 20:54:20.781 ServerApp] All authentication is disabled.  Anyone who can connect to this server will be able to run code.
+[2024-12-21T20:54:20.783+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.782 ServerApp] notebook_shim | extension was successfully loaded.
+[2024-12-21T20:54:20.784+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.783 ServerApp] jupyter_lsp | extension was successfully loaded.
+[2024-12-21T20:54:20.785+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.783 ServerApp] jupyter_server_mathjax | extension was successfully loaded.
+[2024-12-21T20:54:20.786+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.784 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[2024-12-21T20:54:20.787+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.786 LabApp] JupyterLab extension loaded from /opt/conda/lib/python3.11/site-packages/jupyterlab
+[2024-12-21T20:54:20.787+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.786 LabApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[2024-12-21T20:54:20.787+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.786 LabApp] Extension Manager is 'pypi'.
+[2024-12-21T20:54:20.789+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.788 ServerApp] jupyterlab | extension was successfully loaded.
+[2024-12-21T20:54:20.790+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.789 ServerApp] jupyterlab_git | extension was successfully loaded.
+[2024-12-21T20:54:20.793+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.791 ServerApp] nbclassic | extension was successfully loaded.
+[2024-12-21T20:54:20.852+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.851 ServerApp] nbdime | extension was successfully loaded.
+[2024-12-21T20:54:20.854+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.853 ServerApp] notebook | extension was successfully loaded.
+[2024-12-21T20:54:20.854+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.853 ServerApp] Serving notebooks from local directory: /home/jovyan
+[2024-12-21T20:54:20.855+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.853 ServerApp] Jupyter Server 2.8.0 is running at:
+[2024-12-21T20:54:20.855+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.853 ServerApp] http://21c646ac452f:8888/lab
+[2024-12-21T20:54:20.855+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.853 ServerApp]     http://127.0.0.1:8888/lab
+[2024-12-21T20:54:20.855+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:20.853 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[2024-12-21T20:54:21.394+0000] {docker.py:73} INFO - [I 2024-12-21 20:54:21.391 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[2024-12-21T20:54:48.667+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-12-21T20:54:48.670+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-21T20:54:48.672+0000] {process_utils.py:132} INFO - Sending 15 to group 593. PIDs of all processes in the group: [593]
+[2024-12-21T20:54:48.673+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 593
+[2024-12-21T20:54:48.675+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-21T20:54:48.678+0000] {docker.py:539} INFO - Stopping docker container
+[2024-12-21T20:54:48.852+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-21T20:54:48.896+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=593, status='terminated', exitcode=0, started='20:54:18') (593) terminated with exit code 0

@@ -1,0 +1,108 @@
+[2024-12-23T09:34:21.398+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-23T09:34:21.435+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_Calendar_NTBK.Notebook_job manual__2024-12-23T09:34:17.012774+00:00 [queued]>
+[2024-12-23T09:34:21.447+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_Calendar_NTBK.Notebook_job manual__2024-12-23T09:34:17.012774+00:00 [queued]>
+[2024-12-23T09:34:21.448+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-23T09:34:21.463+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): Notebook_job> on 2024-12-23 09:34:17.012774+00:00
+[2024-12-23T09:34:21.498+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=116) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-23T09:34:21.504+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_Calendar_NTBK', 'Notebook_job', 'manual__2024-12-23T09:34:17.012774+00:00', '--job-id', '207', '--raw', '--subdir', 'DAGS_FOLDER/A_dag_test.py', '--cfg-path', '/tmp/tmpiesrxrj4']
+[2024-12-23T09:34:21.508+0000] {standard_task_runner.py:72} INFO - Started process 118 to run task
+[2024-12-23T09:34:21.508+0000] {standard_task_runner.py:105} INFO - Job 207: Subtask Notebook_job
+[2024-12-23T09:34:21.631+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_Calendar_NTBK.Notebook_job manual__2024-12-23T09:34:17.012774+00:00 [running]> on host 85f5ad808200
+[2024-12-23T09:34:21.786+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_Calendar_NTBK' AIRFLOW_CTX_TASK_ID='Notebook_job' AIRFLOW_CTX_EXECUTION_DATE='2024-12-23T09:34:17.012774+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-23T09:34:17.012774+00:00'
+[2024-12-23T09:34:21.788+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-23T09:34:22.061+0000] {docker.py:379} INFO - Starting docker container from image spark-cluster:version-1.0.0
+[2024-12-23T09:34:24.426+0000] {docker.py:73} INFO - Input Notebook:  /home/jovyan/Notebooks/NB_Calendar.ipynb
+[2024-12-23T09:34:24.442+0000] {docker.py:73} INFO - Output Notebook: /home/jovyan/Notebooks/output-NB_Calendar.ipynb
+[2024-12-23T09:34:24.691+0000] {docker.py:73} INFO - Executing:   0%|          | 0/14 [00:00<?, ?cell/s]
+[2024-12-23T09:34:27.203+0000] {docker.py:73} INFO - Executing notebook with kernel: python3
+[2024-12-23T09:34:29.388+0000] {docker.py:73} INFO - Executing:   7%|▋         | 1/14 [00:04<01:01,  4.70s/cell]
+[2024-12-23T09:34:32.493+0000] {docker.py:73} INFO - :: loading settings :: url = jar:file:/usr/local/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2024-12-23T09:34:32.563+0000] {docker.py:73} INFO - Ivy Default Cache set to: /home/jovyan/.ivy2/cache
+[2024-12-23T09:34:32.564+0000] {docker.py:73} INFO - The jars for the packages stored in: /home/jovyan/.ivy2/jars
+[2024-12-23T09:34:32.567+0000] {docker.py:73} INFO - io.delta#delta-spark_2.12 added as a dependency
+[2024-12-23T09:34:32.569+0000] {docker.py:73} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-51803302-143e-4840-9e3c-59f68ec86ff8;1.0
+[2024-12-23T09:34:32.570+0000] {docker.py:73} INFO - 	confs: [default]
+[2024-12-23T09:34:34.004+0000] {docker.py:73} INFO - 	found io.delta#delta-spark_2.12;3.1.0 in central
+[2024-12-23T09:34:34.375+0000] {docker.py:73} INFO - 	found io.delta#delta-storage;3.1.0 in central
+[2024-12-23T09:34:36.099+0000] {docker.py:73} INFO - 	found org.antlr#antlr4-runtime;4.9.3 in central
+[2024-12-23T09:34:36.280+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-spark_2.12/3.1.0/delta-spark_2.12-3.1.0.jar ...
+[2024-12-23T09:34:39.461+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] io.delta#delta-spark_2.12;3.1.0!delta-spark_2.12.jar (3347ms)
+[2024-12-23T09:34:39.631+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-storage/3.1.0/delta-storage-3.1.0.jar ...
+[2024-12-23T09:34:39.812+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] io.delta#delta-storage;3.1.0!delta-storage.jar (345ms)
+[2024-12-23T09:34:39.978+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.9.3/antlr4-runtime-4.9.3.jar ...
+[2024-12-23T09:34:40.588+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] org.antlr#antlr4-runtime;4.9.3!antlr4-runtime.jar (771ms)
+[2024-12-23T09:34:40.590+0000] {docker.py:73} INFO - :: resolution report :: resolve 3542ms :: artifacts dl 4475ms
+[2024-12-23T09:34:40.591+0000] {docker.py:73} INFO - 	:: modules in use:
+[2024-12-23T09:34:40.592+0000] {docker.py:73} INFO - 	io.delta#delta-spark_2.12;3.1.0 from central in [default]
+[2024-12-23T09:34:40.595+0000] {docker.py:73} INFO - 	io.delta#delta-storage;3.1.0 from central in [default]
+[2024-12-23T09:34:40.598+0000] {docker.py:73} INFO - 	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+[2024-12-23T09:34:40.600+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2024-12-23T09:34:40.601+0000] {docker.py:73} INFO - 	|                  |            modules            ||   artifacts   |
+[2024-12-23T09:34:40.602+0000] {docker.py:73} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2024-12-23T09:34:40.602+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2024-12-23T09:34:40.603+0000] {docker.py:73} INFO - 	|      default     |   3   |   3   |   3   |   0   ||   3   |   3   |
+[2024-12-23T09:34:40.604+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2024-12-23T09:34:40.614+0000] {docker.py:73} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-51803302-143e-4840-9e3c-59f68ec86ff8
+[2024-12-23T09:34:40.615+0000] {docker.py:73} INFO - 	confs: [default]
+[2024-12-23T09:34:40.655+0000] {docker.py:73} INFO - 	3 artifacts copied, 0 already retrieved (5727kB/45ms)
+[2024-12-23T09:34:41.076+0000] {docker.py:73} INFO - 24/12/23 09:34:41 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-12-23T09:34:41.305+0000] {docker.py:73} INFO - Setting default log level to "WARN".
+[2024-12-23T09:34:41.307+0000] {docker.py:73} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2024-12-23T09:34:42.578+0000] {docker.py:73} INFO - 24/12/23 09:34:42 WARN StandaloneSchedulerBackend: Dynamic allocation enabled without spark.executor.cores explicitly set, you may get more executors allocated than expected. It's recommended to set spark.executor.cores explicitly. Please check SPARK-30299 for more details.
+[2024-12-23T09:34:43.003+0000] {docker.py:73} INFO - 24/12/23 09:34:43 WARN Utils: spark.executor.instances less than spark.dynamicAllocation.minExecutors is invalid, ignoring its setting, please update your configs.
+[2024-12-23T09:34:44.949+0000] {docker.py:73} INFO - Executing:  21%|██▏       | 3/14 [00:20<01:16,  6.98s/cell]
+[2024-12-23T09:34:47.243+0000] {docker.py:73} INFO - Executing:  43%|████▎     | 6/14 [00:22<00:25,  3.17s/cell]
+[2024-12-23T09:34:47.439+0000] {docker.py:73} INFO - Executing:  50%|█████     | 7/14 [00:22<00:17,  2.50s/cell]
+[2024-12-23T09:34:47.646+0000] {docker.py:73} INFO - Executing:  57%|█████▋    | 8/14 [00:22<00:11,  1.94s/cell]
+[2024-12-23T09:34:50.789+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2024-12-23T09:34:51.586+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 2) / 2]
+[2024-12-23T09:34:54.231+0000] {docker.py:73} INFO - 
+[2024-12-23T09:34:54.271+0000] {docker.py:73} INFO - Executing:  64%|██████▍   | 9/14 [00:29<00:15,  3.15s/cell]
+[2024-12-23T09:34:57.020+0000] {docker.py:73} INFO - [Stage 3:>                                                          (0 + 2) / 2]
+[2024-12-23T09:35:00.010+0000] {docker.py:73} INFO - 
+[2024-12-23T09:35:02.796+0000] {docker.py:73} INFO - 24/12/23 09:35:02 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[2024-12-23T09:35:05.266+0000] {docker.py:73} INFO - [Stage 7:>                                                         (0 + 8) / 50]
+[2024-12-23T09:35:07.913+0000] {docker.py:73} INFO - [Stage 7:>                                                        (0 + 11) / 50]
+[2024-12-23T09:35:08.180+0000] {docker.py:73} INFO - [Stage 7:==>                                                      (2 + 10) / 50]
+[2024-12-23T09:35:08.384+0000] {docker.py:73} INFO - [Stage 7:=========>                                                (8 + 8) / 50]
+[2024-12-23T09:35:08.796+0000] {docker.py:73} INFO - [Stage 7:=========>                                                (8 + 9) / 50]
+[2024-12-23T09:35:09.018+0000] {docker.py:73} INFO - [Stage 7:=============>                                           (12 + 8) / 50]
+[2024-12-23T09:35:09.212+0000] {docker.py:73} INFO - [Stage 7:==================>                                      (16 + 8) / 50]
+[2024-12-23T09:35:09.828+0000] {docker.py:73} INFO - [Stage 7:====================>                                    (18 + 8) / 50]
+[2024-12-23T09:35:10.025+0000] {docker.py:73} INFO - [Stage 7:==========================>                              (23 + 8) / 50]
+[2024-12-23T09:35:10.692+0000] {docker.py:73} INFO - [Stage 7:============================>                            (25 + 9) / 50]
+[2024-12-23T09:35:10.894+0000] {docker.py:73} INFO - [Stage 7:===============================>                         (28 + 8) / 50]
+[2024-12-23T09:35:11.294+0000] {docker.py:73} INFO - [Stage 7:=================================>                       (29 + 8) / 50]
+[2024-12-23T09:35:11.483+0000] {docker.py:73} INFO - [Stage 7:==================================>                      (30 + 8) / 50]
+[2024-12-23T09:35:11.702+0000] {docker.py:73} INFO - [Stage 7:====================================>                    (32 + 9) / 50]
+[2024-12-23T09:35:11.923+0000] {docker.py:73} INFO - [Stage 7:======================================>                  (34 + 8) / 50]
+[2024-12-23T09:35:12.110+0000] {docker.py:73} INFO - [Stage 7:==========================================>              (37 + 8) / 50]
+[2024-12-23T09:35:12.722+0000] {docker.py:73} INFO - [Stage 7:=================================================>       (43 + 7) / 50]
+[2024-12-23T09:35:12.914+0000] {docker.py:73} INFO - [Stage 7:===================================================>     (45 + 5) / 50]
+[2024-12-23T09:35:13.111+0000] {docker.py:73} INFO - [Stage 7:====================================================>    (46 + 4) / 50]
+[2024-12-23T09:35:14.120+0000] {docker.py:73} INFO - [Stage 10:>                                                         (0 + 1) / 1]
+[2024-12-23T09:35:14.224+0000] {docker.py:73} INFO - 
+[2024-12-23T09:35:14.662+0000] {docker.py:73} INFO - Executing:  79%|███████▊  | 11/14 [00:49<00:18,  6.14s/cell]
+[2024-12-23T09:35:17.133+0000] {docker.py:73} INFO - [Stage 12:>                                                        (0 + 8) / 50]
+[2024-12-23T09:35:18.551+0000] {docker.py:73} INFO - [Stage 12:=========>                                               (8 + 8) / 50]
+[2024-12-23T09:35:18.746+0000] {docker.py:73} INFO - [Stage 12:=================>                                     (16 + 10) / 50]
+[2024-12-23T09:35:18.951+0000] {docker.py:73} INFO - [Stage 12:=======================>                                (21 + 9) / 50]
+[2024-12-23T09:35:19.266+0000] {docker.py:73} INFO - [Stage 12:=========================>                              (23 + 8) / 50]
+[2024-12-23T09:35:19.369+0000] {docker.py:73} INFO - [Stage 12:============================>                           (25 + 9) / 50]
+[2024-12-23T09:35:19.585+0000] {docker.py:73} INFO - [Stage 12:=================================>                      (30 + 9) / 50]
+[2024-12-23T09:35:19.808+0000] {docker.py:73} INFO - [Stage 12:==================================>                     (31 + 8) / 50]
+[2024-12-23T09:35:20.190+0000] {docker.py:73} INFO - [Stage 12:==========================================>             (38 + 8) / 50]
+[2024-12-23T09:35:20.415+0000] {docker.py:73} INFO - [Stage 12:=====================================================>  (48 + 2) / 50]
+[2024-12-23T09:35:20.501+0000] {docker.py:73} INFO - 
+[2024-12-23T09:35:22.224+0000] {docker.py:73} INFO - [Stage 13:>                                                         (0 + 1) / 1]
+[2024-12-23T09:35:25.642+0000] {docker.py:73} INFO - 
+[2024-12-23T09:35:25.853+0000] {docker.py:73} INFO - Executing:  86%|████████▌ | 12/14 [01:01<00:14,  7.32s/cell]
+[2024-12-23T09:35:27.565+0000] {docker.py:73} INFO - Executing:  93%|█████████▎| 13/14 [01:02<00:05,  5.91s/cell]
+[2024-12-23T09:35:30.305+0000] {docker.py:73} INFO - Executing: 100%|██████████| 14/14 [01:05<00:00,  4.69s/cell]
+[2024-12-23T09:35:34.352+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-23T09:35:34.376+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_Calendar_NTBK, task_id=Notebook_job, run_id=manual__2024-12-23T09:34:17.012774+00:00, execution_date=20241223T093417, start_date=20241223T093421, end_date=20241223T093534
+[2024-12-23T09:35:34.561+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-23T09:35:34.732+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-23T09:35:34.742+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

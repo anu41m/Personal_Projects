@@ -1,0 +1,659 @@
+[2024-12-24T09:25:47.116+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-24T09:25:47.132+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_Wallet_NTBK.NB_Notebook_job manual__2024-12-24T09:25:43.442093+00:00 [queued]>
+[2024-12-24T09:25:47.145+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_Wallet_NTBK.NB_Notebook_job manual__2024-12-24T09:25:43.442093+00:00 [queued]>
+[2024-12-24T09:25:47.146+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-24T09:25:47.186+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): NB_Notebook_job> on 2024-12-24 09:25:43.442093+00:00
+[2024-12-24T09:25:47.190+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=86) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-24T09:25:47.195+0000] {standard_task_runner.py:72} INFO - Started process 91 to run task
+[2024-12-24T09:25:47.193+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_Wallet_NTBK', 'NB_Notebook_job', 'manual__2024-12-24T09:25:43.442093+00:00', '--job-id', '381', '--raw', '--subdir', 'DAGS_FOLDER/dag_wallet.py', '--cfg-path', '/tmp/tmpdx6czdok']
+[2024-12-24T09:25:47.197+0000] {standard_task_runner.py:105} INFO - Job 381: Subtask NB_Notebook_job
+[2024-12-24T09:25:47.239+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_Wallet_NTBK.NB_Notebook_job manual__2024-12-24T09:25:43.442093+00:00 [running]> on host ca7403376fcd
+[2024-12-24T09:25:47.318+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_Wallet_NTBK' AIRFLOW_CTX_TASK_ID='NB_Notebook_job' AIRFLOW_CTX_EXECUTION_DATE='2024-12-24T09:25:43.442093+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-24T09:25:43.442093+00:00'
+[2024-12-24T09:25:47.320+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-24T09:25:47.526+0000] {docker.py:379} INFO - Starting docker container from image spark-cluster:version-1.0.0
+[2024-12-24T09:25:52.361+0000] {docker.py:73} INFO - Input Notebook:  /home/jovyan/Notebooks/NB_DIM_Category.ipynb
+[2024-12-24T09:25:52.375+0000] {docker.py:73} INFO - Output Notebook: /home/jovyan/Notebooks/output-NB_DIM_Category.ipynb
+[2024-12-24T09:25:52.656+0000] {docker.py:73} INFO - Executing:   0%|          | 0/13 [00:00<?, ?cell/s]
+[2024-12-24T09:25:56.447+0000] {docker.py:73} INFO - Executing notebook with kernel: python3
+[2024-12-24T09:25:58.270+0000] {docker.py:73} INFO - Executing:   8%|▊         | 1/13 [00:05<01:07,  5.61s/cell]
+[2024-12-24T09:25:58.456+0000] {docker.py:73} INFO - Executing:  15%|█▌        | 2/13 [00:05<00:26,  2.42s/cell]
+[2024-12-24T09:26:01.481+0000] {docker.py:73} INFO - :: loading settings :: url = jar:file:/usr/local/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2024-12-24T09:26:01.593+0000] {docker.py:73} INFO - Ivy Default Cache set to: /home/jovyan/.ivy2/cache
+[2024-12-24T09:26:01.596+0000] {docker.py:73} INFO - The jars for the packages stored in: /home/jovyan/.ivy2/jars
+[2024-12-24T09:26:01.603+0000] {docker.py:73} INFO - io.delta#delta-spark_2.12 added as a dependency
+[2024-12-24T09:26:01.604+0000] {docker.py:73} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-ee6cb0bc-fd84-4759-bb82-11a73ef43e7e;1.0
+[2024-12-24T09:26:01.605+0000] {docker.py:73} INFO - 	confs: [default]
+[2024-12-24T09:26:03.324+0000] {docker.py:73} INFO - 	found io.delta#delta-spark_2.12;3.1.0 in central
+[2024-12-24T09:26:03.747+0000] {docker.py:73} INFO - 	found io.delta#delta-storage;3.1.0 in central
+[2024-12-24T09:26:07.233+0000] {docker.py:73} INFO - 	found org.antlr#antlr4-runtime;4.9.3 in central
+[2024-12-24T09:26:07.521+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-spark_2.12/3.1.0/delta-spark_2.12-3.1.0.jar ...
+[2024-12-24T09:26:10.362+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] io.delta#delta-spark_2.12;3.1.0!delta-spark_2.12.jar (3105ms)
+[2024-12-24T09:26:10.553+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-storage/3.1.0/delta-storage-3.1.0.jar ...
+[2024-12-24T09:26:10.753+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] io.delta#delta-storage;3.1.0!delta-storage.jar (388ms)
+[2024-12-24T09:26:10.959+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.9.3/antlr4-runtime-4.9.3.jar ...
+[2024-12-24T09:26:11.276+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] org.antlr#antlr4-runtime;4.9.3!antlr4-runtime.jar (512ms)
+[2024-12-24T09:26:11.278+0000] {docker.py:73} INFO - :: resolution report :: resolve 5651ms :: artifacts dl 4024ms
+[2024-12-24T09:26:11.279+0000] {docker.py:73} INFO - 	:: modules in use:
+[2024-12-24T09:26:11.282+0000] {docker.py:73} INFO - 	io.delta#delta-spark_2.12;3.1.0 from central in [default]
+[2024-12-24T09:26:11.282+0000] {docker.py:73} INFO - 	io.delta#delta-storage;3.1.0 from central in [default]
+[2024-12-24T09:26:11.282+0000] {docker.py:73} INFO - 	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+[2024-12-24T09:26:11.283+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2024-12-24T09:26:11.283+0000] {docker.py:73} INFO - 	|                  |            modules            ||   artifacts   |
+[2024-12-24T09:26:11.283+0000] {docker.py:73} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2024-12-24T09:26:11.283+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2024-12-24T09:26:11.284+0000] {docker.py:73} INFO - 	|      default     |   3   |   3   |   3   |   0   ||   3   |   3   |
+[2024-12-24T09:26:11.284+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2024-12-24T09:26:11.294+0000] {docker.py:73} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-ee6cb0bc-fd84-4759-bb82-11a73ef43e7e
+[2024-12-24T09:26:11.295+0000] {docker.py:73} INFO - 	confs: [default]
+[2024-12-24T09:26:11.319+0000] {docker.py:73} INFO - 	3 artifacts copied, 0 already retrieved (5727kB/24ms)
+[2024-12-24T09:26:11.543+0000] {docker.py:73} INFO - 24/12/24 09:26:11 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-12-24T09:26:11.785+0000] {docker.py:73} INFO - Setting default log level to "
+[2024-12-24T09:26:11.787+0000] {docker.py:73} INFO - WARN".
+[2024-12-24T09:26:11.788+0000] {docker.py:73} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2024-12-24T09:26:12.935+0000] {docker.py:73} INFO - 24/12/24 09:26:12 WARN StandaloneSchedulerBackend: Dynamic allocation enabled without spark.executor.cores explicitly set, you may get more executors allocated than expected. It's recommended to set spark.executor.cores explicitly. Please check SPARK-30299 for more details.
+[2024-12-24T09:26:13.412+0000] {docker.py:73} INFO - 24/12/24 09:26:13 WARN Utils: spark.executor.instances less than spark.dynamicAllocation.minExecutors is invalid, ignoring its setting, please update your configs.
+[2024-12-24T09:26:15.917+0000] {docker.py:73} INFO - Executing:  23%|██▎       | 3/13 [00:23<01:32,  9.29s/cell]
+[2024-12-24T09:26:19.085+0000] {docker.py:73} INFO - Executing:  38%|███▊      | 5/13 [00:26<00:39,  4.93s/cell]
+[2024-12-24T09:26:22.713+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2024-12-24T09:26:37.313+0000] {docker.py:73} INFO - 24/12/24 09:26:37 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2024-12-24T09:26:52.286+0000] {docker.py:73} INFO - 24/12/24 09:26:52 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2024-12-24T09:26:55.555+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 2) / 2]
+[2024-12-24T09:26:58.490+0000] {docker.py:73} INFO - 24/12/24 09:26:58 WARN StandaloneAppClient$ClientEndpoint: Connection to 172.19.0.3:7077 failed; waiting for master to reconnect...
+[2024-12-24T09:26:58.506+0000] {docker.py:73} INFO - 24/12/24 09:26:58 WARN StandaloneSchedulerBackend: Disconnected from Spark cluster! Waiting for reconnection...
+[2024-12-24T09:26:58.657+0000] {docker.py:73} INFO - 24/12/24 09:26:58 ERROR TransportClient: Failed to send RPC RPC 5890141094890870084 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:58.658+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:58.659+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:26:58.663+0000] {docker.py:73} INFO - 24/12/24 09:26:58 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:26:58.780+0000] {docker.py:73} INFO - 24/12/24 09:26:58 ERROR TransportClient: Failed to send RPC RPC 6701797425221741906 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:58.782+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:58.784+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:26:58.785+0000] {docker.py:73} INFO - 24/12/24 09:26:58 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:26:58.892+0000] {docker.py:73} INFO - 24/12/24 09:26:58 ERROR TransportClient: Failed to send RPC RPC 6194812327521647684 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:58.895+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:58.896+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:26:58.902+0000] {docker.py:73} INFO - 24/12/24 09:26:58 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:26:59.009+0000] {docker.py:73} INFO - 24/12/24 09:26:59 ERROR TransportClient: Failed to send RPC RPC 7786052207134963563 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:59.010+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:59.011+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:26:59.012+0000] {docker.py:73} INFO - 24/12/24 09:26:59 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:26:59.192+0000] {docker.py:73} INFO - 24/12/24 09:26:59 ERROR TransportClient: Failed to send RPC RPC 6061468111419463246 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:59.195+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:59.195+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:26:59.196+0000] {docker.py:73} INFO - 24/12/24 09:26:59 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:26:59.419+0000] {docker.py:73} INFO - 24/12/24 09:26:59 ERROR TransportClient: Failed to send RPC RPC 5563340305624607487 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:59.426+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:59.428+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:26:59.430+0000] {docker.py:73} INFO - 24/12/24 09:26:59 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:26:59.534+0000] {docker.py:73} INFO - 24/12/24 09:26:59 ERROR TransportClient: Failed to send RPC RPC 5119534485646973775 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:59.535+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:59.535+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:26:59.535+0000] {docker.py:73} INFO - 24/12/24 09:26:59 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:26:59.646+0000] {docker.py:73} INFO - 24/12/24 09:26:59 ERROR TransportClient: Failed to send RPC RPC 4799906927633490569 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:59.647+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:26:59.647+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:26:59.663+0000] {docker.py:73} INFO - 24/12/24 09:26:59 WARN BlockManagerMaster: Failed to remove broadcast 0 with removeFromMaster = true - org.apache.spark.rpc.RpcEnvStoppedException: RpcEnv already stopped.
+[2024-12-24T09:26:59.668+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:176)
+[2024-12-24T09:26:59.669+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.Dispatcher.postRemoteMessage(Dispatcher.scala:136)
+[2024-12-24T09:26:59.671+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.NettyRpcHandler.receive(NettyRpcEnv.scala:683)
+[2024-12-24T09:26:59.672+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportRequestHandler.processRpcRequest(TransportRequestHandler.java:163)
+[2024-12-24T09:26:59.673+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportRequestHandler.handle(TransportRequestHandler.java:109)
+[2024-12-24T09:26:59.674+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:140)
+[2024-12-24T09:26:59.675+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:53)
+[2024-12-24T09:26:59.676+0000] {docker.py:73} INFO - 	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+[2024-12-24T09:26:59.676+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:26:59.677+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.677+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:26:59.678+0000] {docker.py:73} INFO - 	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+[2024-12-24T09:26:59.678+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+[2024-12-24T09:26:59.679+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.680+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:26:59.682+0000] {docker.py:73} INFO - 	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+[2024-12-24T09:26:59.682+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:26:59.687+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.688+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:26:59.690+0000] {docker.py:73} INFO - 	at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:102)
+[2024-12-24T09:26:59.691+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:26:59.693+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.694+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:26:59.696+0000] {docker.py:73} INFO - 	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+[2024-12-24T09:26:59.697+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+[2024-12-24T09:26:59.698+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.698+0000] {docker.py:73} INFO - 	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+[2024-12-24T09:26:59.700+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+[2024-12-24T09:26:59.700+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+[2024-12-24T09:26:59.701+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+[2024-12-24T09:26:59.703+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+[2024-12-24T09:26:59.704+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2024-12-24T09:26:59.708+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2024-12-24T09:26:59.710+0000] {docker.py:73} INFO - 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2024-12-24T09:26:59.714+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2024-12-24T09:26:59.715+0000] {docker.py:73} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-24T09:26:59.716+0000] {docker.py:73} INFO - 
+[2024-12-24T09:26:59.718+0000] {docker.py:73} INFO - java.lang.RuntimeException: org.apache.spark.rpc.RpcEnvStoppedException: RpcEnv already stopped.
+[2024-12-24T09:26:59.726+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:176)
+[2024-12-24T09:26:59.728+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.Dispatcher.postRemoteMessage(Dispatcher.scala:136)
+[2024-12-24T09:26:59.729+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.NettyRpcHandler.receive(NettyRpcEnv.scala:683)
+[2024-12-24T09:26:59.730+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportRequestHandler.processRpcRequest(TransportRequestHandler.java:163)
+[2024-12-24T09:26:59.738+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportRequestHandler.handle(TransportRequestHandler.java:109)
+[2024-12-24T09:26:59.743+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:140)
+[2024-12-24T09:26:59.745+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:53)
+[2024-12-24T09:26:59.748+0000] {docker.py:73} INFO - 	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+[2024-12-24T09:26:59.751+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:26:59.756+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.759+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:26:59.763+0000] {docker.py:73} INFO - 	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+[2024-12-24T09:26:59.771+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+[2024-12-24T09:26:59.779+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.781+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:26:59.784+0000] {docker.py:73} INFO - 	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+[2024-12-24T09:26:59.785+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:26:59.785+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.786+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:26:59.790+0000] {docker.py:73} INFO - 	at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:102)
+[2024-12-24T09:26:59.792+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:26:59.793+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.793+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:26:59.793+0000] {docker.py:73} INFO - 	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+[2024-12-24T09:26:59.794+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+[2024-12-24T09:26:59.794+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.795+0000] {docker.py:73} INFO - 	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+[2024-12-24T09:26:59.796+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+[2024-12-24T09:26:59.797+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+[2024-12-24T09:26:59.797+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+[2024-12-24T09:26:59.799+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+[2024-12-24T09:26:59.803+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2024-12-24T09:26:59.805+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2024-12-24T09:26:59.806+0000] {docker.py:73} INFO - 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2024-12-24T09:26:59.807+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2024-12-24T09:26:59.807+0000] {docker.py:73} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-24T09:26:59.808+0000] {docker.py:73} INFO - 
+[2024-12-24T09:26:59.809+0000] {docker.py:73} INFO - 	at org.apache.spark.network.client.TransportResponseHandler.handle(TransportResponseHandler.java:209)
+[2024-12-24T09:26:59.810+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:142)
+[2024-12-24T09:26:59.811+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:53)
+[2024-12-24T09:26:59.812+0000] {docker.py:73} INFO - 	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+[2024-12-24T09:26:59.813+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:26:59.822+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.827+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:26:59.831+0000] {docker.py:73} INFO - 	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+[2024-12-24T09:26:59.833+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+[2024-12-24T09:26:59.837+0000] {docker.py:73} INFO - 	at io.netty
+[2024-12-24T09:26:59.842+0000] {docker.py:73} INFO - .channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.846+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:26:59.850+0000] {docker.py:73} INFO - 	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+[2024-12-24T09:26:59.854+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:26:59.854+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.855+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:26:59.856+0000] {docker.py:73} INFO - 	at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:102)
+[2024-12-24T09:26:59.857+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:26:59.864+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.889+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:26:59.899+0000] {docker.py:73} INFO - 	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+[2024-12-24T09:26:59.905+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+[2024-12-24T09:26:59.913+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:26:59.919+0000] {docker.py:73} INFO - 	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+[2024-12-24T09:26:59.923+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+[2024-12-24T09:26:59.926+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+[2024-12-24T09:26:59.931+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+[2024-12-24T09:26:59.932+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+[2024-12-24T09:26:59.937+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2024-12-24T09:26:59.940+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2024-12-24T09:26:59.952+0000] {docker.py:73} INFO - 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2024-12-24T09:26:59.954+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2024-12-24T09:26:59.955+0000] {docker.py:73} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-24T09:26:59.956+0000] {docker.py:73} INFO - 24/12/24 09:26:59 ERROR ContextCleaner: Error cleaning broadcast 0
+[2024-12-24T09:26:59.960+0000] {docker.py:73} INFO - org.apache.spark.SparkException: Exception thrown in awaitResult: 
+[2024-12-24T09:26:59.962+0000] {docker.py:73} INFO - 	at org.apache.spark.util.SparkThreadUtils$.awaitResult(SparkThreadUtils.scala:56)
+[2024-12-24T09:26:59.966+0000] {docker.py:73} INFO - 	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:310)
+[2024-12-24T09:26:59.969+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+[2024-12-24T09:26:59.973+0000] {docker.py:73} INFO - 	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:222)
+[2024-12-24T09:26:59.977+0000] {docker.py:73} INFO - 	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:395)
+[2024-12-24T09:26:59.978+0000] {docker.py:73} INFO - 	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:49)
+[2024-12-24T09:26:59.980+0000] {docker.py:73} INFO - 	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:82)
+[2024-12-24T09:26:59.984+0000] {docker.py:73} INFO - 	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:256)
+[2024-12-24T09:26:59.985+0000] {docker.py:73} INFO - 	at org.apache.spark.ContextCleaner.$anonfun$keepCleaning$3(ContextCleaner.scala:204)
+[2024-12-24T09:26:59.986+0000] {docker.py:73} INFO - 	at org.apache.spark.ContextCleaner.$anonfun$keepCleaning$3$adapted(ContextCleaner.scala:195)
+[2024-12-24T09:26:59.987+0000] {docker.py:73} INFO - 	at scala.Option.foreach(Option.scala:407)
+[2024-12-24T09:26:59.988+0000] {docker.py:73} INFO - 	at org.apache.spark.ContextCleaner.$anonfun$keepCleaning$1(ContextCleaner.scala:195)
+[2024-12-24T09:26:59.996+0000] {docker.py:73} INFO - 	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1356)
+[2024-12-24T09:27:00.000+0000] {docker.py:73} INFO - 	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:189)
+[2024-12-24T09:27:00.001+0000] {docker.py:73} INFO - 	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:79)
+[2024-12-24T09:27:00.002+0000] {docker.py:73} INFO - Caused by: java.lang.RuntimeException: org.apache.spark.rpc.RpcEnvStoppedException: RpcEnv already stopped.
+[2024-12-24T09:27:00.003+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:176)
+[2024-12-24T09:27:00.004+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.Dispatcher.postRemoteMessage(Dispatcher.scala:136)
+[2024-12-24T09:27:00.006+0000] {docker.py:73} INFO - 	at org.apache.spark.rpc.netty.NettyRpcHandler.receive(NettyRpcEnv.scala:683)
+[2024-12-24T09:27:00.010+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportRequestHandler.processRpcRequest(TransportRequestHandler.java:163)
+[2024-12-24T09:27:00.013+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportRequestHandler.handle(TransportRequestHandler.java:109)
+[2024-12-24T09:27:00.013+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:140)
+[2024-12-24T09:27:00.014+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:53)
+[2024-12-24T09:27:00.014+0000] {docker.py:73} INFO - 	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+[2024-12-24T09:27:00.015+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:27:00.018+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:27:00.019+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:27:00.021+0000] {docker.py:73} INFO - 	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+[2024-12-24T09:27:00.023+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+[2024-12-24T09:27:00.027+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:27:00.030+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:27:00.033+0000] {docker.py:73} INFO - 	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+[2024-12-24T09:27:00.034+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:27:00.036+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:27:00.037+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:27:00.038+0000] {docker.py:73} INFO - 	at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:102)
+[2024-12-24T09:27:00.040+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:27:00.041+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:27:00.043+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:27:00.046+0000] {docker.py:73} INFO - 	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+[2024-12-24T09:27:00.048+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+[2024-12-24T09:27:00.050+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:27:00.051+0000] {docker.py:73} INFO - 	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+[2024-12-24T09:27:00.051+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+[2024-12-24T09:27:00.053+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+[2024-12-24T09:27:00.053+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+[2024-12-24T09:27:00.056+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+[2024-12-24T09:27:00.060+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2024-12-24T09:27:00.065+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2024-12-24T09:27:00.067+0000] {docker.py:73} INFO - 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2024-12-24T09:27:00.069+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2024-12-24T09:27:00.071+0000] {docker.py:73} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-24T09:27:00.072+0000] {docker.py:73} INFO - 
+[2024-12-24T09:27:00.073+0000] {docker.py:73} INFO - 	at org.apache.spark.network.client.TransportResponseHandler.handle(TransportResponseHandler.java:209)
+[2024-12-24T09:27:00.077+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:142)
+[2024-12-24T09:27:00.078+0000] {docker.py:73} INFO - 	at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:53)
+[2024-12-24T09:27:00.080+0000] {docker.py:73} INFO - 	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+[2024-12-24T09:27:00.082+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:27:00.083+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:27:00.084+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:27:00.084+0000] {docker.py:73} INFO - 	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+[2024-12-24T09:27:00.085+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+[2024-12-24T09:27:00.085+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:27:00.086+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:27:00.086+0000] {docker.py:73} INFO - 	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+[2024-12-24T09:27:00.087+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:27:00.087+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:27:00.088+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:27:00.089+0000] {docker.py:73} INFO - 	at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:102)
+[2024-12-24T09:27:00.094+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2024-12-24T09:27:00.096+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:27:00.097+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2024-12-24T09:27:00.098+0000] {docker.py:73} INFO - 	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+[2024-12-24T09:27:00.099+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+[2024-12-24T09:27:00.103+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2024-12-24T09:27:00.112+0000] {docker.py:73} INFO - 	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+[2024-12-24T09:27:00.114+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+[2024-12-24T09:27:00.118+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+[2024-12-24T09:27:00.120+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+[2024-12-24T09:27:00.122+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+[2024-12-24T09:27:00.127+0000] {docker.py:73} INFO - 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2024-12-24T09:27:00.127+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2024-12-24T09:27:00.129+0000] {docker.py:73} INFO - 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2024-12-24T09:27:00.130+0000] {docker.py:73} INFO - 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2024-12-24T09:27:00.132+0000] {docker.py:73} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-24T09:27:00.134+0000] {docker.py:73} INFO - 24/12/24 09:26:59 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:00.138+0000] {docker.py:73} INFO - 24/12/24 09:26:59 ERROR TransportClient: Failed to send RPC RPC 8777565264914594021 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.141+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.143+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:00.146+0000] {docker.py:73} INFO - 24/12/24 09:26:59 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:00.149+0000] {docker.py:73} INFO - 24/12/24 09:26:59 ERROR TransportClient: Failed to send RPC RPC 5195224377085193122 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.151+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.153+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:00.155+0000] {docker.py:73} INFO - 24/12/24 09:27:00 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:00.161+0000] {docker.py:73} INFO - 24/12/24 09:27:00 ERROR TransportClient: Failed to send RPC RPC 5498493639151724185 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.163+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.164+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:00.169+0000] {docker.py:73} INFO - 24/12/24 09:27:00 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:00.212+0000] {docker.py:73} INFO - [Stage 2:>                                                          (0 + 0) / 1]
+[2024-12-24T09:27:00.275+0000] {docker.py:73} INFO - 24/12/24 09:27:00 ERROR TransportClient: Failed to send RPC RPC 5703240952989610109 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.276+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.277+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:00.278+0000] {docker.py:73} INFO - 24/12/24 09:27:00 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:00.375+0000] {docker.py:73} INFO - 24/12/24 09:27:00 ERROR TransportClient: Failed to send RPC RPC 8360096267835368127 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.376+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.376+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:00.376+0000] {docker.py:73} INFO - 24/12/24 09:27:00 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:00.479+0000] {docker.py:73} INFO - 24/12/24 09:27:00 ERROR TransportClient: Failed to send RPC RPC 5601018592228487702 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.480+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.481+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:00.483+0000] {docker.py:73} INFO - 24/12/24 09:27:00 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:00.595+0000] {docker.py:73} INFO - 24/12/24 09:27:00 ERROR TransportClient: Failed to send RPC RPC 8722253920988232812 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.598+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.599+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:00.600+0000] {docker.py:73} INFO - 24/12/24 09:27:00 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:00.738+0000] {docker.py:73} INFO - 24/12/24 09:27:00 ERROR TransportClient: Failed to send RPC RPC 8774557767740548054 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.740+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.741+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:00.742+0000] {docker.py:73} INFO - 24/12/24 09:27:00 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:00.887+0000] {docker.py:73} INFO - 24/12/24 09:27:00 ERROR TransportClient: Failed to send RPC RPC 7342276158780438639 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.888+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.889+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:00.889+0000] {docker.py:73} INFO - 24/12/24 09:27:00 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:00.973+0000] {docker.py:73} INFO - 24/12/24 09:27:00 ERROR TransportClient: Failed to send RPC RPC 8476367784492737946 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.974+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:00.975+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:00.975+0000] {docker.py:73} INFO - 24/12/24 09:27:00 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:01.083+0000] {docker.py:73} INFO - 24/12/24 09:27:01 ERROR TransportClient: Failed to send RPC RPC 6109431728378598802 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.084+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.085+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:01.087+0000] {docker.py:73} INFO - 24/12/24 09:27:01 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:01.188+0000] {docker.py:73} INFO - 24/12/24 09:27:01 ERROR TransportClient: Failed to send RPC RPC 8669759799992647107 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.189+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.189+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:01.189+0000] {docker.py:73} INFO - 24/12/24 09:27:01 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:01.294+0000] {docker.py:73} INFO - 24/12/24 09:27:01 ERROR TransportClient: Failed to send RPC RPC 9063130006206047985 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.296+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.297+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:01.299+0000] {docker.py:73} INFO - 24/12/24 09:27:01 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:01.403+0000] {docker.py:73} INFO - 24/12/24 09:27:01 ERROR TransportClient: Failed to send RPC RPC 6476585024645512053 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.404+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.404+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:01.405+0000] {docker.py:73} INFO - 24/12/24 09:27:01 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:01.512+0000] {docker.py:73} INFO - 24/12/24 09:27:01 ERROR TransportClient: Failed to send RPC RPC 7164074492871975350 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.515+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.515+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:01.516+0000] {docker.py:73} INFO - 24/12/24 09:27:01 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:01.614+0000] {docker.py:73} INFO - 24/12/24 09:27:01 ERROR TransportClient: Failed to send RPC RPC 4642381557194845117 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.614+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.614+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:01.614+0000] {docker.py:73} INFO - 24/12/24 09:27:01 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:01.717+0000] {docker.py:73} INFO - 24/12/24 09:27:01 ERROR TransportClient: Failed to send RPC RPC 8592252582083784255 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.717+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.719+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:01.719+0000] {docker.py:73} INFO - 24/12/24 09:27:01 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:01.820+0000] {docker.py:73} INFO - 24/12/24 09:27:01 ERROR TransportClient: Failed to send RPC RPC 5437845861934392616 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.822+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.824+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:01.826+0000] {docker.py:73} INFO - 24/12/24 09:27:01 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:01.925+0000] {docker.py:73} INFO - 24/12/24 09:27:01 ERROR TransportClient: Failed to send RPC RPC 7397726248892636698 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.926+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:01.926+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:01.926+0000] {docker.py:73} INFO - 24/12/24 09:27:01 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:02.029+0000] {docker.py:73} INFO - 24/12/24 09:27:02 ERROR TransportClient: Failed to send RPC RPC 6644518420290014179 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.029+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.029+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:02.029+0000] {docker.py:73} INFO - 24/12/24 09:27:02 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:02.133+0000] {docker.py:73} INFO - 24/12/24 09:27:02 ERROR TransportClient: Failed to send RPC RPC 7978501484149425364 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.133+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.133+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:02.134+0000] {docker.py:73} INFO - 24/12/24 09:27:02 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:02.237+0000] {docker.py:73} INFO - 24/12/24 09:27:02 ERROR TransportClient: Failed to send RPC RPC 8834819629871193587 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.238+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.238+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:02.239+0000] {docker.py:73} INFO - 24/12/24 09:27:02 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:02.351+0000] {docker.py:73} INFO - 24/12/24 09:27:02 ERROR TransportClient: Failed to send RPC RPC 5541360367046756569 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.352+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.353+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:02.353+0000] {docker.py:73} INFO - 24/12/24 09:27:02 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:02.454+0000] {docker.py:73} INFO - 24/12/24 09:27:02 ERROR TransportClient: Failed to send RPC RPC 8772221552722890147 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.457+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.458+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:02.458+0000] {docker.py:73} INFO - 24/12/24 09:27:02 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:02.557+0000] {docker.py:73} INFO - 24/12/24 09:27:02 ERROR TransportClient: Failed to send RPC RPC 8480132047107450557 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.558+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.559+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:02.560+0000] {docker.py:73} INFO - 24/12/24 09:27:02 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:02.657+0000] {docker.py:73} INFO - 24/12/24 09:27:02 ERROR TransportClient: Failed to send RPC RPC 6228372511463030905 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.658+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.658+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:02.658+0000] {docker.py:73} INFO - 24/12/24 09:27:02 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:02.759+0000] {docker.py:73} INFO - 24/12/24 09:27:02 ERROR TransportClient: Failed to send RPC RPC 8512133446800951122 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.760+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.760+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:02.760+0000] {docker.py:73} INFO - 24/12/24 09:27:02 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:02.863+0000] {docker.py:73} INFO - 24/12/24 09:27:02 ERROR TransportClient: Failed to send RPC RPC 5896476762799716537 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.864+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.864+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:02.864+0000] {docker.py:73} INFO - 24/12/24 09:27:02 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:02.971+0000] {docker.py:73} INFO - 24/12/24 09:27:02 ERROR TransportClient: Failed to send RPC RPC 9115633158698277327 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.971+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:02.972+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:02.972+0000] {docker.py:73} INFO - 24/12/24 09:27:02 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:03.074+0000] {docker.py:73} INFO - 24/12/24 09:27:03 ERROR TransportClient: Failed to send RPC RPC 5013673764287167868 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.075+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.075+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:03.075+0000] {docker.py:73} INFO - 24/12/24 09:27:03 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:03.176+0000] {docker.py:73} INFO - 24/12/24 09:27:03 ERROR TransportClient: Failed to send RPC RPC 5137703381573167545 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.176+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.176+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:03.177+0000] {docker.py:73} INFO - 24/12/24 09:27:03 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:03.278+0000] {docker.py:73} INFO - 24/12/24 09:27:03 ERROR TransportClient: Failed to send RPC RPC 8755898954599022066 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.279+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.279+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:03.279+0000] {docker.py:73} INFO - 24/12/24 09:27:03 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:03.380+0000] {docker.py:73} INFO - 24/12/24 09:27:03 ERROR TransportClient: Failed to send RPC RPC 6716015016143598816 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.381+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.381+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:03.381+0000] {docker.py:73} INFO - 24/12/24 09:27:03 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:03.482+0000] {docker.py:73} INFO - 24/12/24 09:27:03 ERROR TransportClient: Failed to send RPC RPC 8602633863553018247 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.482+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.483+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:03.483+0000] {docker.py:73} INFO - 24/12/24 09:27:03 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:03.589+0000] {docker.py:73} INFO - 24/12/24 09:27:03 ERROR TransportClient: Failed to send RPC RPC 9031274523627324683 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.591+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.592+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:03.592+0000] {docker.py:73} INFO - 24/12/24 09:27:03 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:03.691+0000] {docker.py:73} INFO - 24/12/24 09:27:03 ERROR TransportClient: Failed to send RPC RPC 6039957316696353944 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.691+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.691+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:03.691+0000] {docker.py:73} INFO - 24/12/24 09:27:03 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:03.799+0000] {docker.py:73} INFO - 24/12/24 09:27:03 ERROR TransportClient: Failed to send RPC RPC 7945509547945540666 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.800+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.800+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:03.801+0000] {docker.py:73} INFO - 24/12/24 09:27:03 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:03.903+0000] {docker.py:73} INFO - 24/12/24 09:27:03 ERROR TransportClient: Failed to send RPC RPC 4664405516649755304 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.904+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:03.904+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:03.904+0000] {docker.py:73} INFO - 24/12/24 09:27:03 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:04.005+0000] {docker.py:73} INFO - 24/12/24 09:27:04 ERROR TransportClient: Failed to send RPC RPC 5778394962061123220 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.006+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.006+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:04.007+0000] {docker.py:73} INFO - 24/12/24 09:27:04 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:04.109+0000] {docker.py:73} INFO - 24/12/24 09:27:04 ERROR TransportClient: Failed to send RPC RPC 8875914439192618987 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.109+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.109+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:04.109+0000] {docker.py:73} INFO - 24/12/24 09:27:04 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:04.215+0000] {docker.py:73} INFO - 24/12/24 09:27:04 ERROR TransportClient: Failed to send RPC RPC 6225475519772089898 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.216+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.216+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:04.216+0000] {docker.py:73} INFO - 24/12/24 09:27:04 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:04.319+0000] {docker.py:73} INFO - 24/12/24 09:27:04 ERROR TransportClient: Failed to send RPC RPC 5699137787951205082 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.320+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.320+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:04.320+0000] {docker.py:73} INFO - 24/12/24 09:27:04 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:04.436+0000] {docker.py:73} INFO - 24/12/24 09:27:04 ERROR TransportClient: Failed to send RPC RPC 8194848624750749232 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.442+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.450+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:04.456+0000] {docker.py:73} INFO - 24/12/24 09:27:04 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:04.552+0000] {docker.py:73} INFO - 24/12/24 09:27:04 ERROR TransportClient: Failed to send RPC RPC 7755222287925657001 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.553+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.553+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:04.554+0000] {docker.py:73} INFO - 24/12/24 09:27:04 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:04.657+0000] {docker.py:73} INFO - 24/12/24 09:27:04 ERROR TransportClient: Failed to send RPC RPC 4953148723318918620 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.658+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.659+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:04.660+0000] {docker.py:73} INFO - 24/12/24 09:27:04 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:04.668+0000] {docker.py:73} INFO - 24/12/24 09:27:04 ERROR TaskSchedulerImpl: Lost executor 0 on 172.19.0.4: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+[2024-12-24T09:27:04.692+0000] {docker.py:73} INFO - 24/12/24 09:27:04 WARN BlockManagerMasterEndpoint: No more replicas available for broadcast_0_piece0 !
+[2024-12-24T09:27:04.761+0000] {docker.py:73} INFO - 24/12/24 09:27:04 ERROR TransportClient: Failed to send RPC RPC 5337070855491151743 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.761+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.762+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:04.762+0000] {docker.py:73} INFO - 24/12/24 09:27:04 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:04.864+0000] {docker.py:73} INFO - 24/12/24 09:27:04 ERROR TransportClient: Failed to send RPC RPC 8169873643082060301 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.866+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.867+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:04.868+0000] {docker.py:73} INFO - 24/12/24 09:27:04 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:04.982+0000] {docker.py:73} INFO - 24/12/24 09:27:04 ERROR TransportClient: Failed to send RPC RPC 5030999186484760585 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.983+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:04.984+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:04.986+0000] {docker.py:73} INFO - 24/12/24 09:27:04 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:05.094+0000] {docker.py:73} INFO - 24/12/24 09:27:05 ERROR TransportClient: Failed to send RPC RPC 8497328648082139286 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.098+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.098+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:05.098+0000] {docker.py:73} INFO - 24/12/24 09:27:05 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:05.197+0000] {docker.py:73} INFO - 24/12/24 09:27:05 ERROR TransportClient: Failed to send RPC RPC 6414782047209715787 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.198+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.198+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:05.200+0000] {docker.py:73} INFO - 24/12/24 09:27:05 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:05.308+0000] {docker.py:73} INFO - 24/12/24 09:27:05 ERROR TransportClient: Failed to send RPC RPC 7247206746684825344 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.313+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.314+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:05.315+0000] {docker.py:73} INFO - 24/12/24 09:27:05 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:05.410+0000] {docker.py:73} INFO - 24/12/24 09:27:05 ERROR TransportClient: Failed to send RPC RPC 8970040386317690203 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.411+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.412+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:05.413+0000] {docker.py:73} INFO - 24/12/24 09:27:05 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:05.513+0000] {docker.py:73} INFO - 24/12/24 09:27:05 ERROR TransportClient: Failed to send RPC RPC 5540587019581730132 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.514+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.514+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:05.515+0000] {docker.py:73} INFO - 24/12/24 09:27:05 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:05.619+0000] {docker.py:73} INFO - 24/12/24 09:27:05 ERROR TransportClient: Failed to send RPC RPC 7788180353490386198 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.620+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.620+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:05.621+0000] {docker.py:73} INFO - 24/12/24 09:27:05 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:05.721+0000] {docker.py:73} INFO - 24/12/24 09:27:05 ERROR TransportClient: Failed to send RPC RPC 5229871000516040693 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.722+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.722+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:05.722+0000] {docker.py:73} INFO - 24/12/24 09:27:05 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:05.825+0000] {docker.py:73} INFO - 24/12/24 09:27:05 ERROR TransportClient: Failed to send RPC RPC 8296592793840442040 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.825+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.825+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:05.825+0000] {docker.py:73} INFO - 24/12/24 09:27:05 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:05.934+0000] {docker.py:73} INFO - 24/12/24 09:27:05 ERROR TransportClient: Failed to send RPC RPC 7450523484619849516 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.934+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:05.934+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:05.935+0000] {docker.py:73} INFO - 24/12/24 09:27:05 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:06.039+0000] {docker.py:73} INFO - 24/12/24 09:27:06 ERROR TransportClient: Failed to send RPC RPC 9018261131507590175 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.039+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.040+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:06.040+0000] {docker.py:73} INFO - 24/12/24 09:27:06 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:06.154+0000] {docker.py:73} INFO - 24/12/24 09:27:06 ERROR TransportClient: Failed to send RPC RPC 5955022640133449847 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.156+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.159+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:06.160+0000] {docker.py:73} INFO - 24/12/24 09:27:06 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:06.258+0000] {docker.py:73} INFO - 24/12/24 09:27:06 ERROR TransportClient: Failed to send RPC RPC 8351831918359960468 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.260+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.260+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:06.260+0000] {docker.py:73} INFO - 24/12/24 09:27:06 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:06.362+0000] {docker.py:73} INFO - 24/12/24 09:27:06 ERROR TransportClient: Failed to send RPC RPC 5432593409779630192 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.363+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.363+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:06.363+0000] {docker.py:73} INFO - 24/12/24 09:27:06 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:06.464+0000] {docker.py:73} INFO - 24/12/24 09:27:06 ERROR TransportClient: Failed to send RPC RPC 8876773039402211356 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.466+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.467+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:06.467+0000] {docker.py:73} INFO - 24/12/24 09:27:06 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:06.571+0000] {docker.py:73} INFO - 24/12/24 09:27:06 ERROR TransportClient: Failed to send RPC RPC 5321266263638847379 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.575+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.576+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:06.579+0000] {docker.py:73} INFO - 24/12/24 09:27:06 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:06.676+0000] {docker.py:73} INFO - 24/12/24 09:27:06 ERROR TransportClient: Failed to send RPC RPC 4951380360487139269 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.678+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.680+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:06.681+0000] {docker.py:73} INFO - 24/12/24 09:27:06 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:06.784+0000] {docker.py:73} INFO - 24/12/24 09:27:06 ERROR TransportClient: Failed to send RPC RPC 5993528265732304389 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.786+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.786+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:06.787+0000] {docker.py:73} INFO - 24/12/24 09:27:06 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:06.889+0000] {docker.py:73} INFO - 24/12/24 09:27:06 ERROR TransportClient: Failed to send RPC RPC 4692610005291531932 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.889+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.890+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:06.890+0000] {docker.py:73} INFO - 24/12/24 09:27:06 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:06.994+0000] {docker.py:73} INFO - 24/12/24 09:27:06 ERROR TransportClient: Failed to send RPC RPC 5592965205340291259 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.995+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:06.995+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:06.996+0000] {docker.py:73} INFO - 24/12/24 09:27:06 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:07.101+0000] {docker.py:73} INFO - 24/12/24 09:27:07 ERROR TransportClient: Failed to send RPC RPC 6534746000696077692 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.103+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.104+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:07.105+0000] {docker.py:73} INFO - 24/12/24 09:27:07 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:07.207+0000] {docker.py:73} INFO - 24/12/24 09:27:07 ERROR TransportClient: Failed to send RPC RPC 6919822092968921315 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.208+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.209+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:07.210+0000] {docker.py:73} INFO - 24/12/24 09:27:07 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:07.309+0000] {docker.py:73} INFO - 24/12/24 09:27:07 ERROR TransportClient: Failed to send RPC RPC 6139147312235028430 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.309+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.309+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:07.309+0000] {docker.py:73} INFO - 24/12/24 09:27:07 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:07.431+0000] {docker.py:73} INFO - 24/12/24 09:27:07 ERROR TransportClient: Failed to send RPC RPC 7668119625291301658 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.434+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.435+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:07.436+0000] {docker.py:73} INFO - 24/12/24 09:27:07 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:07.535+0000] {docker.py:73} INFO - 24/12/24 09:27:07 ERROR TransportClient: Failed to send RPC RPC 6436013690123346978 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.535+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.536+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:07.536+0000] {docker.py:73} INFO - 24/12/24 09:27:07 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:07.636+0000] {docker.py:73} INFO - 24/12/24 09:27:07 ERROR TransportClient: Failed to send RPC RPC 7503800993991478296 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.637+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.637+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:07.637+0000] {docker.py:73} INFO - 24/12/24 09:27:07 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:07.739+0000] {docker.py:73} INFO - 24/12/24 09:27:07 ERROR TransportClient: Failed to send RPC RPC 8666769776418046847 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.740+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.740+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:07.741+0000] {docker.py:73} INFO - 24/12/24 09:27:07 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:07.844+0000] {docker.py:73} INFO - 24/12/24 09:27:07 ERROR TransportClient: Failed to send RPC RPC 5869135252851507573 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.845+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.845+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:07.845+0000] {docker.py:73} INFO - 24/12/24 09:27:07 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:07.948+0000] {docker.py:73} INFO - 24/12/24 09:27:07 ERROR TransportClient: Failed to send RPC RPC 4725641091929904088 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.948+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:07.948+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:07.948+0000] {docker.py:73} INFO - 24/12/24 09:27:07 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:08.052+0000] {docker.py:73} INFO - 24/12/24 09:27:08 ERROR TransportClient: Failed to send RPC RPC 6477644564541115934 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.053+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.053+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:08.053+0000] {docker.py:73} INFO - 24/12/24 09:27:08 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:08.157+0000] {docker.py:73} INFO - 24/12/24 09:27:08 ERROR TransportClient: Failed to send RPC RPC 5213031103045836423 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.157+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.157+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:08.158+0000] {docker.py:73} INFO - 24/12/24 09:27:08 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:08.264+0000] {docker.py:73} INFO - 24/12/24 09:27:08 ERROR TransportClient: Failed to send RPC RPC 8624338623504719886 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.264+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.264+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:08.265+0000] {docker.py:73} INFO - 24/12/24 09:27:08 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:08.372+0000] {docker.py:73} INFO - 24/12/24 09:27:08 ERROR TransportClient: Failed to send RPC RPC 8361088913818731845 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.373+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.373+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:08.373+0000] {docker.py:73} INFO - 24/12/24 09:27:08 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:08.476+0000] {docker.py:73} INFO - 24/12/24 09:27:08 ERROR TransportClient: Failed to send RPC RPC 7929448500857268157 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.476+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.476+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:08.476+0000] {docker.py:73} INFO - 24/12/24 09:27:08 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:08.580+0000] {docker.py:73} INFO - 24/12/24 09:27:08 ERROR TransportClient: Failed to send RPC RPC 6583657078335796477 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.580+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.580+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:08.581+0000] {docker.py:73} INFO - 24/12/24 09:27:08 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:08.689+0000] {docker.py:73} INFO - 24/12/24 09:27:08 ERROR TransportClient: Failed to send RPC RPC 6066932329818741267 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.690+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.691+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:08.692+0000] {docker.py:73} INFO - 24/12/24 09:27:08 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:08.800+0000] {docker.py:73} INFO - 24/12/24 09:27:08 ERROR TransportClient: Failed to send RPC RPC 6043004443577232514 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.800+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.800+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:08.801+0000] {docker.py:73} INFO - 24/12/24 09:27:08 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:08.907+0000] {docker.py:73} INFO - 24/12/24 09:27:08 ERROR TransportClient: Failed to send RPC RPC 5552522375743688304 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.908+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:08.908+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:08.909+0000] {docker.py:73} INFO - 24/12/24 09:27:08 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:09.014+0000] {docker.py:73} INFO - 24/12/24 09:27:09 ERROR TransportClient: Failed to send RPC RPC 5331803604459787637 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:09.015+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:09.015+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:09.015+0000] {docker.py:73} INFO - 24/12/24 09:27:09 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:09.119+0000] {docker.py:73} INFO - 24/12/24 09:27:09 ERROR TransportClient: Failed to send RPC RPC 6162129407083234204 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:09.121+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:09.122+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:09.123+0000] {docker.py:73} INFO - 24/12/24 09:27:09 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:09.222+0000] {docker.py:73} INFO - 24/12/24 09:27:09 ERROR TransportClient: Failed to send RPC RPC 7145007094013890837 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:09.222+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:09.223+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:09.223+0000] {docker.py:73} INFO - 24/12/24 09:27:09 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:09.331+0000] {docker.py:73} INFO - 24/12/24 09:27:09 ERROR TransportClient: Failed to send RPC RPC 7715369134656112708 to spark-master/172.19.0.3:7077: io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:09.332+0000] {docker.py:73} INFO - io.netty.channel.StacklessClosedChannelException
+[2024-12-24T09:27:09.332+0000] {docker.py:73} INFO - 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+[2024-12-24T09:27:09.333+0000] {docker.py:73} INFO - 24/12/24 09:27:09 WARN ExecutorAllocationManager: Unable to reach the cluster manager to request more executors!
+[2024-12-24T09:27:09.386+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-12-24T09:27:09.389+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-24T09:27:09.394+0000] {process_utils.py:132} INFO - Sending 15 to group 91. PIDs of all processes in the group: [91]
+[2024-12-24T09:27:09.395+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 91
+[2024-12-24T09:27:09.397+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-24T09:27:09.399+0000] {docker.py:539} INFO - Stopping docker container
+[2024-12-24T09:27:09.825+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-24T09:27:09.943+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=91, status='terminated', exitcode=0, started='09:25:46') (91) terminated with exit code 0

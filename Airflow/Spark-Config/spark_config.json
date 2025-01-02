@@ -1,8 +1,0 @@
-{
-    "spark.dynamicAllocation.enabled":"true",
-    "spark.sql.extensions":"io.delta.sql.DeltaSparkSessionExtension",
-    "spark.sql.catalog.spark_catalog":"org.apache.spark.sql.delta.catalog.DeltaCatalog",
-    "spark.master":"spark://172.20.0.3:7077",
-    "spark.jars.packages":"io.delta:delta-core_2.13:2.4.0",
-    "spark.app.name":"Airflow_Spark_Job"
-}
