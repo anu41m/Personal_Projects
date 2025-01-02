@@ -32,7 +32,7 @@ echo "Enter the Branch to pull the changes:"
 
 git remote add origin https://github.com/anu41m/my_jupyter_project.git
 
-echo "Available Brances:- \"DEV_test\""
+echo "Available Branches:- \"DEV_test\""
 read $user_input
 
 case "$user_input" in
