@@ -1,0 +1,33 @@
+[2025-01-05T13:59:00.495+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-05T13:59:00.567+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_NB_Fetch_Google_Finance.NB_Notebook_job scheduled__2025-01-03T15:35:00+00:00 [queued]>
+[2025-01-05T13:59:00.606+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_NB_Fetch_Google_Finance.NB_Notebook_job scheduled__2025-01-03T15:35:00+00:00 [queued]>
+[2025-01-05T13:59:00.607+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-05T13:59:00.641+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): NB_Notebook_job> on 2025-01-03 15:35:00+00:00
+[2025-01-05T13:59:00.669+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=237) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-05T13:59:00.686+0000] {standard_task_runner.py:72} INFO - Started process 245 to run task
+[2025-01-05T13:59:00.691+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_NB_Fetch_Google_Finance', 'NB_Notebook_job', 'scheduled__2025-01-03T15:35:00+00:00', '--job-id', '586', '--raw', '--subdir', 'DAGS_FOLDER/dag_NB_Fetch_Google_Finance.py', '--cfg-path', '/tmp/tmpjklv40n6']
+[2025-01-05T13:59:00.704+0000] {standard_task_runner.py:105} INFO - Job 586: Subtask NB_Notebook_job
+[2025-01-05T13:59:00.904+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_NB_Fetch_Google_Finance.NB_Notebook_job scheduled__2025-01-03T15:35:00+00:00 [running]> on host 44275986e897
+[2025-01-05T13:59:01.660+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Anoop M' AIRFLOW_CTX_DAG_ID='dag_NB_Fetch_Google_Finance' AIRFLOW_CTX_TASK_ID='NB_Notebook_job' AIRFLOW_CTX_EXECUTION_DATE='2025-01-03T15:35:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-03T15:35:00+00:00'
+[2025-01-05T13:59:01.706+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-05T13:59:02.877+0000] {docker.py:379} INFO - Starting docker container from image spark-cluster:version-1.0.0
+[2025-01-05T13:59:06.170+0000] {docker.py:73} INFO - Input Notebook:  /home/jovyan/Notebooks/NB_Fetch_Google_Finance.ipynb
+[2025-01-05T13:59:06.181+0000] {docker.py:73} INFO - Output Notebook: /home/jovyan/Notebooks/output/NB_Fetch_Google_Finance.ipynb
+[2025-01-05T13:59:09.956+0000] {docker.py:73} INFO - Executing notebook with kernel: python3
+[2025-01-05T13:59:09.976+0000] {docker.py:73} INFO - Executing Cell 1---------------------------------------
+[2025-01-05T13:59:25.086+0000] {docker.py:73} INFO - :: loading settings :: url = jar:file:/usr/local/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-01-05T13:59:25.330+0000] {docker.py:73} INFO - Ivy Default Cache set to: /home/jovyan/.ivy2/cache
+[2025-01-05T13:59:25.333+0000] {docker.py:73} INFO - The jars for the packages stored in: /home/jovyan/.ivy2/jars
+[2025-01-05T13:59:25.351+0000] {docker.py:73} INFO - io.delta#delta-spark_2.12 added as a dependency
+[2025-01-05T13:59:25.353+0000] {docker.py:73} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-5443f926-d2d2-4b90-8f1d-21be4e0cd725;1.0
+[2025-01-05T13:59:25.354+0000] {docker.py:73} INFO - 	confs: [default]
+[2025-01-05T13:59:26.777+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-05T13:59:26.784+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-05T13:59:26.792+0000] {process_utils.py:132} INFO - Sending 15 to group 245. PIDs of all processes in the group: [245]
+[2025-01-05T13:59:26.793+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 245
+[2025-01-05T13:59:26.796+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-05T13:59:26.802+0000] {docker.py:539} INFO - Stopping docker container
+[2025-01-05T13:59:27.806+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-05T13:59:27.877+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=245, status='terminated', exitcode=0, started='13:59:00') (245) terminated with exit code 0

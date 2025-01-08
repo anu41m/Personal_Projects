@@ -1,0 +1,264 @@
+[2025-01-05T18:34:40.871+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-05T18:34:40.895+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_NB_Fetch_Google_Finance.NB_Notebook_job manual__2025-01-05T18:34:36.673586+00:00 [queued]>
+[2025-01-05T18:34:40.902+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_NB_Fetch_Google_Finance.NB_Notebook_job manual__2025-01-05T18:34:36.673586+00:00 [queued]>
+[2025-01-05T18:34:40.903+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-05T18:34:40.910+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): NB_Notebook_job> on 2025-01-05 18:34:36.673586+00:00
+[2025-01-05T18:34:40.927+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=315) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-05T18:34:40.931+0000] {standard_task_runner.py:72} INFO - Started process 317 to run task
+[2025-01-05T18:34:40.933+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_NB_Fetch_Google_Finance', 'NB_Notebook_job', 'manual__2025-01-05T18:34:36.673586+00:00', '--job-id', '648', '--raw', '--subdir', 'DAGS_FOLDER/dag_NB_Fetch_Google_Finance.py', '--cfg-path', '/tmp/tmpt0y48y06']
+[2025-01-05T18:34:40.934+0000] {standard_task_runner.py:105} INFO - Job 648: Subtask NB_Notebook_job
+[2025-01-05T18:34:40.992+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_NB_Fetch_Google_Finance.NB_Notebook_job manual__2025-01-05T18:34:36.673586+00:00 [running]> on host c0503b833e6f
+[2025-01-05T18:34:41.106+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Anoop M' AIRFLOW_CTX_DAG_ID='dag_NB_Fetch_Google_Finance' AIRFLOW_CTX_TASK_ID='NB_Notebook_job' AIRFLOW_CTX_EXECUTION_DATE='2025-01-05T18:34:36.673586+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-05T18:34:36.673586+00:00'
+[2025-01-05T18:34:41.108+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-05T18:34:41.342+0000] {docker.py:379} INFO - Starting docker container from image spark-cluster:version-1.0.0
+[2025-01-05T18:34:45.997+0000] {docker.py:73} INFO - Input Notebook:  /home/jovyan/Notebooks/NB_Fetch_Google_Finance.ipynb
+[2025-01-05T18:34:46.028+0000] {docker.py:73} INFO - Output Notebook: /home/jovyan/Notebooks/output/NB_Fetch_Google_Finance.ipynb
+[2025-01-05T18:34:51.410+0000] {docker.py:73} INFO - Executing notebook with kernel: python3
+[2025-01-05T18:34:51.430+0000] {docker.py:73} INFO - Executing Cell 1---------------------------------------
+[2025-01-05T18:34:58.079+0000] {docker.py:73} INFO - :: loading settings :: url = jar:file:/usr/local/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-01-05T18:34:58.197+0000] {docker.py:73} INFO - Ivy Default Cache set to: /home/jovyan/.ivy2/cache
+[2025-01-05T18:34:58.200+0000] {docker.py:73} INFO - The jars for the packages stored in: /home/jovyan/.ivy2/jars
+[2025-01-05T18:34:58.206+0000] {docker.py:73} INFO - io.delta#delta-spark_2.12 added as a dependency
+[2025-01-05T18:34:58.210+0000] {docker.py:73} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-6c8955a2-b934-4459-a6db-05be8cfd378e;1.0
+[2025-01-05T18:34:58.213+0000] {docker.py:73} INFO - 	confs: [default]
+[2025-01-05T18:34:59.933+0000] {docker.py:73} INFO - 	found io.delta#delta-spark_2.12;3.1.0 in central
+[2025-01-05T18:35:00.426+0000] {docker.py:73} INFO - 	found io.delta#delta-storage;3.1.0 in central
+[2025-01-05T18:35:03.303+0000] {docker.py:73} INFO - 	found org.antlr#antlr4-runtime;4.9.3 in central
+[2025-01-05T18:35:03.536+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-spark_2.12/3.1.0/delta-spark_2.12-3.1.0.jar ...
+[2025-01-05T18:35:05.250+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] io.delta#delta-spark_2.12;3.1.0!delta-spark_2.12.jar (1930ms)
+[2025-01-05T18:35:05.485+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-storage/3.1.0/delta-storage-3.1.0.jar ...
+[2025-01-05T18:35:05.727+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] io.delta#delta-storage;3.1.0!delta-storage.jar (462ms)
+[2025-01-05T18:35:05.956+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.9.3/antlr4-runtime-4.9.3.jar ...
+[2025-01-05T18:35:06.185+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] org.antlr#antlr4-runtime;4.9.3!antlr4-runtime.jar (453ms)
+[2025-01-05T18:35:06.188+0000] {docker.py:73} INFO - :: resolution report :: resolve 5109ms :: artifacts dl 2871ms
+[2025-01-05T18:35:06.190+0000] {docker.py:73} INFO - 	:: modules in use:
+[2025-01-05T18:35:06.191+0000] {docker.py:73} INFO - 	io.delta#delta-spark_2.12;3.1.0 from central in [default]
+[2025-01-05T18:35:06.191+0000] {docker.py:73} INFO - 	io.delta#delta-storage;3.1.0 from central in [default]
+[2025-01-05T18:35:06.193+0000] {docker.py:73} INFO - 	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+[2025-01-05T18:35:06.193+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2025-01-05T18:35:06.194+0000] {docker.py:73} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-01-05T18:35:06.194+0000] {docker.py:73} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-01-05T18:35:06.195+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2025-01-05T18:35:06.195+0000] {docker.py:73} INFO - 	|      default     |   3   |   3   |   3   |   0   ||   3   |   3   |
+[2025-01-05T18:35:06.195+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2025-01-05T18:35:06.209+0000] {docker.py:73} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-6c8955a2-b934-4459-a6db-05be8cfd378e
+[2025-01-05T18:35:06.209+0000] {docker.py:73} INFO - 	confs: [default]
+[2025-01-05T18:35:06.240+0000] {docker.py:73} INFO - 	3 artifacts copied, 0 already retrieved (5727kB/31ms)
+[2025-01-05T18:35:06.645+0000] {docker.py:73} INFO - 25/01/05 18:35:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-01-05T18:35:06.925+0000] {docker.py:73} INFO - Setting default log level to "WARN
+[2025-01-05T18:35:06.926+0000] {docker.py:73} INFO - ".
+[2025-01-05T18:35:06.927+0000] {docker.py:73} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2025-01-05T18:35:08.256+0000] {docker.py:73} INFO - 25/01/05 18:35:08 WARN StandaloneSchedulerBackend: Dynamic allocation enabled without spark.executor.cores explicitly set, you may get more executors allocated than expected. It's recommended to set spark.executor.cores explicitly. Please check SPARK-30299 for more details.
+[2025-01-05T18:35:09.264+0000] {docker.py:73} INFO - 25/01/05 18:35:09 WARN Utils: spark.executor.instances less than spark.dynamicAllocation.minExecutors is invalid, ignoring its setting, please update your configs.
+[2025-01-05T18:35:13.840+0000] {docker.py:73} INFO - <pyspark.sql.session.SparkSession at 0xffff6f39ffd0>
+[2025-01-05T18:35:13.857+0000] {docker.py:73} INFO - Ending Cell 1------------------------------------------
+[2025-01-05T18:35:13.874+0000] {docker.py:73} INFO - Executing Cell 2---------------------------------------
+[2025-01-05T18:35:23.220+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 1) / 1]
+[2025-01-05T18:35:24.684+0000] {docker.py:73} INFO - 
+[2025-01-05T18:35:25.285+0000] {docker.py:73} INFO - Ending Cell 2------------------------------------------
+[2025-01-05T18:35:25.291+0000] {docker.py:73} INFO - Executing Cell 3---------------------------------------
+[2025-01-05T18:35:26.230+0000] {docker.py:73} INFO - [Stage 1:>                                                          (0 + 1) / 1]
+[2025-01-05T18:35:27.735+0000] {docker.py:73} INFO - 
+[2025-01-05T18:35:28.688+0000] {docker.py:73} INFO - Ending Cell 3------------------------------------------
+[2025-01-05T18:35:28.704+0000] {docker.py:73} INFO - Executing Cell 4---------------------------------------
+[2025-01-05T18:35:28.727+0000] {docker.py:73} INFO - Ending Cell 4------------------------------------------
+[2025-01-05T18:35:28.730+0000] {docker.py:73} INFO - Executing Cell 5---------------------------------------
+[2025-01-05T18:35:28.747+0000] {docker.py:73} INFO - Ending Cell 5------------------------------------------
+[2025-01-05T18:35:28.750+0000] {docker.py:73} INFO - Executing Cell 6---------------------------------------
+[2025-01-05T18:35:28.766+0000] {docker.py:73} INFO - Ending Cell 6------------------------------------------
+[2025-01-05T18:35:28.770+0000] {docker.py:73} INFO - Executing Cell 7---------------------------------------
+[2025-01-05T18:35:28.783+0000] {docker.py:73} INFO - Ending Cell 7------------------------------------------
+[2025-01-05T18:35:28.786+0000] {docker.py:73} INFO - Executing Cell 8---------------------------------------
+[2025-01-05T18:35:28.807+0000] {docker.py:73} INFO - Ending Cell 8------------------------------------------
+[2025-01-05T18:35:28.813+0000] {docker.py:73} INFO - Executing Cell 9---------------------------------------
+[2025-01-05T18:35:28.832+0000] {docker.py:73} INFO - Ending Cell 9------------------------------------------
+[2025-01-05T18:35:28.840+0000] {docker.py:73} INFO - Executing Cell 10--------------------------------------
+[2025-01-05T18:35:28.889+0000] {docker.py:73} INFO - Ending Cell 10-----------------------------------------
+[2025-01-05T18:35:28.895+0000] {docker.py:73} INFO - Executing Cell 11--------------------------------------
+[2025-01-05T18:35:31.686+0000] {docker.py:73} INFO - Ending Cell 11-----------------------------------------
+[2025-01-05T18:35:31.692+0000] {docker.py:73} INFO - Executing Cell 12--------------------------------------
+[2025-01-05T18:35:31.721+0000] {docker.py:73} INFO - ['ASTEC', 'ITI', 'AVONMORE', 'MEGASTAR', 'MOKSH', 'ITDC', 'DEVIT', 'SAREGAMA', 'ROML', 'APOLLO', 'DMART', 'LLOYDSENGG', 'NURECA', 'KARMAENG', 'ASMS', 'BASML', 'ESTER', 'SALASAR', 'PROZONER', 'JAYNECOIND', 'SPENCERS', 'UMAEXPORTS', 'ASHAPURMIN', 'DECCANCE', 'PTCIL', 'AMDIND', 'SATINDLTD', 'GLOBAL', 'STYLEBAAZA', 'MANGCHEFER', 'ORIENTTECH', 'MANAKALUCO', 'MANCREDIT', 'KINGFA', 'DCM', 'LORDSCHLO', 'TATVA', 'TRANSWORLD', 'OMINFRAL', 'ONMOBILE', 'HILTON', 'LLOYDSENT', 'BHAGCHEM', 'SBGLP', 'SRM', 'ORCHPHARMA', 'LLOYDSME', 'JTEKTINDIA', 'PRAENG', 'BVCL', 'SPCENET', 'SECURCRED', 'SIKKO-RE', 'AVON-RE', 'JAICORPLTD', 'GAYAHWS', 'RCOM', 'EDUCOMP', 'GOENKA', 'AMNPLST', 'DYNAMATECH', 'JPASSOCIAT', 'MADHAV', 'PFOCUS', 'NOIDATOLL', 'YAARI', 'TVVISION', 'SKIL', 'EMAMIREAL', 'EROSMEDIA', 'INDSWFTLTD', 'SARLAPOLY', 'SANCO', 'KITEX', 'TIL', 'SRPL', 'SIKKO', 'ONELIFECAP', 'NATIONALUM', 'ROLLT', 'KPIGREEN', 'STERTOOLS', 'TANLA', 'ZOMATO', 'WEWIN', 'DELTAMAGNT', 'PVP', 'ANGELONE', 'GANECOS', 'MAMATA', 'SRGHFL', 'CEWATER', 'AMBICAAGAR', 'KBCGLOBAL', 'IIFLCAPS', 'UNIINFO', 'SUVIDHAA', 'E2E', 'ABREL', 'AJANTPHARM']
+[2025-01-05T18:35:31.722+0000] {docker.py:73} INFO - Ending Cell 12-----------------------------------------
+[2025-01-05T18:35:31.727+0000] {docker.py:73} INFO - Executing Cell 13--------------------------------------
+[2025-01-05T18:35:31.733+0000] {docker.py:73} INFO - Ending Cell 13-----------------------------------------
+[2025-01-05T18:35:31.736+0000] {docker.py:73} INFO - Executing Cell 14--------------------------------------
+[2025-01-05T18:36:21.721+0000] {docker.py:73} INFO - SIKKO-RE.NS: Period 'ytd' is invalid, must be one of ['1d', '5d']
+[2025-01-05T18:36:22.480+0000] {docker.py:73} INFO - $AVON-RE.NS: possibly delisted; no price data found  (period=ytd)
+[2025-01-05T18:37:04.368+0000] {docker.py:73} INFO - Ending Cell 14-----------------------------------------
+[2025-01-05T18:37:04.375+0000] {docker.py:73} INFO - Executing Cell 15--------------------------------------
+[2025-01-05T18:37:04.861+0000] {docker.py:73} INFO - Ending Cell 15-----------------------------------------
+[2025-01-05T18:37:04.864+0000] {docker.py:73} INFO - Executing Cell 16--------------------------------------
+[2025-01-05T18:37:05.189+0000] {docker.py:73} INFO - Ending Cell 16-----------------------------------------
+[2025-01-05T18:37:05.193+0000] {docker.py:73} INFO - Executing Cell 17--------------------------------------
+[2025-01-05T18:37:07.394+0000] {docker.py:73} INFO - [Stage 3:>                                                          (0 + 1) / 1]
+[2025-01-05T18:37:08.038+0000] {docker.py:73} INFO - 
+[2025-01-05T18:37:09.443+0000] {docker.py:73} INFO - Ending Cell 17-----------------------------------------
+[2025-01-05T18:37:09.452+0000] {docker.py:73} INFO - Executing Cell 18--------------------------------------
+[2025-01-05T18:37:11.175+0000] {docker.py:73} INFO - Ending Cell 18-----------------------------------------
+[2025-01-05T18:37:13.842+0000] {docker.py:73} INFO - Traceback (most recent call last):
+[2025-01-05T18:37:13.847+0000] {docker.py:73} INFO -   File "/opt/conda/bin/papermill", line 8, in <module>
+[2025-01-05T18:37:13.847+0000] {docker.py:73} INFO -     sys.exit(papermill())
+[2025-01-05T18:37:13.848+0000] {docker.py:73} INFO -              ^^^^^^^^^^^
+[2025-01-05T18:37:13.848+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+[2025-01-05T18:37:13.848+0000] {docker.py:73} INFO -     return self.main(*args, **kwargs)
+[2025-01-05T18:37:13.849+0000] {docker.py:73} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-05T18:37:13.849+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/core.py", line 1078, in main
+[2025-01-05T18:37:13.849+0000] {docker.py:73} INFO -     rv = self.invoke(ctx)
+[2025-01-05T18:37:13.849+0000] {docker.py:73} INFO -          ^^^^^^^^^^^^^^^^
+[2025-01-05T18:37:13.850+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+[2025-01-05T18:37:13.850+0000] {docker.py:73} INFO -     return ctx.invoke(self.callback, **ctx.params)
+[2025-01-05T18:37:13.850+0000] {docker.py:73} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-05T18:37:13.850+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+[2025-01-05T18:37:13.850+0000] {docker.py:73} INFO -     return __callback(*args, **kwargs)
+[2025-01-05T18:37:13.850+0000] {docker.py:73} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-05T18:37:13.850+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/click/decorators.py", line 33, in new_func
+[2025-01-05T18:37:13.851+0000] {docker.py:73} INFO -     return f(get_current_context(), *args, **kwargs)
+[2025-01-05T18:37:13.851+0000] {docker.py:73} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-05T18:37:13.851+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/papermill/cli.py", line 235, in papermill
+[2025-01-05T18:37:13.851+0000] {docker.py:73} INFO -     execute_notebook(
+[2025-01-05T18:37:13.851+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/papermill/execute.py", line 131, in execute_notebook
+[2025-01-05T18:37:13.852+0000] {docker.py:73} INFO -     raise_for_execution_errors(nb, output_path)
+[2025-01-05T18:37:13.853+0000] {docker.py:73} INFO -   File "/opt/conda/lib/python3.11/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+[2025-01-05T18:37:13.853+0000] {docker.py:73} INFO -     raise error
+[2025-01-05T18:37:13.854+0000] {docker.py:73} INFO - papermill.exceptions.PapermillExecutionError: 
+[2025-01-05T18:37:13.854+0000] {docker.py:73} INFO - ---------------------------------------------------------------------------
+[2025-01-05T18:37:13.856+0000] {docker.py:73} INFO - Exception encountered at "In [18]":
+[2025-01-05T18:37:13.856+0000] {docker.py:73} INFO - ---------------------------------------------------------------------------
+[2025-01-05T18:37:13.856+0000] {docker.py:73} INFO - ParseException                            Traceback (most recent call last)
+[2025-01-05T18:37:13.856+0000] {docker.py:73} INFO - Cell In[18], line 12
+[2025-01-05T18:37:13.857+0000] {docker.py:73} INFO -       5     insert_values=",".join([f"source.{i}" for i in column_name])
+[2025-01-05T18:37:13.857+0000] {docker.py:73} INFO -       6     query = f"""MERGE INTO delta.`{trgt_path_processed}` AS target 
+[2025-01-05T18:37:13.858+0000] {docker.py:73} INFO -       7             USING vw_source AS source 
+[2025-01-05T18:37:13.858+0000] {docker.py:73} INFO -       8             ON target.PKSK = source.PKSK 
+[2025-01-05T18:37:13.858+0000] {docker.py:73} INFO -       9             AND target.RowSK <> source.RowSK 
+[2025-01-05T18:37:13.858+0000] {docker.py:73} INFO -      10             WHEN MATCHED THEN UPDATE SET {set_clause}
+[2025-01-05T18:37:13.858+0000] {docker.py:73} INFO -      11             WHEN NOT MATCHED THEN INSERT ({insert_clause}) VALUES ({insert_values})"""
+[2025-01-05T18:37:13.858+0000] {docker.py:73} INFO - ---> 12     spark.sql(query)        
+[2025-01-05T18:37:13.858+0000] {docker.py:73} INFO -      13 else :
+[2025-01-05T18:37:13.859+0000] {docker.py:73} INFO -      14     query=f"CREATE TABLE delta.`{trgt_path_processed}` USING DELTA AS SELECT * FROM vw_source"
+[2025-01-05T18:37:13.859+0000] {docker.py:73} INFO - 
+[2025-01-05T18:37:13.859+0000] {docker.py:73} INFO - File /opt/conda/lib/python3.11/site-packages/pyspark/sql/session.py:1631, in SparkSession.sql(self, sqlQuery, args, **kwargs)
+[2025-01-05T18:37:13.859+0000] {docker.py:73} INFO -    1627         assert self._jvm is not None
+[2025-01-05T18:37:13.859+0000] {docker.py:73} INFO -    1628         litArgs = self._jvm.PythonUtils.toArray(
+[2025-01-05T18:37:13.860+0000] {docker.py:73} INFO -    1629             [_to_java_column(lit(v)) for v in (args or [])]
+[2025-01-05T18:37:13.860+0000] {docker.py:73} INFO -    1630         )
+[2025-01-05T18:37:13.860+0000] {docker.py:73} INFO - -> 1631     return DataFrame(self._jsparkSession.sql(sqlQuery, litArgs), self)
+[2025-01-05T18:37:13.860+0000] {docker.py:73} INFO -    1632 finally:
+[2025-01-05T18:37:13.860+0000] {docker.py:73} INFO -    1633     if len(kwargs) > 0:
+[2025-01-05T18:37:13.861+0000] {docker.py:73} INFO - 
+[2025-01-05T18:37:13.861+0000] {docker.py:73} INFO - File /opt/conda/lib/python3.11/site-packages/py4j/java_gateway.py:1322, in JavaMember.__call__(self, *args)
+[2025-01-05T18:37:13.862+0000] {docker.py:73} INFO -    1316 command = proto.CALL_COMMAND_NAME +\
+[2025-01-05T18:37:13.863+0000] {docker.py:73} INFO -    1317     self.command_header +\
+[2025-01-05T18:37:13.863+0000] {docker.py:73} INFO -    1318     args_command +\
+[2025-01-05T18:37:13.864+0000] {docker.py:73} INFO -    1319     proto.END_COMMAND_PART
+[2025-01-05T18:37:13.864+0000] {docker.py:73} INFO -    1321 answer = self.gateway_client.send_command(command)
+[2025-01-05T18:37:13.864+0000] {docker.py:73} INFO - -> 1322 return_value = get_return_value(
+[2025-01-05T18:37:13.868+0000] {docker.py:73} INFO -    1323     answer, self.gateway_client, self.target_id, self.name)
+[2025-01-05T18:37:13.870+0000] {docker.py:73} INFO -    1325 for temp_arg in temp_args:
+[2025-01-05T18:37:13.870+0000] {docker.py:73} INFO -    1326     if hasattr(temp_arg, "_detach"):
+[2025-01-05T18:37:13.870+0000] {docker.py:73} INFO - 
+[2025-01-05T18:37:13.870+0000] {docker.py:73} INFO - File /opt/conda/lib/python3.11/site-packages/pyspark/errors/exceptions/captured.py:185, in capture_sql_exception.<locals>.deco(*a, **kw)
+[2025-01-05T18:37:13.870+0000] {docker.py:73} INFO -     181 converted = convert_exception(e.java_exception)
+[2025-01-05T18:37:13.870+0000] {docker.py:73} INFO -     182 if not isinstance(converted, UnknownException):
+[2025-01-05T18:37:13.870+0000] {docker.py:73} INFO -     183     # Hide where the exception came from that shows a non-Pythonic
+[2025-01-05T18:37:13.870+0000] {docker.py:73} INFO -     184     # JVM exception message.
+[2025-01-05T18:37:13.871+0000] {docker.py:73} INFO - --> 185     raise converted from None
+[2025-01-05T18:37:13.871+0000] {docker.py:73} INFO -     186 else:
+[2025-01-05T18:37:13.871+0000] {docker.py:73} INFO -     187     raise
+[2025-01-05T18:37:13.871+0000] {docker.py:73} INFO - 
+[2025-01-05T18:37:13.871+0000] {docker.py:73} INFO - ParseException: 
+[2025-01-05T18:37:13.871+0000] {docker.py:73} INFO - [PARSE_SYNTAX_ERROR] Syntax error at or near '.52': missing EQ.(line 5, pos 292)
+[2025-01-05T18:37:13.871+0000] {docker.py:73} INFO - 
+[2025-01-05T18:37:13.871+0000] {docker.py:73} INFO - == SQL ==
+[2025-01-05T18:37:13.871+0000] {docker.py:73} INFO - MERGE INTO delta.`/mnt/Stock_market_data/Processed_Parquet` AS target 
+[2025-01-05T18:37:13.871+0000] {docker.py:73} INFO -             USING vw_source AS source 
+[2025-01-05T18:37:13.871+0000] {docker.py:73} INFO -             ON target.PKSK = source.PKSK 
+[2025-01-05T18:37:13.871+0000] {docker.py:73} INFO -             AND target.RowSK <> source.RowSK 
+[2025-01-05T18:37:13.872+0000] {docker.py:73} INFO -             WHEN MATCHED THEN UPDATE SET target.Ticker = source.Ticker, target.Stock_Name = source.Stock_Name, target.Sector = source.Sector, target.Industry = source.Industry, target.CMP = source.CMP, target.Change = source.Change, target.Change_Percentage = source.Change_Percentage, target.52-week_high = source.52-week_high, target.ROE = source.ROE, target.ROCE = source.ROCE, target.Trailing_PEG = source.Trailing_PEG, target.Forward_PEG = source.Forward_PEG, target.Debt-to-Equity = source.Debt-to-Equity, target.Latest_Finanacial_Year = source.Latest_Finanacial_Year, target.Sales_Growth = source.Sales_Growth, target.MA50 = source.MA50, target.MA200 = source.MA200, target.Gainer/Looser = source.Gainer/Looser, target.WatchOutFlag = source.WatchOutFlag, target.UpdateTimestamp = source.UpdateTimestamp
+[2025-01-05T18:37:13.872+0000] {docker.py:73} INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------^^^
+[2025-01-05T18:37:13.872+0000] {docker.py:73} INFO -             WHEN NOT MATCHED THEN INSERT (Ticker,Stock_Name,Sector,Industry,CMP,Change,Change_Percentage,52-week_high,ROE,ROCE,Trailing_PEG,Forward_PEG,Debt-to-Equity,Latest_Finanacial_Year,Sales_Growth,MA50,MA200,Gainer/Looser,WatchOutFlag,UpdateTimestamp) VALUES (source.Ticker,source.Stock_Name,source.Sector,source.Industry,source.CMP,source.Change,source.Change_Percentage,source.52-week_high,source.ROE,source.ROCE,source.Trailing_PEG,source.Forward_PEG,source.Debt-to-Equity,source.Latest_Finanacial_Year,source.Sales_Growth,source.MA50,source.MA200,source.Gainer/Looser,source.WatchOutFlag,source.UpdateTimestamp)
+[2025-01-05T18:37:14.963+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 519, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 396, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 453, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 1}
+[2025-01-05T18:37:15.021+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=dag_NB_Fetch_Google_Finance, task_id=NB_Notebook_job, run_id=manual__2025-01-05T18:34:36.673586+00:00, execution_date=20250105T183436, start_date=20250105T183440, end_date=20250105T183715
+[2025-01-05T18:37:15.080+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-05T18:37:15.082+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 648 for task NB_Notebook_job (Docker container failed: {'StatusCode': 1}; 317)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 519, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 396, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 453, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 1}
+[2025-01-05T18:37:15.156+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-05T18:37:15.293+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-05T18:37:15.296+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

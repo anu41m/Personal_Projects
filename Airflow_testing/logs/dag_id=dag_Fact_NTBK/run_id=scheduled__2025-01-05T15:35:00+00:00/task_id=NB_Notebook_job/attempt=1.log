@@ -1,0 +1,326 @@
+[2025-01-06T16:15:20.784+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-06T16:15:20.845+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_Fact_NTBK.NB_Notebook_job scheduled__2025-01-05T15:35:00+00:00 [queued]>
+[2025-01-06T16:15:20.864+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_Fact_NTBK.NB_Notebook_job scheduled__2025-01-05T15:35:00+00:00 [queued]>
+[2025-01-06T16:15:20.866+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-06T16:15:20.917+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): NB_Notebook_job> on 2025-01-05 15:35:00+00:00
+[2025-01-06T16:15:20.944+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=82) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-06T16:15:20.953+0000] {standard_task_runner.py:72} INFO - Started process 88 to run task
+[2025-01-06T16:15:20.955+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_Fact_NTBK', 'NB_Notebook_job', 'scheduled__2025-01-05T15:35:00+00:00', '--job-id', '668', '--raw', '--subdir', 'DAGS_FOLDER/dag_FACT_NTBK.py', '--cfg-path', '/tmp/tmp82xtu0dy']
+[2025-01-06T16:15:20.961+0000] {standard_task_runner.py:105} INFO - Job 668: Subtask NB_Notebook_job
+[2025-01-06T16:15:21.077+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_Fact_NTBK.NB_Notebook_job scheduled__2025-01-05T15:35:00+00:00 [running]> on host 11dfcfce049d
+[2025-01-06T16:15:21.276+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Anoop M' AIRFLOW_CTX_DAG_ID='dag_Fact_NTBK' AIRFLOW_CTX_TASK_ID='NB_Notebook_job' AIRFLOW_CTX_EXECUTION_DATE='2025-01-05T15:35:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-05T15:35:00+00:00'
+[2025-01-06T16:15:21.277+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-06T16:15:21.832+0000] {docker.py:379} INFO - Starting docker container from image spark-cluster:version-1.0.0
+[2025-01-06T16:15:25.571+0000] {docker.py:73} INFO - Input Notebook:  /home/jovyan/Notebooks/NB_FACT_NTBK.ipynb
+[2025-01-06T16:15:25.578+0000] {docker.py:73} INFO - Output Notebook: /home/jovyan/Notebooks/output/NB_FACT_NTBK.ipynb
+[2025-01-06T16:15:29.744+0000] {docker.py:73} INFO - Executing notebook with kernel: python3
+[2025-01-06T16:15:29.755+0000] {docker.py:73} INFO - Executing Cell 1---------------------------------------
+[2025-01-06T16:15:30.650+0000] {docker.py:73} INFO - Ending Cell 1------------------------------------------
+[2025-01-06T16:15:30.657+0000] {docker.py:73} INFO - Executing Cell 2---------------------------------------
+[2025-01-06T16:15:30.694+0000] {docker.py:73} INFO - Ending Cell 2------------------------------------------
+[2025-01-06T16:15:30.698+0000] {docker.py:73} INFO - Executing Cell 3---------------------------------------
+[2025-01-06T16:15:35.932+0000] {docker.py:73} INFO - :: loading settings :: url = jar:file:/usr/local/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-01-06T16:15:36.145+0000] {docker.py:73} INFO - Ivy Default Cache set to: /home/jovyan/.ivy2/cache
+[2025-01-06T16:15:36.147+0000] {docker.py:73} INFO - The jars for the packages stored in: /home/jovyan/.ivy2/jars
+[2025-01-06T16:15:36.148+0000] {docker.py:73} INFO - io.delta#delta-spark_2.12 added as a dependency
+[2025-01-06T16:15:36.149+0000] {docker.py:73} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-5894d887-b531-4a7e-8c84-30d7b2aaaaf4;1.0
+[2025-01-06T16:15:36.149+0000] {docker.py:73} INFO - 	confs: [default]
+[2025-01-06T16:15:38.708+0000] {docker.py:73} INFO - 	found io.delta#delta-spark_2.12;3.1.0 in central
+[2025-01-06T16:15:39.318+0000] {docker.py:73} INFO - 	found io.delta#delta-storage;3.1.0 in central
+[2025-01-06T16:15:43.470+0000] {docker.py:73} INFO - 	found org.antlr#antlr4-runtime;4.9.3 in central
+[2025-01-06T16:15:43.808+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-spark_2.12/3.1.0/delta-spark_2.12-3.1.0.jar ...
+[2025-01-06T16:15:54.033+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] io.delta#delta-spark_2.12;3.1.0!delta-spark_2.12.jar (10546ms)
+[2025-01-06T16:15:54.381+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-storage/3.1.0/delta-storage-3.1.0.jar ...
+[2025-01-06T16:15:54.692+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] io.delta#delta-storage;3.1.0!delta-storage.jar (650ms)
+[2025-01-06T16:15:55.003+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.9.3/antlr4-runtime-4.9.3.jar ...
+[2025-01-06T16:15:55.423+0000] {docker.py:73} INFO - 	[SUCCESSFUL ] org.antlr#antlr4-runtime;4.9.3!antlr4-runtime.jar (724ms)
+[2025-01-06T16:15:55.425+0000] {docker.py:73} INFO - :: resolution report :: resolve 7330ms :: artifacts dl 11945ms
+[2025-01-06T16:15:55.426+0000] {docker.py:73} INFO - 	:: modules in use:
+[2025-01-06T16:15:55.427+0000] {docker.py:73} INFO - 	io.delta#delta-spark_2.12;3.1.0 from central in [default]
+[2025-01-06T16:15:55.428+0000] {docker.py:73} INFO - 	io.delta#delta-storage;3.1.0 from central in [default]
+[2025-01-06T16:15:55.430+0000] {docker.py:73} INFO - 	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+[2025-01-06T16:15:55.431+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2025-01-06T16:15:55.433+0000] {docker.py:73} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-01-06T16:15:55.441+0000] {docker.py:73} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-01-06T16:15:55.443+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2025-01-06T16:15:55.445+0000] {docker.py:73} INFO - 	|      default     |   3   |   3   |   3   |   0   ||   3   |   3   |
+[2025-01-06T16:15:55.446+0000] {docker.py:73} INFO - 	---------------------------------------------------------------------
+[2025-01-06T16:15:55.458+0000] {docker.py:73} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-5894d887-b531-4a7e-8c84-30d7b2aaaaf4
+[2025-01-06T16:15:55.460+0000] {docker.py:73} INFO - 	confs: [default]
+[2025-01-06T16:15:55.581+0000] {docker.py:73} INFO - 	3 artifacts copied, 0 already retrieved (5727kB/121ms)
+[2025-01-06T16:15:57.029+0000] {docker.py:73} INFO - 25/01/06 16:15:57 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-01-06T16:15:57.684+0000] {docker.py:73} INFO - Setting default log level to "WARN".
+[2025-01-06T16:15:57.696+0000] {docker.py:73} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2025-01-06T16:16:01.056+0000] {docker.py:73} INFO - 25/01/06 16:16:01 WARN StandaloneSchedulerBackend: Dynamic allocation enabled without spark.executor.cores explicitly set, you may get more executors allocated than expected. It's recommended to set spark.executor.cores explicitly. Please check SPARK-30299 for more details.
+[2025-01-06T16:16:01.930+0000] {docker.py:73} INFO - 25/01/06 16:16:01 WARN Utils: spark.executor.instances less than spark.dynamicAllocation.minExecutors is invalid, ignoring its setting, please update your configs.
+[2025-01-06T16:16:04.232+0000] {docker.py:73} INFO - <pyspark.sql.session.SparkSession at 0xffff5f928d10>
+[2025-01-06T16:16:04.251+0000] {docker.py:73} INFO - Ending Cell 3------------------------------------------
+[2025-01-06T16:16:04.252+0000] {docker.py:73} INFO - Executing Cell 4---------------------------------------
+[2025-01-06T16:16:06.177+0000] {docker.py:73} INFO - Ending Cell 4------------------------------------------
+[2025-01-06T16:16:06.201+0000] {docker.py:73} INFO - Executing Cell 5---------------------------------------
+[2025-01-06T16:16:10.240+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:16:24.084+0000] {docker.py:73} INFO - 25/01/06 16:16:24 WARN StandaloneAppClient$ClientEndpoint: Connection to 172.19.0.3:7077 failed; waiting for master to reconnect...
+[2025-01-06T16:16:24.094+0000] {docker.py:73} INFO - 25/01/06 16:16:24 WARN StandaloneSchedulerBackend: Disconnected from Spark cluster! Waiting for reconnection...
+[2025-01-06T16:16:25.242+0000] {docker.py:73} INFO - 25/01/06 16:16:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:16:40.235+0000] {docker.py:73} INFO - 25/01/06 16:16:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:16:55.229+0000] {docker.py:73} INFO - 25/01/06 16:16:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:17:10.231+0000] {docker.py:73} INFO - 25/01/06 16:17:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:17:10.401+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:17:25.242+0000] {docker.py:73} INFO - 25/01/06 16:17:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:17:40.244+0000] {docker.py:73} INFO - 25/01/06 16:17:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:17:55.232+0000] {docker.py:73} INFO - 25/01/06 16:17:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:18:10.240+0000] {docker.py:73} INFO - 25/01/06 16:18:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:18:10.559+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:18:25.231+0000] {docker.py:73} INFO - 25/01/06 16:18:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:18:40.241+0000] {docker.py:73} INFO - 25/01/06 16:18:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:18:55.233+0000] {docker.py:73} INFO - 25/01/06 16:18:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:19:10.235+0000] {docker.py:73} INFO - 25/01/06 16:19:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:19:10.580+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:19:25.241+0000] {docker.py:73} INFO - 25/01/06 16:19:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:19:40.238+0000] {docker.py:73} INFO - 25/01/06 16:19:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:19:55.240+0000] {docker.py:73} INFO - 25/01/06 16:19:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:20:10.247+0000] {docker.py:73} INFO - 25/01/06 16:20:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:20:10.719+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:20:25.238+0000] {docker.py:73} INFO - 25/01/06 16:20:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:20:40.233+0000] {docker.py:73} INFO - 25/01/06 16:20:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:20:55.237+0000] {docker.py:73} INFO - 25/01/06 16:20:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:21:10.233+0000] {docker.py:73} INFO - 25/01/06 16:21:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:21:10.762+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:21:25.248+0000] {docker.py:73} INFO - 25/01/06 16:21:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:21:40.244+0000] {docker.py:73} INFO - 25/01/06 16:21:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:21:55.237+0000] {docker.py:73} INFO - 25/01/06 16:21:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:22:10.236+0000] {docker.py:73} INFO - 25/01/06 16:22:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:22:10.858+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:22:25.233+0000] {docker.py:73} INFO - 25/01/06 16:22:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:22:40.234+0000] {docker.py:73} INFO - 25/01/06 16:22:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:22:55.232+0000] {docker.py:73} INFO - 25/01/06 16:22:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:23:10.247+0000] {docker.py:73} INFO - 25/01/06 16:23:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:23:11.049+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:23:25.234+0000] {docker.py:73} INFO - 25/01/06 16:23:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:23:40.237+0000] {docker.py:73} INFO - 25/01/06 16:23:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:23:55.236+0000] {docker.py:73} INFO - 25/01/06 16:23:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:24:10.231+0000] {docker.py:73} INFO - 25/01/06 16:24:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:24:11.254+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:24:25.239+0000] {docker.py:73} INFO - 25/01/06 16:24:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:24:40.235+0000] {docker.py:73} INFO - 25/01/06 16:24:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:24:55.236+0000] {docker.py:73} INFO - 25/01/06 16:24:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:25:10.235+0000] {docker.py:73} INFO - 25/01/06 16:25:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:25:11.296+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:25:25.234+0000] {docker.py:73} INFO - 25/01/06 16:25:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:25:40.240+0000] {docker.py:73} INFO - 25/01/06 16:25:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:25:55.249+0000] {docker.py:73} INFO - 25/01/06 16:25:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:26:10.241+0000] {docker.py:73} INFO - 25/01/06 16:26:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:26:11.325+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:26:25.237+0000] {docker.py:73} INFO - 25/01/06 16:26:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:26:40.237+0000] {docker.py:73} INFO - 25/01/06 16:26:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:26:55.246+0000] {docker.py:73} INFO - 25/01/06 16:26:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:27:10.354+0000] {docker.py:73} INFO - 25/01/06 16:27:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:27:11.374+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:27:25.259+0000] {docker.py:73} INFO - 25/01/06 16:27:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:27:40.235+0000] {docker.py:73} INFO - 25/01/06 16:27:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:27:55.245+0000] {docker.py:73} INFO - 25/01/06 16:27:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:28:10.236+0000] {docker.py:73} INFO - 25/01/06 16:28:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:28:11.522+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:28:25.246+0000] {docker.py:73} INFO - 25/01/06 16:28:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:28:40.242+0000] {docker.py:73} INFO - 25/01/06 16:28:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:28:55.238+0000] {docker.py:73} INFO - 25/01/06 16:28:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:29:10.231+0000] {docker.py:73} INFO - 25/01/06 16:29:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:29:11.619+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:29:25.240+0000] {docker.py:73} INFO - 25/01/06 16:29:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:29:40.250+0000] {docker.py:73} INFO - 25/01/06 16:29:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:29:55.234+0000] {docker.py:73} INFO - 25/01/06 16:29:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:30:10.240+0000] {docker.py:73} INFO - 25/01/06 16:30:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:30:11.757+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:30:25.231+0000] {docker.py:73} INFO - 25/01/06 16:30:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:30:40.246+0000] {docker.py:73} INFO - 25/01/06 16:30:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:30:55.246+0000] {docker.py:73} INFO - 25/01/06 16:30:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:31:10.235+0000] {docker.py:73} INFO - 25/01/06 16:31:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:31:11.920+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:31:25.236+0000] {docker.py:73} INFO - 25/01/06 16:31:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:31:40.236+0000] {docker.py:73} INFO - 25/01/06 16:31:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:31:55.238+0000] {docker.py:73} INFO - 25/01/06 16:31:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:32:10.233+0000] {docker.py:73} INFO - 25/01/06 16:32:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:32:12.120+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:32:25.242+0000] {docker.py:73} INFO - 25/01/06 16:32:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:32:40.240+0000] {docker.py:73} INFO - 25/01/06 16:32:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:32:55.235+0000] {docker.py:73} INFO - 25/01/06 16:32:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:33:10.235+0000] {docker.py:73} INFO - 25/01/06 16:33:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:33:12.266+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:33:25.251+0000] {docker.py:73} INFO - 25/01/06 16:33:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:33:40.239+0000] {docker.py:73} INFO - 25/01/06 16:33:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:33:55.242+0000] {docker.py:73} INFO - 25/01/06 16:33:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:34:10.234+0000] {docker.py:73} INFO - 25/01/06 16:34:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:34:12.374+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:34:25.239+0000] {docker.py:73} INFO - 25/01/06 16:34:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:34:40.252+0000] {docker.py:73} INFO - 25/01/06 16:34:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:34:55.240+0000] {docker.py:73} INFO - 25/01/06 16:34:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:35:10.242+0000] {docker.py:73} INFO - 25/01/06 16:35:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:35:12.532+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:35:25.240+0000] {docker.py:73} INFO - 25/01/06 16:35:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:35:40.241+0000] {docker.py:73} INFO - 25/01/06 16:35:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:35:55.248+0000] {docker.py:73} INFO - 25/01/06 16:35:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:36:10.241+0000] {docker.py:73} INFO - 25/01/06 16:36:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:36:12.590+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:36:25.250+0000] {docker.py:73} INFO - 25/01/06 16:36:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:36:40.247+0000] {docker.py:73} INFO - 25/01/06 16:36:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:36:55.233+0000] {docker.py:73} INFO - 25/01/06 16:36:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:37:10.246+0000] {docker.py:73} INFO - 25/01/06 16:37:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:37:12.630+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:37:25.243+0000] {docker.py:73} INFO - 25/01/06 16:37:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:37:40.246+0000] {docker.py:73} INFO - 25/01/06 16:37:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:37:55.234+0000] {docker.py:73} INFO - 25/01/06 16:37:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:38:10.247+0000] {docker.py:73} INFO - 25/01/06 16:38:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:38:12.773+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:38:25.246+0000] {docker.py:73} INFO - 25/01/06 16:38:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:38:40.240+0000] {docker.py:73} INFO - 25/01/06 16:38:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:38:55.235+0000] {docker.py:73} INFO - 25/01/06 16:38:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:39:10.239+0000] {docker.py:73} INFO - 25/01/06 16:39:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:39:12.872+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:39:25.244+0000] {docker.py:73} INFO - 25/01/06 16:39:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:39:40.239+0000] {docker.py:73} INFO - 25/01/06 16:39:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:39:55.240+0000] {docker.py:73} INFO - 25/01/06 16:39:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:40:10.235+0000] {docker.py:73} INFO - 25/01/06 16:40:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:40:12.977+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:40:25.241+0000] {docker.py:73} INFO - 25/01/06 16:40:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:40:40.243+0000] {docker.py:73} INFO - 25/01/06 16:40:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:40:55.241+0000] {docker.py:73} INFO - 25/01/06 16:40:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:41:10.237+0000] {docker.py:73} INFO - 25/01/06 16:41:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:41:13.015+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:41:25.234+0000] {docker.py:73} INFO - 25/01/06 16:41:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:41:40.248+0000] {docker.py:73} INFO - 25/01/06 16:41:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:41:55.242+0000] {docker.py:73} INFO - 25/01/06 16:41:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:42:10.238+0000] {docker.py:73} INFO - 25/01/06 16:42:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:42:13.061+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:42:25.244+0000] {docker.py:73} INFO - 25/01/06 16:42:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:42:40.237+0000] {docker.py:73} INFO - 25/01/06 16:42:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:42:55.235+0000] {docker.py:73} INFO - 25/01/06 16:42:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:43:10.237+0000] {docker.py:73} INFO - 25/01/06 16:43:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:43:13.098+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:43:25.241+0000] {docker.py:73} INFO - 25/01/06 16:43:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:43:40.245+0000] {docker.py:73} INFO - 25/01/06 16:43:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:43:55.249+0000] {docker.py:73} INFO - 25/01/06 16:43:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:44:10.234+0000] {docker.py:73} INFO - 25/01/06 16:44:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:44:13.157+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:44:25.247+0000] {docker.py:73} INFO - 25/01/06 16:44:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:44:40.243+0000] {docker.py:73} INFO - 25/01/06 16:44:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:44:55.241+0000] {docker.py:73} INFO - 25/01/06 16:44:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:45:10.243+0000] {docker.py:73} INFO - 25/01/06 16:45:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:45:13.336+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:45:25.245+0000] {docker.py:73} INFO - 25/01/06 16:45:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:45:40.245+0000] {docker.py:73} INFO - 25/01/06 16:45:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:45:55.234+0000] {docker.py:73} INFO - 25/01/06 16:45:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:46:10.246+0000] {docker.py:73} INFO - 25/01/06 16:46:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:46:13.433+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:46:25.233+0000] {docker.py:73} INFO - 25/01/06 16:46:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:46:40.247+0000] {docker.py:73} INFO - 25/01/06 16:46:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:46:55.252+0000] {docker.py:73} INFO - 25/01/06 16:46:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:47:10.251+0000] {docker.py:73} INFO - 25/01/06 16:47:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:47:13.519+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:47:25.250+0000] {docker.py:73} INFO - 25/01/06 16:47:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:47:40.233+0000] {docker.py:73} INFO - 25/01/06 16:47:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:47:55.234+0000] {docker.py:73} INFO - 25/01/06 16:47:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:48:10.230+0000] {docker.py:73} INFO - 25/01/06 16:48:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:48:13.629+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:48:25.255+0000] {docker.py:73} INFO - 25/01/06 16:48:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:48:40.256+0000] {docker.py:73} INFO - 25/01/06 16:48:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:48:55.245+0000] {docker.py:73} INFO - 25/01/06 16:48:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:49:10.236+0000] {docker.py:73} INFO - 25/01/06 16:49:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:49:13.779+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:49:25.241+0000] {docker.py:73} INFO - 25/01/06 16:49:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:49:40.253+0000] {docker.py:73} INFO - 25/01/06 16:49:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:49:55.237+0000] {docker.py:73} INFO - 25/01/06 16:49:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:50:10.230+0000] {docker.py:73} INFO - 25/01/06 16:50:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:50:13.801+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:50:25.239+0000] {docker.py:73} INFO - 25/01/06 16:50:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:50:40.244+0000] {docker.py:73} INFO - 25/01/06 16:50:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:50:55.245+0000] {docker.py:73} INFO - 25/01/06 16:50:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:51:10.245+0000] {docker.py:73} INFO - 25/01/06 16:51:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:51:13.897+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:51:25.237+0000] {docker.py:73} INFO - 25/01/06 16:51:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:51:40.231+0000] {docker.py:73} INFO - 25/01/06 16:51:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:51:55.261+0000] {docker.py:73} INFO - 25/01/06 16:51:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:52:10.254+0000] {docker.py:73} INFO - 25/01/06 16:52:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:52:13.905+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:52:25.241+0000] {docker.py:73} INFO - 25/01/06 16:52:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:52:40.241+0000] {docker.py:73} INFO - 25/01/06 16:52:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:52:55.241+0000] {docker.py:73} INFO - 25/01/06 16:52:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:53:10.239+0000] {docker.py:73} INFO - 25/01/06 16:53:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:53:13.929+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:53:25.244+0000] {docker.py:73} INFO - 25/01/06 16:53:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:53:40.249+0000] {docker.py:73} INFO - 25/01/06 16:53:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:53:55.246+0000] {docker.py:73} INFO - 25/01/06 16:53:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:54:10.243+0000] {docker.py:73} INFO - 25/01/06 16:54:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:54:14.031+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:54:25.230+0000] {docker.py:73} INFO - 25/01/06 16:54:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:54:40.236+0000] {docker.py:73} INFO - 25/01/06 16:54:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:54:55.250+0000] {docker.py:73} INFO - 25/01/06 16:54:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:55:10.242+0000] {docker.py:73} INFO - 25/01/06 16:55:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:55:14.159+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:55:25.250+0000] {docker.py:73} INFO - 25/01/06 16:55:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:55:40.241+0000] {docker.py:73} INFO - 25/01/06 16:55:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:55:55.251+0000] {docker.py:73} INFO - 25/01/06 16:55:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:56:10.238+0000] {docker.py:73} INFO - 25/01/06 16:56:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:56:14.239+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:56:25.238+0000] {docker.py:73} INFO - 25/01/06 16:56:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:56:40.241+0000] {docker.py:73} INFO - 25/01/06 16:56:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:56:55.255+0000] {docker.py:73} INFO - 25/01/06 16:56:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:57:10.236+0000] {docker.py:73} INFO - 25/01/06 16:57:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:57:14.326+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:57:25.236+0000] {docker.py:73} INFO - 25/01/06 16:57:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:57:40.243+0000] {docker.py:73} INFO - 25/01/06 16:57:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:57:55.245+0000] {docker.py:73} INFO - 25/01/06 16:57:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:58:10.235+0000] {docker.py:73} INFO - 25/01/06 16:58:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:58:14.398+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:58:25.244+0000] {docker.py:73} INFO - 25/01/06 16:58:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:58:40.264+0000] {docker.py:73} INFO - 25/01/06 16:58:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:58:55.238+0000] {docker.py:73} INFO - 25/01/06 16:58:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:59:10.238+0000] {docker.py:73} INFO - 25/01/06 16:59:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:59:14.519+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T16:59:25.238+0000] {docker.py:73} INFO - 25/01/06 16:59:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:59:40.251+0000] {docker.py:73} INFO - 25/01/06 16:59:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T16:59:55.239+0000] {docker.py:73} INFO - 25/01/06 16:59:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:00:10.247+0000] {docker.py:73} INFO - 25/01/06 17:00:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:00:14.662+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T17:00:25.256+0000] {docker.py:73} INFO - 25/01/06 17:00:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:00:40.237+0000] {docker.py:73} INFO - 25/01/06 17:00:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:00:55.240+0000] {docker.py:73} INFO - 25/01/06 17:00:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:01:10.237+0000] {docker.py:73} INFO - 25/01/06 17:01:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:01:14.825+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T17:01:25.241+0000] {docker.py:73} INFO - 25/01/06 17:01:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:01:40.245+0000] {docker.py:73} INFO - 25/01/06 17:01:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:01:55.236+0000] {docker.py:73} INFO - 25/01/06 17:01:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:02:10.246+0000] {docker.py:73} INFO - 25/01/06 17:02:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:02:15.011+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T17:02:25.235+0000] {docker.py:73} INFO - 25/01/06 17:02:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:02:40.241+0000] {docker.py:73} INFO - 25/01/06 17:02:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:02:55.245+0000] {docker.py:73} INFO - 25/01/06 17:02:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:03:10.244+0000] {docker.py:73} INFO - 25/01/06 17:03:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:03:15.174+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T17:03:25.237+0000] {docker.py:73} INFO - 25/01/06 17:03:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:03:40.240+0000] {docker.py:73} INFO - 25/01/06 17:03:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:03:55.243+0000] {docker.py:73} INFO - 25/01/06 17:03:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:04:10.240+0000] {docker.py:73} INFO - 25/01/06 17:04:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:04:15.358+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T17:04:25.238+0000] {docker.py:73} INFO - 25/01/06 17:04:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:04:40.233+0000] {docker.py:73} INFO - 25/01/06 17:04:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:04:55.240+0000] {docker.py:73} INFO - 25/01/06 17:04:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:05:10.230+0000] {docker.py:73} INFO - 25/01/06 17:05:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:05:15.477+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T17:05:25.232+0000] {docker.py:73} INFO - 25/01/06 17:05:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:05:40.234+0000] {docker.py:73} INFO - 25/01/06 17:05:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:05:55.252+0000] {docker.py:73} INFO - 25/01/06 17:05:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:06:10.238+0000] {docker.py:73} INFO - 25/01/06 17:06:10 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:06:15.523+0000] {docker.py:73} INFO - [Stage 0:>                                                          (0 + 0) / 2]
+[2025-01-06T17:06:25.241+0000] {docker.py:73} INFO - 25/01/06 17:06:25 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:06:40.246+0000] {docker.py:73} INFO - 25/01/06 17:06:40 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:06:55.266+0000] {docker.py:73} INFO - 25/01/06 17:06:55 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T17:07:08.261+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-06T17:07:08.273+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-06T17:07:08.278+0000] {process_utils.py:132} INFO - Sending 15 to group 88. PIDs of all processes in the group: [88]
+[2025-01-06T17:07:08.279+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 88
+[2025-01-06T17:07:08.283+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-06T17:07:08.289+0000] {docker.py:539} INFO - Stopping docker container
+[2025-01-06T17:07:08.913+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-06T17:07:08.962+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=88, status='terminated', exitcode=0, started='16:15:20') (88) terminated with exit code 0

@@ -8,7 +8,7 @@ default_args={
     'owner':'Anoop M'
 }
 
-@dag(start_date=datetime(2021,1,1), schedule_interval="35 15 * * *", catchup=False, default_args=default_args)
+@dag(start_date=datetime(2021,1,1), schedule_interval=None, catchup=False, default_args=default_args)
 
 def dag_Fact_NTBK():
     # Create the start and stop Spark DAGs by passing valid arguments

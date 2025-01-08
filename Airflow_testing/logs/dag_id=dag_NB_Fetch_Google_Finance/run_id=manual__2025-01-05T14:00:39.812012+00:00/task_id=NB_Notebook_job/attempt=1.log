@@ -1,0 +1,37 @@
+[2025-01-05T14:00:42.354+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-05T14:00:42.366+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_NB_Fetch_Google_Finance.NB_Notebook_job manual__2025-01-05T14:00:39.812012+00:00 [queued]>
+[2025-01-05T14:00:42.372+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_NB_Fetch_Google_Finance.NB_Notebook_job manual__2025-01-05T14:00:39.812012+00:00 [queued]>
+[2025-01-05T14:00:42.372+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-05T14:00:42.381+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): NB_Notebook_job> on 2025-01-05 14:00:39.812012+00:00
+[2025-01-05T14:00:42.387+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_NB_Fetch_Google_Finance', 'NB_Notebook_job', 'manual__2025-01-05T14:00:39.812012+00:00', '--job-id', '592', '--raw', '--subdir', 'DAGS_FOLDER/dag_NB_Fetch_Google_Finance.py', '--cfg-path', '/tmp/tmpr5s78xzi']
+[2025-01-05T14:00:42.389+0000] {standard_task_runner.py:105} INFO - Job 592: Subtask NB_Notebook_job
+[2025-01-05T14:00:42.390+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=281) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-05T14:00:42.391+0000] {standard_task_runner.py:72} INFO - Started process 283 to run task
+[2025-01-05T14:00:42.461+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_NB_Fetch_Google_Finance.NB_Notebook_job manual__2025-01-05T14:00:39.812012+00:00 [running]> on host 44275986e897
+[2025-01-05T14:00:42.565+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Anoop M' AIRFLOW_CTX_DAG_ID='dag_NB_Fetch_Google_Finance' AIRFLOW_CTX_TASK_ID='NB_Notebook_job' AIRFLOW_CTX_EXECUTION_DATE='2025-01-05T14:00:39.812012+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-05T14:00:39.812012+00:00'
+[2025-01-05T14:00:42.566+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-05T14:00:42.770+0000] {docker.py:379} INFO - Starting docker container from image spark-cluster:version-1.0.0
+[2025-01-05T14:00:45.119+0000] {docker.py:73} INFO - Input Notebook:  /home/jovyan/Notebooks/NB_Fetch_Google_Finance.ipynb
+[2025-01-05T14:00:45.133+0000] {docker.py:73} INFO - Output Notebook: /home/jovyan/Notebooks/output/NB_Fetch_Google_Finance.ipynb
+[2025-01-05T14:00:47.647+0000] {docker.py:73} INFO - Executing notebook with kernel: python3
+[2025-01-05T14:00:47.651+0000] {docker.py:73} INFO - Executing Cell 1---------------------------------------
+[2025-01-05T14:00:51.488+0000] {docker.py:73} INFO - :: loading settings :: url = jar:file:/usr/local/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-01-05T14:00:51.595+0000] {docker.py:73} INFO - Ivy Default Cache set to: /home/jovyan/.ivy2/cache
+[2025-01-05T14:00:51.596+0000] {docker.py:73} INFO - The jars for the packages stored in: /home/jovyan/.ivy2/jars
+[2025-01-05T14:00:51.600+0000] {docker.py:73} INFO - io.delta#delta-spark_2.12 added as a dependency
+[2025-01-05T14:00:51.602+0000] {docker.py:73} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-77caccd6-4751-412b-9e97-d375b04481f3;1.0
+[2025-01-05T14:00:51.603+0000] {docker.py:73} INFO - 	confs: [default]
+[2025-01-05T14:00:53.447+0000] {docker.py:73} INFO - 	found io.delta#delta-spark_2.12;3.1.0 in central
+[2025-01-05T14:00:54.694+0000] {docker.py:73} INFO - 	found io.delta#delta-storage;3.1.0 in central
+[2025-01-05T14:00:58.737+0000] {docker.py:73} INFO - 	found org.antlr#antlr4-runtime;4.9.3 in central
+[2025-01-05T14:00:58.961+0000] {docker.py:73} INFO - downloading https://repo1.maven.org/maven2/io/delta/delta-spark_2.12/3.1.0/delta-spark_2.12-3.1.0.jar ...
+[2025-01-05T14:03:10.310+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-05T14:03:10.318+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-05T14:03:10.320+0000] {process_utils.py:132} INFO - Sending 15 to group 283. PIDs of all processes in the group: [283]
+[2025-01-05T14:03:10.321+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 283
+[2025-01-05T14:03:10.324+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-05T14:03:10.331+0000] {docker.py:539} INFO - Stopping docker container
+[2025-01-05T14:03:10.801+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-05T14:03:10.837+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=283, status='terminated', exitcode=0, started='14:00:42') (283) terminated with exit code 0
