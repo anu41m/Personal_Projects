@@ -34,4 +34,3 @@ case "$branch_name" in
     echo "Invalid input! Aborting."
     ;;
 esac
-# echo "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"
