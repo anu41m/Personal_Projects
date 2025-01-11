@@ -1,0 +1,119 @@
+[2025-01-11T02:52:22.545+0000] {processor.py:186} INFO - Started process (PID=49) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:52:22.547+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:52:22.555+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:52:22.554+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:52:22.577+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:52:22.624+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:52:22.623+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:52:22.651+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:52:22.651+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:52:22.677+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.144 seconds
+[2025-01-11T02:52:53.371+0000] {processor.py:186} INFO - Started process (PID=62) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:52:53.372+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:52:53.374+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:52:53.373+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:52:53.379+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:52:53.392+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:52:53.392+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:52:53.399+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:52:53.399+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:52:53.413+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.046 seconds
+[2025-01-11T02:53:25.207+0000] {processor.py:186} INFO - Started process (PID=85) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:53:25.210+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:53:25.221+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:53:25.220+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:53:25.272+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:53:25.346+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:53:25.346+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:53:26.373+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:53:26.373+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:53:26.426+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 1.230 seconds
+[2025-01-11T02:53:56.667+0000] {processor.py:186} INFO - Started process (PID=98) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:53:56.668+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:53:56.669+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:53:56.669+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:53:56.675+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:53:56.783+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:53:56.783+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:53:56.789+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:53:56.789+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:53:56.796+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.132 seconds
+[2025-01-11T02:54:26.998+0000] {processor.py:186} INFO - Started process (PID=115) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:54:26.999+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:54:27.001+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:54:27.001+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:54:27.006+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:54:27.017+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:54:27.017+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:54:27.024+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:54:27.023+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:54:27.034+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.039 seconds
+[2025-01-11T02:54:57.843+0000] {processor.py:186} INFO - Started process (PID=128) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:54:57.844+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:54:57.848+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:54:57.847+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:54:57.865+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:54:57.890+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:54:57.890+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:54:57.907+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:54:57.906+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:54:57.919+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.082 seconds
+[2025-01-11T02:55:28.554+0000] {processor.py:186} INFO - Started process (PID=141) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:55:28.555+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:55:28.556+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:55:28.556+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:55:28.561+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:55:28.572+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:55:28.571+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:55:28.578+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:55:28.578+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:55:28.586+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.034 seconds
+[2025-01-11T02:55:59.185+0000] {processor.py:186} INFO - Started process (PID=154) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:55:59.186+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:55:59.188+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:55:59.188+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:55:59.194+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:55:59.209+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:55:59.209+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:55:59.223+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:55:59.223+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:55:59.231+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.050 seconds
+[2025-01-11T02:56:30.264+0000] {processor.py:186} INFO - Started process (PID=166) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:56:30.267+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:56:30.279+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:56:30.276+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:56:30.326+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:56:30.376+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:56:30.375+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:56:30.446+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:56:30.445+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:56:30.495+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.264 seconds
+[2025-01-11T02:57:01.319+0000] {processor.py:186} INFO - Started process (PID=179) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:57:01.323+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:57:01.326+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:57:01.326+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:57:01.341+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:57:01.364+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:57:01.364+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:57:01.376+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:57:01.376+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:57:01.387+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.093 seconds
+[2025-01-11T02:57:32.130+0000] {processor.py:186} INFO - Started process (PID=192) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:57:32.135+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:57:32.140+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:57:32.139+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:57:32.155+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:57:32.184+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:57:32.184+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:57:32.200+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:57:32.200+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:57:32.216+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.101 seconds
+[2025-01-11T02:58:02.758+0000] {processor.py:186} INFO - Started process (PID=205) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:58:02.759+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:58:02.761+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:58:02.761+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:58:02.775+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:58:02.795+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:58:02.795+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:58:02.803+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:58:02.803+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:58:02.824+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.075 seconds
+[2025-01-11T02:58:33.408+0000] {processor.py:186} INFO - Started process (PID=218) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:58:33.409+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:58:33.411+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:58:33.411+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:58:33.420+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:58:33.437+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:58:33.437+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:58:33.445+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:58:33.445+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:58:33.461+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.059 seconds
+[2025-01-11T02:59:04.084+0000] {processor.py:186} INFO - Started process (PID=231) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:59:04.086+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:59:04.087+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:59:04.087+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:59:04.095+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:59:04.115+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:59:04.115+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:59:04.130+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:59:04.130+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:59:04.146+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.071 seconds
+[2025-01-11T02:59:34.792+0000] {processor.py:186} INFO - Started process (PID=244) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:59:34.793+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T02:59:34.796+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:59:34.795+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:59:34.803+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T02:59:34.826+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:59:34.826+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:59:34.846+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:59:34.846+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T02:59:34.859+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.084 seconds
+[2025-01-11T03:00:05.554+0000] {processor.py:186} INFO - Started process (PID=257) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T03:00:05.558+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T03:00:05.561+0000] {logging_mixin.py:190} INFO - [2025-01-11T03:00:05.560+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T03:00:05.573+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T03:00:05.592+0000] {logging_mixin.py:190} INFO - [2025-01-11T03:00:05.592+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T03:00:05.600+0000] {logging_mixin.py:190} INFO - [2025-01-11T03:00:05.600+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T03:00:05.611+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.073 seconds
+[2025-01-11T03:00:36.317+0000] {processor.py:186} INFO - Started process (PID=270) to work on /opt/airflow/dags/dag_wallet.py
+[2025-01-11T03:00:36.323+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_wallet.py for tasks to queue
+[2025-01-11T03:00:36.328+0000] {logging_mixin.py:190} INFO - [2025-01-11T03:00:36.328+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T03:00:36.356+0000] {processor.py:925} INFO - DAG(s) 'dag_Wallet_NTBK' retrieved from /opt/airflow/dags/dag_wallet.py
+[2025-01-11T03:00:36.412+0000] {logging_mixin.py:190} INFO - [2025-01-11T03:00:36.411+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T03:00:36.460+0000] {logging_mixin.py:190} INFO - [2025-01-11T03:00:36.460+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Wallet_NTBK to None, run_after=None
+[2025-01-11T03:00:36.507+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_wallet.py took 0.202 seconds

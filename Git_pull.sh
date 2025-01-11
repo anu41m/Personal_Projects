@@ -4,7 +4,7 @@ echo -e "Checking Git is installed.....\n"
 git --version || { echo "Git is not installed..."; exit 1; }
 
 # Navigate to the desired directory
-cd "/Users/anoopm/my_jupyter_project" || { echo "Directory not found!"; exit 1; }
+cd "/Users/anoopm/my_jupyter_project/Docker_setup" || { echo "Directory not found!"; exit 1; }
 
 echo "Configuring your Git username and email..."
 git config --global user.name "anu41m"

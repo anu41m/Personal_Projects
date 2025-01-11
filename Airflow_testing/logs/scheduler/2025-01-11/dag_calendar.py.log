@@ -1,0 +1,112 @@
+[2025-01-11T02:52:22.906+0000] {processor.py:186} INFO - Started process (PID=52) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:52:22.908+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:52:22.913+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:52:22.912+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:52:22.932+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:52:22.986+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:52:22.985+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:52:23.013+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:52:23.013+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:52:23.061+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.162 seconds
+[2025-01-11T02:52:53.469+0000] {processor.py:186} INFO - Started process (PID=65) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:52:53.469+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:52:53.470+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:52:53.470+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:52:53.475+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:52:53.484+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:52:53.484+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:52:53.490+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:52:53.490+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:52:53.498+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.032 seconds
+[2025-01-11T02:53:27.204+0000] {processor.py:186} INFO - Started process (PID=88) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:53:27.212+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:53:27.262+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:53:27.260+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:53:27.432+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:53:27.552+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:53:27.551+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:53:28.205+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:53:28.205+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:53:28.237+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 1.137 seconds
+[2025-01-11T02:53:58.848+0000] {processor.py:186} INFO - Started process (PID=101) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:53:58.849+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:53:58.851+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:53:58.851+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:53:58.862+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:53:59.139+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:53:59.139+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:53:59.151+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:53:59.151+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:53:59.171+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.329 seconds
+[2025-01-11T02:54:30.137+0000] {processor.py:186} INFO - Started process (PID=118) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:54:30.140+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:54:30.147+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:54:30.146+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:54:30.164+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:54:30.198+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:54:30.198+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:54:30.222+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:54:30.221+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:54:30.249+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.118 seconds
+[2025-01-11T02:55:01.010+0000] {processor.py:186} INFO - Started process (PID=131) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:55:01.011+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:55:01.013+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:55:01.013+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:55:01.023+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:55:01.052+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:55:01.051+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:55:01.071+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:55:01.070+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:55:01.086+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.088 seconds
+[2025-01-11T02:55:31.657+0000] {processor.py:186} INFO - Started process (PID=144) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:55:31.659+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:55:31.665+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:55:31.663+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:55:31.685+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:55:31.706+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:55:31.706+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:55:31.717+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:55:31.717+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:55:31.728+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.083 seconds
+[2025-01-11T02:56:02.350+0000] {processor.py:186} INFO - Started process (PID=157) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:56:02.351+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:56:02.354+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:56:02.354+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:56:02.370+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:56:02.397+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:56:02.396+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:56:02.406+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:56:02.406+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:56:02.423+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.084 seconds
+[2025-01-11T02:56:32.882+0000] {processor.py:186} INFO - Started process (PID=169) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:56:32.890+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:56:32.902+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:56:32.900+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:56:32.976+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:56:33.072+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:56:33.072+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:56:33.103+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:56:33.102+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:56:33.140+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.313 seconds
+[2025-01-11T02:57:03.511+0000] {processor.py:186} INFO - Started process (PID=182) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:57:03.515+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:57:03.518+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:57:03.518+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:57:03.544+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:57:03.583+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:57:03.582+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:57:03.616+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:57:03.616+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:57:03.630+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.131 seconds
+[2025-01-11T02:57:34.274+0000] {processor.py:186} INFO - Started process (PID=195) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:57:34.277+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:57:34.282+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:57:34.282+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:57:34.303+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:57:34.329+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:57:34.329+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:57:34.352+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:57:34.351+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:57:34.365+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.104 seconds
+[2025-01-11T02:58:04.849+0000] {processor.py:186} INFO - Started process (PID=208) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:58:04.851+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:58:04.853+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:58:04.853+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:58:04.864+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:58:04.887+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:58:04.887+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:58:04.895+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:58:04.895+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:58:04.909+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.068 seconds
+[2025-01-11T02:58:35.527+0000] {processor.py:186} INFO - Started process (PID=221) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:58:35.528+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:58:35.531+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:58:35.530+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:58:35.546+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:58:35.569+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:58:35.569+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:58:35.582+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:58:35.581+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:58:35.596+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.079 seconds
+[2025-01-11T02:59:06.195+0000] {processor.py:186} INFO - Started process (PID=234) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:59:06.198+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:59:06.201+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:59:06.201+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:59:06.217+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:59:06.238+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:59:06.238+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:59:06.250+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:59:06.250+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:59:06.267+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.081 seconds
+[2025-01-11T02:59:36.897+0000] {processor.py:186} INFO - Started process (PID=247) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:59:36.899+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T02:59:36.901+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:59:36.901+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:59:36.910+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T02:59:36.928+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:59:36.928+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T02:59:36.938+0000] {logging_mixin.py:190} INFO - [2025-01-11T02:59:36.938+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T02:59:36.951+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.059 seconds
+[2025-01-11T03:00:07.672+0000] {processor.py:186} INFO - Started process (PID=260) to work on /opt/airflow/dags/dag_calendar.py
+[2025-01-11T03:00:07.674+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_calendar.py for tasks to queue
+[2025-01-11T03:00:07.678+0000] {logging_mixin.py:190} INFO - [2025-01-11T03:00:07.677+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T03:00:07.693+0000] {processor.py:925} INFO - DAG(s) 'dag_Calendar_NTBK' retrieved from /opt/airflow/dags/dag_calendar.py
+[2025-01-11T03:00:07.714+0000] {logging_mixin.py:190} INFO - [2025-01-11T03:00:07.714+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-11T03:00:07.731+0000] {logging_mixin.py:190} INFO - [2025-01-11T03:00:07.731+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_Calendar_NTBK to None, run_after=None
+[2025-01-11T03:00:07.747+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_calendar.py took 0.084 seconds
