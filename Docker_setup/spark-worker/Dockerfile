@@ -8,31 +8,21 @@ ENV PATH=$PATH:$SPARK_HOME/bin:$HADOOP_HOME/bin
 # Install Java and set JAVA_HOME
 USER root
 
-# Create a Conda environment with Python 3.12 and activate it
-# RUN echo "source /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
-#     /bin/bash -c "source /opt/conda/etc/profile.d/conda.sh && \
-#                   conda create -y -n py312 -c conda-forge python=3.12 && \
-#                   conda activate py312 && \
-#                   mamba install -y numpy pandas && \
-#                   mamba clean -a -y"
-
-ENV SPARK_VERSION=3.5.0
-ENV HADOOP_VERSION=3
 # Install Java for Hadoop compatibility
 RUN apt-get update && apt-get install -y \
     telnet\
     curl \
     gnupg \
-    openjdk-17-jdk\
-    && curl -o /tmp/spark.tgz "https://archive.apache.org/dist/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz" \
-    && tar -xvzf /tmp/spark.tgz -C /usr/local \
-    && rm -rf /usr/local/spark\
-    && mv /usr/local/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION} /usr/local/spark \
-    && rm /tmp/spark.tgz
+    openjdk-17-jdk
+#     && curl -o /tmp/spark.tgz "https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-${HADOOP_VERSION}.tgz" \
+#     && tar -xvzf /tmp/spark.tgz -C /usr/local \
+#     && rm -rf /usr/local/spark\
+#     && mv /usr/local/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION} /usr/local/spark \
+#     && rm /tmp/spark.tgz
     
-# Set environment variables
-ENV SPARK_HOME=/usr/local/spark
-ENV PATH="$SPARK_HOME/bin:$PATH"
+# # Set environment variables
+# ENV SPARK_HOME=/usr/local/spark
+# ENV PATH="$SPARK_HOME/bin:$PATH"
 ENV PYSPARK_PYTHON=/opt/conda/bin/python
 ENV PYSPARK_DRIVER_PYTHON=/opt/conda/bin/python
 
@@ -54,4 +44,4 @@ VOLUME [ "/Users/anoopm/Documents/Local_Folder:/mnt","/Users/anoopm/Library/Clou
 EXPOSE 8081 7337
 
 # Start Spark worker and connect to master
-CMD ["/bin/bash", "-c", "${SPARK_HOME}/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077"]
+#CMD ["/bin/bash", "-c", "${SPARK_HOME}/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077"]

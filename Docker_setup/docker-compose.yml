@@ -3,7 +3,6 @@ networks:
   Airflow_custom_network:
     driver: bridge
     name: Airflow_custom_network
-    external: true
 
 services:
   spark-master:
